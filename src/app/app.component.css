@@ -1,9 +1,29 @@
 
 
-.title{
+.fond{
 
     background-image : url("https://i.ytimg.com/vi/uQEBXWMBHhk/maxresdefault.jpg");
+    color: white;  
+}
+
+
+.title{
+    
+    font-size: 60px;
+    color: rgb(180, 107, 23);
+    font-family: 'Squada One', "Arial Black", Arial, Verdana, sans-serif;
+}
+
+
+.soustitre{
+    font-size: 30px;
+    color: gray;
+    font-family: Impact, "Arial Black", Arial, Verdana, sans-serif;
+}
+
+.text{
+    font-size: 17px;
     color: white;
-    
-    
+    font-family: Arial, Verdana, sans-serif;
+    text-align: justify;
 }
