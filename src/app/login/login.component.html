@@ -6,13 +6,13 @@
         <div class="card-body">
 
             <!-- Material form register -->
-            <form>
+            <form #connect="ngForm" (ngSubmit)="connexion(connect.value)">
                 <p class="h4 text-center py-4">Connexion</p>
 
                 <!-- Material input email -->
                 <div class="md-form">
                     <i class="fa fa-envelope prefix grey-text"></i>
-                    <input type="email" id="login" class="form-control">
+                    <input type="email" name="pseudo" class="form-control" ngModel="">
                     <label for="materialFormCardEmailEx" class="font-weight-light pl-3">Votre login</label>
                 </div>
 
@@ -20,7 +20,7 @@
                 <!-- Material input password -->
                 <div class="md-form">
                     <i class="fa fa-lock prefix grey-text"></i>
-                    <input type="password" id="mdp" class="form-control">
+                    <input type="password" name="mdp" class="form-control" ngModel="">
                     <label for="materialFormCardPasswordEx" class="font-weight-light pl-3">Votre mot de passe</label>
                 </div>
 
@@ -29,7 +29,7 @@
                 </div>
             </form>
             <!-- Material form register -->
-
+            <p class="text-danger text-center" *ngIf=" msgErr != null "> {{ msgErr }} </p>
         </div>
         <!-- Card body -->
 
