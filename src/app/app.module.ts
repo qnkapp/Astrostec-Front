@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { DetailProduitBoutiqueComponent } from './detail-produit-boutique/detail-produit-boutique.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,13 +20,14 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
     LoginComponent,
     AccueilComponent,
     CatalogueComponent,
-    DetailProduitBoutiqueComponent
+    DetailProduitBoutiqueComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
