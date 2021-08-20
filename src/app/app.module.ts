@@ -6,17 +6,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
 import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CatalogueComponent } from './catalogue/catalogue.component';
+import { DetailProduitBoutiqueComponent } from './detail-produit-boutique/detail-produit-boutique.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BoutiqueComponent,
     LoginComponent,
-    AccueilComponent
+    AccueilComponent,
+    CatalogueComponent,
+    DetailProduitBoutiqueComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
