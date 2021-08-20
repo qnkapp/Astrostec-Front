@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   constructor(private http: HttpClient, private otherService: OtherService) { }
 
   membre: any;
+  msgErr: any;
 
   ngOnInit(): void {
     
@@ -23,6 +24,10 @@ export class LoginComponent implements OnInit {
         this.membre = data;
         if (this.membre != null){
           console.log(this.membre)
+          this.msgErr = null;
+        }
+        else{
+          this.msgErr = "Mauvais login ou mot de passe"
         }
        },
       error: (err) => { console.log(err) }
