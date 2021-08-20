@@ -17,7 +17,8 @@ import { ForumComponent } from './forum/forum.component';
     BoutiqueComponent,
     LoginComponent,
     AccueilComponent,
-    CatalogueComponent
+    CatalogueComponent,
+    ForumComponent
   ],
   imports: [
     BrowserModule,
