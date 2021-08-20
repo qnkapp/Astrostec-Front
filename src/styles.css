@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+
+.fond{
+
+    background-image : url("/assets/Img/fond_etoiles.jpg");
+    color: white;  
+}
+
+
+.title{
+    
+    font-size: 60px;
+    color: rgb(180, 107, 23);
+    font-family: 'Squada One', "Arial Black", Arial, Verdana, sans-serif;
+}
+
+
+.soustitre{
+    font-size: 30px;
+    color: gray;
+    font-family: Impact, "Arial Black", Arial, Verdana, sans-serif;
+}
+
+.text{
+    font-size: 17px;
+    color: white;
+    font-family: Arial, Verdana, sans-serif;
+    text-align: justify;
+}
