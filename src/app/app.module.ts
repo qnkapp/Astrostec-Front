@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
 import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 

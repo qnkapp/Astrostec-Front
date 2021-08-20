@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MatDialog } from '@angular/material/dialog';
+ 
 @Component({
   selector: 'app-boutique',
   templateUrl: './boutique.component.html',
@@ -10,6 +11,10 @@ export class BoutiqueComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  goToDetail():void{
+
   }
 
 }
