@@ -11,11 +11,12 @@ export class LoginComponent implements OnInit {
 
   membreLogin: any;
 
-  constructor(private http: HttpClient, private otherService: OtherService) { }
+  constructor(/*private http: HttpClient, private otherService: OtherService */) { }
 
   ngOnInit(): void {
+
   }
 
-  
+
 
 }
