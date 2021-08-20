@@ -9,6 +9,13 @@ body {
     margin-top: 100px
 }
 
+.pt-50 {
+    padding-top: 50px
+}
+.pb-50 {
+    padding-bottom: 50px
+}
+
 .product-wrapper,
 .product-img {
     overflow: hidden;
