@@ -8,7 +8,7 @@ import { BoutiqueComponent } from './boutique/boutique.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CatalogueComponent } from './catalogue/catalogue.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
