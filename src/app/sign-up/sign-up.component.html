@@ -6,7 +6,7 @@
         <div class="card-body">
 
             <!-- Material form register -->
-            <form>
+            <form #connect="ngForm" (ngSubmit)="signup(connect.value)">
                 <p class="h4 text-center py-4">S'enregistrer</p>
 
                 <!-- Grid row -->
@@ -16,7 +16,7 @@
                         <!-- Material input -->
                         <div class="md-form">
                             <i class="fa fa-user prefix grey-text"></i>
-                            <input type="text" id="nom" class="form-control">
+                            <input type="text" id="nom" name="nom" class="form-control" ngModel="">
                             <label for="nom" class="font-weight-light pl-3">Votre nom</label>
                         </div>
                     </div>
@@ -26,8 +26,8 @@
                     <div class="col">
                         <!-- Material input -->
                         <div class="md-form">
-                            <input type="text" id="prenom" class="form-control">
-                            <label for="prenom" class="font-weight-light pl-3">Votre pseudo*</label>
+                            <input type="text" id="prenom" name="prenom" class="form-control" ngModel="">
+                            <label for="prenom" class="font-weight-light pl-3">Votre prénom</label>
                         </div>
                     </div>
                     <!-- Grid column -->
@@ -37,14 +37,14 @@
                 <!-- Material input date -->
                 <div class="md-form">
                     <i class="fa fa-calendar prefix grey-text"></i>
-                    <input type="date" id="ddn" name="ddn" class="form-control">
+                    <input type="date" id="ddn" name="ddn" class="form-control" ngModel="">
                     <label for="pseudo" class="font-weight-light pl-3">Votre date de naissance</label>
                 </div>
 
                 <!-- Material input text -->
                 <div class="md-form">
                     <i class="fa fa-user prefix grey-text"></i>
-                    <input type="text" id="pseudo" class="form-control">
+                    <input type="text" id="pseudo" name="pseudo" class="form-control" ngModel="">
                     <label for="pseudo" class="font-weight-light pl-3">Votre pseudo*</label>
                 </div>
 
@@ -52,7 +52,7 @@
                 <!-- Material input email -->
                 <div class="md-form">
                     <i class="fa fa-envelope prefix grey-text"></i>
-                    <input type="email" id="email" class="form-control">
+                    <input type="email" id="email" name="email" class="form-control" ngModel="">
                     <label for="email" class="font-weight-light pl-3">Votre email*</label>
                 </div>
 
@@ -66,7 +66,7 @@
                 <!-- Material input password -->
                 <div class="md-form">
                     <i class="fa fa-lock prefix grey-text"></i>
-                    <input type="password" id="mdp" class="form-control">
+                    <input type="password" id="mdp" name="mdp" class="form-control" ngModel="">
                     <label for="mdp" class="font-weight-light pl-3">Votre mot de passe*</label>
                 </div>
 
