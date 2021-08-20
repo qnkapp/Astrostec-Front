@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
 import { LoginComponent } from './login/login.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
