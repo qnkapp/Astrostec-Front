@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './forum.component.html',
   styleUrls: ['./forum.component.css']
 })
-export class AccueilComponent implements OnInit {
+export class ForumComponent implements OnInit {
 
   constructor() { }
 

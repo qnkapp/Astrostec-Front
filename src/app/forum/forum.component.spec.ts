@@ -1,8 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+
 import { ForumComponent } from './forum.component';
 
-describe('LoginComponent', () => {
+describe('ForumComponent', () => {
   let component: ForumComponent;
   let fixture: ComponentFixture<ForumComponent>;
 
