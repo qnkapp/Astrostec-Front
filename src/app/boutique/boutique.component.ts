@@ -8,7 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class BoutiqueComponent implements OnInit {
 
-  constructor(private dialog:MatDialog) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
