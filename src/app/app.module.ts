@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ForumComponent } from './forum/forum.component';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { PlanetesComponent } from './planetes/planetes.component';
+import { SatellitesComponent } from './satellites/satellites.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     AccueilComponent,
     DetailProduitBoutiqueComponent,
     ForumComponent,
-    SignUpComponent
+    SignUpComponent,
+    PlanetesComponent,
+    SatellitesComponent
   ],
   imports: [
     BrowserModule,
