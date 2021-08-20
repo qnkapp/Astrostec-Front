@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { DetailProduitBoutiqueComponent } from './detail-produit-boutique/detail-produit-boutique.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DetailProduitBoutiqueComponent } from './detail-produit-boutique/detail
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
