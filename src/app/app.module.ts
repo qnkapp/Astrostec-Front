@@ -7,13 +7,14 @@ import { AppComponent } from './app.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CatalogueComponent } from './catalogue/catalogue.component';
 import { DetailProduitBoutiqueComponent } from './detail-produit-boutique/detail-produit-boutique.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { ForumComponent } from './forum/forum.component';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { PlanetesComponent } from './planetes/planetes.component';
+import { SatellitesComponent } from './satellites/satellites.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +22,11 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     BoutiqueComponent,
     LoginComponent,
     AccueilComponent,
-    CatalogueComponent,
     DetailProduitBoutiqueComponent,
     ForumComponent,
-    SignUpComponent
+    SignUpComponent,
+    PlanetesComponent,
+    SatellitesComponent
   ],
   imports: [
     BrowserModule,
