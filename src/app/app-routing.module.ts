@@ -11,7 +11,7 @@ const routes: Routes = [
   {component: AccueilComponent, path:'Accueil'},
   {component: LoginComponent, path:'connexion'},
   {component: ForumComponent, path:'forum'},
-  {component: CatalogueComponent, path:'catalogue'}
+  {component: CatalogueComponent, path:'catalogue'},
 ];
 
 @NgModule({
