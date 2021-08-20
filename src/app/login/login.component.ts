@@ -9,14 +9,28 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
 
-  membreLogin: any;
-
   constructor(private http: HttpClient, private otherService: OtherService) { }
 
-  ngOnInit(): void {
+  membre: any;
+  msgErr: any;
 
+  ngOnInit(): void {
+    
   }
 
-
-
+  connexion(membre: any): void {
+    this.http.post(this.otherService.lienBack + 'login', membre).subscribe({
+      next: (data) => { 
+        this.membre = data;
+        if (this.membre != null){
+          console.log(this.membre)
+          this.msgErr = null;
+        }
+        else{
+          this.msgErr = "Mauvais login ou mot de passe"
+        }
+       },
+      error: (err) => { console.log(err) }
+    })
+  }
 }
