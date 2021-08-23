@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { OtherService } from '../services/other.service';
 
 @Component({
@@ -9,10 +10,13 @@ import { OtherService } from '../services/other.service';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor(private http: HttpClient, private otherService: OtherService) { }
+  constructor(private http: HttpClient, private otherService: OtherService, private route: Router) { }
 
   membre: any;
-  msgErr: any;
+  msgErrPseudo: any;
+  msgErrEmail: any;
+  msgErrMdp: any;
+  verifyExist: any;
 
   ngOnInit(): void {
   }
@@ -20,13 +24,16 @@ export class SignUpComponent implements OnInit {
   signup(membre: any): void {
     this.http.post(this.otherService.lienBack + 'creation', membre).subscribe({
       next: (data) => { 
-        this.membre = data;
-        if (this.membre != null){
-          console.log(this.membre)
-          this.msgErr = null;
+        this.verifyExist = data;
+        if (this.verifyExist == 1){
+          this.msgErrPseudo = "Le pseudo existe déjà";
         }
-        else{
-          this.msgErr = "Mauvais login ou mot de passe"
+        else if (this.verifyExist == 2){
+          this.msgErrEmail = "L'email existe déjà"
+        }
+        else {
+          this.otherService.sendMessage("Enregistrement réussi! Vous pouvez vous connecter")
+          this.route.navigateByUrl("login")
         }
        },
       error: (err) => { console.log(err) }
