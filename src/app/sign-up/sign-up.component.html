@@ -117,7 +117,7 @@
                 <!-- Material input date -->
                 <div class="md-form">
                     <i class="fa fa-calendar prefix grey-text"></i>
-                    <input type="date" id="ddn" class="form-control" formControlName="ddn">
+                    <input type="date" id="ddn" class="form-control" formControlName="ddn" min="1900-01-01" max="{{todaysdate|date:'yyyy-MM-dd'}}">
                     <label for="pseudo" class="font-weight-light pl-3">Votre date de naissance</label>
                 </div>
 

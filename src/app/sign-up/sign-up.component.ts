@@ -24,7 +24,7 @@ export class SignUpComponent implements OnInit {
   membre = { nom: null, prenom: null, ddn: null, pseudo: null, email: null, mdp: null};
   newMembre: any;
   membreForm: any;
-
+  todaysdate = new Date();
   verifyExist: any;
   
 
