@@ -10,3 +10,7 @@
     color: gray;
     font-family: Impact, "Arial Black", Arial, Verdana, sans-serif;
 }
+
+.carousel-caption{
+    transform: translateY(74%);
+}

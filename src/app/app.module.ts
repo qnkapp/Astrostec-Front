@@ -11,11 +11,14 @@ import { DetailProduitBoutiqueComponent } from './detail-produit-boutique/detail
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { ForumComponent } from './forum/forum.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { PlanetesComponent } from './planetes/planetes.component';
 import { SatellitesComponent } from './satellites/satellites.component';
 import { ChatComponent } from './chat/chat.component';
+import { VerifySameEmailDirective } from './sign-up/verifySameEmail.directive';
+import { VerifySameMdpDirective } from './sign-up/verifySameMdp.directive';
+import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { ChatComponent } from './chat/chat.component';
     SignUpComponent,
     PlanetesComponent,
     SatellitesComponent,
-    ChatComponent
+    ChatComponent,
+    VerifySameEmailDirective,
+    VerifySameMdpDirective,
+    DetailPlanetesComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,8 @@ import { ChatComponent } from './chat/chat.component';
     BrowserAnimationsModule,
     MatDialogModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
