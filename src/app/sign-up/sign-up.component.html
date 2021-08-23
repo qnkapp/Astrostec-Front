@@ -6,8 +6,73 @@
         <div class="card-body">
 
             <!-- Material form register -->
-            <form #connect="ngForm" (ngSubmit)="signup(connect.value)">
+            <form #connect="ngForm" (ngSubmit)="signup(connect.value)" [formGroup]="membreForm" appVerifySameEmail
+                appVerifySameMdp>
                 <p class="h4 text-center py-4">S'enregistrer</p>
+
+                <div *ngIf="pseudo.invalid && (pseudo.dirty || pseudo.touched) && pseudo.errors?.required"
+                    class="text-danger">
+                    Un pseudo est requis
+                </div>
+
+                <!-- Material input text -->
+                <div class="md-form">
+                    <i class="fa fa-user prefix grey-text"></i>
+                    <input type="text" id="pseudo" class="form-control" formControlName="pseudo" required>
+                    <label for="pseudo" class="font-weight-light pl-3">Votre pseudo*</label>
+                </div>
+
+                <div *ngIf="email.invalid && (email.dirty || email.touched) && (email.errors?.required || email.errors?.email)"
+                    class="text-danger">
+                    Veuillez entrer un email
+                </div>
+
+                <!-- Material input email -->
+                <div class="md-form">
+                    <i class="fa fa-envelope prefix grey-text"></i>
+                    <input type="email" id="email" name="email" class="form-control" formControlName="email" required
+                        email>
+                    <label for="email" class="font-weight-light pl-3">Votre email*</label>
+                </div>
+
+                <div *ngIf="membreForm.errors?.isNotSameEmail && sameEmail.dirty" class="text-danger">
+                    L'email est différent
+                </div>
+
+                <!-- Material input email -->
+                <div class="md-form">
+                    <i class="fa fa-exclamation-triangle prefix grey-text"></i>
+                    <input type="email" id="emailConfirm" class="form-control" formControlName="sameEmail">
+                    <label for="emailConfirm" class="font-weight-light pl-3">Confirmer votre email*</label>
+                </div>
+
+                <div *ngIf="mdp.invalid && (mdp.touched || mdp.dirty)" class="text-danger">
+                    <div *ngIf="mdp.errors?.required">
+                        Veuillez entrer un mot de passe
+                    </div>
+                    <div *ngIf="mdp.errors?.minlength">
+                        Votre mot de passe doit faire plus de 3 caractères
+                    </div>
+                </div>
+
+                <!-- Material input password -->
+                <div class="md-form">
+                    <i class="fa fa-lock prefix grey-text"></i>
+                    <input type="password" id="mdp" class="form-control" formControlName="mdp">
+                    <label for="mdp" class="font-weight-light pl-3">Votre mot de passe*</label>
+                </div>
+
+                <div *ngIf="membreForm.errors?.isNotSameMdp && sameMdp.dirty" class="text-danger">
+                    Le mot de passe est différent
+                </div>
+
+                <!-- Material input password -->
+                <div class="md-form">
+                    <i class="fa fa-exclamation-triangle prefix grey-text"></i>
+                    <input type="password" id="mdpConfirm" class="form-control" formControlName="sameMdp">
+                    <label for="mdpConfirm" class="font-weight-light pl-3">Confirmer votre mot de
+                        passe*</label>
+                </div>
 
                 <!-- Grid row -->
                 <div class="row">
@@ -16,7 +81,7 @@
                         <!-- Material input -->
                         <div class="md-form">
                             <i class="fa fa-user prefix grey-text"></i>
-                            <input type="text" id="nom" name="nom" class="form-control" ngModel="">
+                            <input type="text" id="nom" class="form-control" formControlName="nom">
                             <label for="nom" class="font-weight-light pl-3">Votre nom</label>
                         </div>
                     </div>
@@ -26,7 +91,7 @@
                     <div class="col">
                         <!-- Material input -->
                         <div class="md-form">
-                            <input type="text" id="prenom" name="prenom" class="form-control" ngModel="">
+                            <input type="text" id="prenom" class="form-control" formControlName="prenom">
                             <label for="prenom" class="font-weight-light pl-3">Votre prénom</label>
                         </div>
                     </div>
@@ -37,58 +102,12 @@
                 <!-- Material input date -->
                 <div class="md-form">
                     <i class="fa fa-calendar prefix grey-text"></i>
-                    <input type="date" id="ddn" name="ddn" class="form-control" ngModel="">
+                    <input type="date" id="ddn" class="form-control" formControlName="ddn">
                     <label for="pseudo" class="font-weight-light pl-3">Votre date de naissance</label>
                 </div>
 
-
-                <div *ngIf="pseudo.invalid && (pseudo.dirty || pseudo.touched) && pseudo.errors?.required" class="alert-danger">
-                        Un pseudo est requis
-                </div>
-
-                <!-- Material input text -->
-                <div class="md-form">
-                    <i class="fa fa-user prefix grey-text"></i>
-                    <input type="text" id="pseudo" name="pseudo" class="form-control" ngModel="" #pseudo="ngModel"
-                        required>
-                    <label for="pseudo" class="font-weight-light pl-3">Votre pseudo*</label>
-                </div>
-
-                <div *ngIf="email.invalid && (email.dirty || email.touched) && (email.errors?.required || email.errors?.email)" class="alert-danger">
-                        Un email est requis
-                </div>
-
-                <!-- Material input email -->
-                <div class="md-form">
-                    <i class="fa fa-envelope prefix grey-text"></i>
-                    <input type="email" id="email" name="email" class="form-control" ngModel="" #email="ngModel" required email>
-                    <label for="email" class="font-weight-light pl-3">Votre email*</label>
-                </div>
-
-                <!-- Material input email -->
-                <div class="md-form">
-                    <i class="fa fa-exclamation-triangle prefix grey-text"></i>
-                    <input type="email" id="emailConfirm" class="form-control">
-                    <label for="emailConfirm" class="font-weight-light pl-3">Confirmer votre email*</label>
-                </div>
-
-                <!-- Material input password -->
-                <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                    <input type="password" id="mdp" name="mdp" class="form-control" ngModel="">
-                    <label for="mdp" class="font-weight-light pl-3">Votre mot de passe*</label>
-                </div>
-
-                <!-- Material input password -->
-                <div class="md-form">
-                    <i class="fa fa-exclamation-triangle prefix grey-text"></i>
-                    <input type="password" id="mdpConfirm" class="form-control">
-                    <label for="mdpConfirm" class="font-weight-light pl-3">Confirmer votre mot de
-                        passe*</label>
-                </div>
-
                 <div class="text-center py-4 mt-3">
-                    <button class="btn btn-cyan" type="submit">S'enregistrer</button>
+                    <button class="btn btn-cyan" type="submit" [disabled]="membreForm.invalid">S'enregistrer</button>
                 </div>
             </form>
             <!-- Material form register -->
