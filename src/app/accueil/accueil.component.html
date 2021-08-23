@@ -1,7 +1,7 @@
-<div class="fond">
+<body class="fond">
 
   <!--Section: Titre-->
-  <section class="title text-center pt-5">
+  <section class="title text-center pt-5" style="width: 100%;">
     Bienvenue sur Astrotec
   </section>
   <!--Section: Titre-->
@@ -22,9 +22,7 @@
     <!--Section: Descriptif-->
     <section class="col-sm-6 mt-5 pt-5">
 
-      <br>
-
-      <div class="descriptif container text-align mt-4 pl-auto ml-4">
+      <div class="descriptif container text-align mt-auto mb-auto pl-auto ml-4">
         Visitez notre site pour en apprendre plus sur les planètes, satellites ou encore exoplanètes qui nous entourent.
         <br>Cliquez sur la catégorie d'astres qui vous intéresse et vous pourrez tout apprendre sur votre corps céleste
         préféré. Inscrivez-vous et vous pourrez vous aussi modifier les articles !
@@ -37,14 +35,16 @@
           <path
             d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
         </svg>
-         <!--Smiley-->
+        <!--Smiley-->
+
+        <br>
 
       </div>
     </section>
     <!--Section: Descriptif-->
 
     <!--Section: Carousel-->
-    <section class="col-sm-6 mt-2">
+    <section class="col-sm-6 mt-auto mb-auto">
 
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
@@ -222,6 +222,8 @@
     </section>
     <!--Section: Contact us-->
 
-  </div> <!--fond-->
+  </div> 
+  
+</body><!--fond-->
 
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
