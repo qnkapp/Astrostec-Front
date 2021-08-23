@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { PlanetesComponent } from './planetes/planetes.component';
 import { SatellitesComponent } from './satellites/satellites.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SatellitesComponent } from './satellites/satellites.component';
     ForumComponent,
     SignUpComponent,
     PlanetesComponent,
-    SatellitesComponent
+    SatellitesComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
