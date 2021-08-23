@@ -41,18 +41,27 @@
                     <label for="pseudo" class="font-weight-light pl-3">Votre date de naissance</label>
                 </div>
 
+
+                <div *ngIf="pseudo.invalid && (pseudo.dirty || pseudo.touched) && pseudo.errors?.required" class="alert-danger">
+                        Un pseudo est requis
+                </div>
+
                 <!-- Material input text -->
                 <div class="md-form">
                     <i class="fa fa-user prefix grey-text"></i>
-                    <input type="text" id="pseudo" name="pseudo" class="form-control" ngModel="">
+                    <input type="text" id="pseudo" name="pseudo" class="form-control" ngModel="" #pseudo="ngModel"
+                        required>
                     <label for="pseudo" class="font-weight-light pl-3">Votre pseudo*</label>
                 </div>
 
+                <div *ngIf="email.invalid && (email.dirty || email.touched) && (email.errors?.required || email.errors?.email)" class="alert-danger">
+                        Un email est requis
+                </div>
 
                 <!-- Material input email -->
                 <div class="md-form">
                     <i class="fa fa-envelope prefix grey-text"></i>
-                    <input type="email" id="email" name="email" class="form-control" ngModel="">
+                    <input type="email" id="email" name="email" class="form-control" ngModel="" #email="ngModel" required email>
                     <label for="email" class="font-weight-light pl-3">Votre email*</label>
                 </div>
 
