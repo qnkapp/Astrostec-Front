@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MessageService } from '../services/message.service';
 import { OtherService } from '../services/other.service';
 
 @Component({
@@ -10,7 +12,7 @@ import { OtherService } from '../services/other.service';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor(private http: HttpClient, private otherService: OtherService, private route: Router) { }
+  constructor(private http: HttpClient, private otherService: OtherService, private route: Router, private messageService: MessageService) { }
 
   membre: any;
   msgErrPseudo: any;
@@ -19,6 +21,7 @@ export class SignUpComponent implements OnInit {
   verifyExist: any;
 
   ngOnInit(): void {
+    
   }
 
   signup(membre: any): void {
@@ -29,11 +32,11 @@ export class SignUpComponent implements OnInit {
           this.msgErrPseudo = "Le pseudo existe déjà";
         }
         else if (this.verifyExist == 2){
-          this.msgErrEmail = "L'email existe déjà"
+          this.msgErrEmail = "L'email existe déjà";
         }
-        else {
-          this.otherService.sendMessage("Enregistrement réussi! Vous pouvez vous connecter")
-          this.route.navigateByUrl("login")
+        else if (this.verifyExist == 0){
+          this.messageService.sendMessage("Enregistrement réussi! Vous pouvez vous connecter")
+          this.route.navigateByUrl("connexion")
         }
        },
       error: (err) => { console.log(err) }

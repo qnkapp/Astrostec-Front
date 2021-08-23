@@ -9,15 +9,15 @@ import { OtherService } from '../services/other.service';
   styleUrls: ['./planetes.component.css']
 })
 export class PlanetesComponent implements OnInit {
-  planet: any;
+  planetes: any;
   constructor(private http: HttpClient, private otherService: OtherService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.getPlanet();
+    this.getPlanete();
   }
-  getPlanet(): void {
+  getPlanete(): void {
     this.http.get(this.otherService.lienBack + 'planet').subscribe({
-      next: (data) => { this.planet = data },
+      next: (data) => { this.planetes = data },
       error: (err) => { console.log(err) }
     })
   }
