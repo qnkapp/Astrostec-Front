@@ -5,8 +5,7 @@
     </div>
     <div class="col-sm-8">
       <h1>{{produit.nom}}</h1>
-      <p class="mb-2 text-muted text-uppercase">Catégorie</p>
-      <p><span class="mr-1"><strong style="font-size: 16px;">{{produit.prix}}€</strong></span></p>
+      <p><span class="mr-1"><strong style="font-size: 16px;">{{parseFloat(produit.prix)}}€</strong></span></p>
       <p class="pt-1">{{produit.description}}</p>
       
       <div class="table-responsive">
@@ -24,7 +23,7 @@
         <p>Quantité : </p>
         <div class="def-number-input number-input safari_only">
           <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-          <input class="quantity" min="0" name="quantity" value="1" type="number">
+          <input class="quantity" min="0" max={{produit.stock}} name="quantity" value="1" type="number">
           <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
         </div>
       </div>

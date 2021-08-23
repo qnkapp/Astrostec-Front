@@ -12,7 +12,7 @@
                     <div class="product-img">
                         <a (click)="goToDetail(p)" data-abc="true"> <img src={{p.image}} width="227">
                         </a>
-                        <span style="top: 0.1em;background-color: rgba(0, 0, 0, 0.5); color: white;"><i class="fa fa-rupee"></i>{{p.prix}}€</span>
+                        <span style="top: 0.1em;background-color: rgba(0, 0, 0, 0.5); color: white;"><i class="fa fa-rupee"></i>{{parseFloat(p.prix)}}€</span>
                         <div class="product-action">
                             <div class="product-action-style" style="border: 1px solid black;">
                                 <a (click)="goToDetail(p)"> <i class="fa fa-plus"></i></a>
