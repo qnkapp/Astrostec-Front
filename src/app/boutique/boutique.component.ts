@@ -38,4 +38,7 @@ export class BoutiqueComponent implements OnInit {
     });
   }
 
+  parseFloat(prix:any):number{
+    return prix.toFixed(2);
+  }
 }

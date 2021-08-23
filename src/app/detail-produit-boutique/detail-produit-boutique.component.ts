@@ -24,4 +24,8 @@ export class DetailProduitBoutiqueComponent implements OnInit {
     });
   }
 
+  parseFloat(prix:any):number{
+    return prix.toFixed(2);
+  }
+
 }
