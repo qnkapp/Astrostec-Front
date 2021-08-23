@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DetailPlanetesComponent } from '../detail-planetes/detail-planetes.component';
+import { OtherService } from '../services/other.service';
 
 @Component({
   selector: 'app-planetes',
@@ -6,10 +10,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./planetes.component.css']
 })
 export class PlanetesComponent implements OnInit {
-
-  constructor() { }
+  planetes: any;
+  constructor(private http: HttpClient, private otherService: OtherService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.getPlanete();
+  }
+  getPlanete(): void {
+    this.http.get(this.otherService.lienBack + 'planet').subscribe({
+      next: (data) => { this.planetes = data },
+      error: (err) => { console.log(err) }
+    })
+  }
+
+  goToDetail():void{
+    const mydial = this.dialog.open(DetailPlanetesComponent);
   }
 
 }

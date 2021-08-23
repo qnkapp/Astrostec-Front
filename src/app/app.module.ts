@@ -18,6 +18,7 @@ import { SatellitesComponent } from './satellites/satellites.component';
 import { ChatComponent } from './chat/chat.component';
 import { VerifySameEmailDirective } from './sign-up/verifySameEmail.directive';
 import { VerifySameMdpDirective } from './sign-up/verifySameMdp.directive';
+import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { VerifySameMdpDirective } from './sign-up/verifySameMdp.directive';
     SatellitesComponent,
     ChatComponent,
     VerifySameEmailDirective,
-    VerifySameMdpDirective
+    VerifySameMdpDirective,
+    DetailPlanetesComponent
   ],
   imports: [
     BrowserModule,
