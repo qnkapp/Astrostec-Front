@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { DetailPlanetesComponent } from '../detail-planetes/detail-planetes.component';
 import { OtherService } from '../services/other.service';
 
 @Component({
@@ -20,6 +21,11 @@ export class PlanetesComponent implements OnInit {
       next: (data) => { this.planetes = data },
       error: (err) => { console.log(err) }
     })
+  }
+
+  goToDetail(planete: any):void{
+    const mydial = this.dialog.open(DetailPlanetesComponent);
+    data: planete
   }
 
 }
