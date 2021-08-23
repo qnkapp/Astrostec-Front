@@ -12,13 +12,13 @@
     <div class="chat-global">
        
         <div class="nav-top">
-            <p>Boite de chat</p>
-            <div class="location">
-                <i class="fas fa-angle-left"></i>
-                <p>Retour</p>
-            </div>
+                <p>Boite de chat</p>
+                <div class="location">
+                    <i class="fas fa-angle-left"></i>
+                    <p>Retour</p>
+                </div>
             <!-- ce sera une illustration d'un eventuel chat sans réels utilisateur appartenant à la BDD-->
-            <div class="utilisateur">
+                <div class="utilisateur">
 
                 <p>Sacha</p>
                 <p>En ligne</p>
@@ -26,9 +26,6 @@
              <div class="notification">
                 <i class="fas fa-bell"></i>
 
-             </div>
-             <div class="send">
-                <i class="fas fa-paper-plane"></i>
              </div>
 
              <div class="signalement">
@@ -38,29 +35,43 @@
 
              <div class="conversation">
                  <div class="talk right">
-                     <!--<img src="" alt="">-->
+                    <img src="../../assets/icons/icons_chat/avatar2.svg" class="rounded float-right" alt="...">
                      <p>Lorem ipsem</p>
 
                  </div>
                  <div class="talk left">
-                     <!--<img src="" alt="">-->
+                    <img src="../../assets/icons/icons_chat/avatar1.svg" class="rounded float-left" alt="...">
                     <p>Lorem ipsem</p>
 
                 </div>
                 <div class="talk right">
-                    <!--<img src="" alt="">-->
+                    <img src="../../assets/icons/icons_chat/avatar2.svg" class="rounded float-right" alt="...">
                     <p>Lorem ipsem Lorem ipsem Lorem ipsem Lorem ipsem</p>
 
                 </div>
                 <div class="talk left">
-                    <!--<img src="" alt="">-->
+                    <img src="../../assets/icons/icons_chat/avatar1.svg" class="rounded float-left" alt="...">
                     <p>Lorem ipsem Lorem ipsem Lorem ipsem</p>
 
                 </div>
              </div>
-
-
         </div>
+            <Form class="chat-form">
+                    <div class="container_input_stuff">
+                        <div class="logo-icons">
+                            <i class="fas fa-paperclip"></i>
+                        </div>
+                         <div class="messages-input">
+                             <template aria-placeholder="Ecrivez votre message..." cols="4" row="150" ></template>
+                             <i class="fas fa-grin"></i>
+                         </div>
+
+                         <button class="send">
+                            <i class="fas fa-paper-plane"></i>
+                         </button>
+                    </div>
+            </Form>
+
     </div>
     
 </body>
