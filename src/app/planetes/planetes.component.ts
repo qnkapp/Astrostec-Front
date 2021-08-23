@@ -23,8 +23,9 @@ export class PlanetesComponent implements OnInit {
     })
   }
 
-  goToDetail():void{
+  goToDetail(planete: any):void{
     const mydial = this.dialog.open(DetailPlanetesComponent);
+    data: planete
   }
 
 }
