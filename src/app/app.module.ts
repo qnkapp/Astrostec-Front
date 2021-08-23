@@ -16,6 +16,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { PlanetesComponent } from './planetes/planetes.component';
 import { SatellitesComponent } from './satellites/satellites.component';
 import { ChatComponent } from './chat/chat.component';
+import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ChatComponent } from './chat/chat.component';
     SignUpComponent,
     PlanetesComponent,
     SatellitesComponent,
-    ChatComponent
+    ChatComponent,
+    DetailPlanetesComponent
   ],
   imports: [
     BrowserModule,
