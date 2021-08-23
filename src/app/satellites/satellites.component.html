@@ -1,1 +1,27 @@
-<p>satellites works!</p>
+
+
+<!-- <p>satellites works!</p> -->
+<div class="fond">
+
+    <br>
+    <br>
+
+    <div class="title text-center" style="width: 100%;">
+        Les satellites
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="soustitre container text-center mb-4">
+        Tout savoir sur les satellites de notre système solaire
+    </div>
+    <div class="container">
+        <div class="col-sm-6" *ngFor='let s of satellites'>
+            <h1> {{ s.name }} </h1>
+        </div>
+    </div>
+
+</div>
