@@ -7,62 +7,86 @@
     <title>Messagerie instantanée</title>
 </head>
 <body>
-
-
-    <div class="chat-global">
-       
-        <div class="nav-top">
-                <p>Boite de chat</p>
+<div class="chat-global">
+    <!--Navbar -->
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark red lighten-1">
+            <div class="nav-top">
                 <div class="location">
+                <button type="button" class="btn btn-dribbble">
                     <i class="fas fa-angle-left"></i>
-                    <p>Retour</p>
-                </div>
-            <!-- ce sera une illustration d'un eventuel chat sans réels utilisateur appartenant à la BDD-->
-                <div class="utilisateur">
+                   
+                </button> 
+                <p>Discussions</p>
+            </div>
+            
+    <!-- ce sera une illustration d'un eventuel chat sans réels utilisateur appartenant à la BDD-->
+            <div class="utilisateur">
 
                 <p>Sacha</p>
                 <p>En ligne</p>
-             </div> 
-             <div class="notification">
+            </div> 
+            <div class="notification">
                 <i class="fas fa-bell"></i>
 
-             </div>
+            </div>
 
-             <div class="signalement">
+            <div class="signalement">
                 <i class="fas fa-exclamation-triangle"></i>
 
-             </div>
+            </div>
+     </div>
+    
+    
+   
+     <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+      
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item avatar">
+          <a class="nav-link p-0" href="#">
+            <img src="../../assets/icons/icons_chat/avatar2.svg" class="rounded-circle z-depth-0"
+              alt="avatar image" height="35">
+          </a>
+        </li>
+      </ul>
+       </div>
+     </nav>
+      <!--/.Navbar -->
 
-             <div class="conversation">
+
+
+
+       
+
+              <div class="conversation">
                  <div class="talk right">
-                    <img src="../../assets/icons/icons_chat/avatar2.svg" class="rounded float-right" alt="...">
+                    <img src="../../assets/icons/icons_chat/avatar2.svg" class="rounded float-right" alt="avatar image" height="35">
                      <p>Lorem ipsem</p>
 
                  </div>
                  <div class="talk left">
-                    <img src="../../assets/icons/icons_chat/avatar1.svg" class="rounded float-left" alt="...">
+                    <img src="../../assets/icons/icons_chat/avatar1.svg" class="rounded float-left" alt="avatar image" height="35">
                     <p>Lorem ipsem</p>
 
                 </div>
                 <div class="talk right">
-                    <img src="../../assets/icons/icons_chat/avatar2.svg" class="rounded float-right" alt="...">
+                    <img src="../../assets/icons/icons_chat/avatar2.svg" class="rounded float-right" alt="avatar image" height="35">
                     <p>Lorem ipsem Lorem ipsem Lorem ipsem Lorem ipsem</p>
 
                 </div>
                 <div class="talk left">
-                    <img src="../../assets/icons/icons_chat/avatar1.svg" class="rounded float-left" alt="...">
+                    <img src="../../assets/icons/icons_chat/avatar1.svg" class="rounded float-left" alt="avatar image" height="35">
                     <p>Lorem ipsem Lorem ipsem Lorem ipsem</p>
 
                 </div>
-             </div>
+             
         </div>
             <Form class="chat-form">
                     <div class="container_input_stuff">
                         <div class="logo-icons">
                             <i class="fas fa-paperclip"></i>
                         </div>
-                         <div class="messages-input">
-                             <template aria-placeholder="Ecrivez votre message..." cols="4" row="150" ></template>
+                         <div class="text-center">
+                             <textarea placeholder="Ecrivez votre message..." cols="90" row="150" ></textarea>
                              <i class="fas fa-grin"></i>
                          </div>
 

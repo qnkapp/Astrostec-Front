@@ -11,6 +11,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
   { component: BoutiqueComponent, path: 'boutique' },
+  {path: '', redirectTo: 'Accueil', pathMatch: 'full'},
   { component: AccueilComponent, path: 'Accueil' },
   { component: LoginComponent, path: 'connexion' },
   {
