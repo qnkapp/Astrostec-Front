@@ -1,9 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MessageService } from '../services/message.service';
 import { OtherService } from '../services/other.service';
+import { verifySameEmail } from './verifySameEmail.directive';
+import { verifySameMdp } from './verifySameMdp.directive';
 
 @Component({
   selector: 'app-sign-up',
@@ -12,33 +14,59 @@ import { OtherService } from '../services/other.service';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor(private http: HttpClient, private otherService: OtherService, private route: Router, private messageService: MessageService) { }
+  constructor(
+    private http: HttpClient,
+    private otherService: OtherService,
+    private route: Router,
+    private messageService: MessageService) { }
 
-  membre: any;
+  membre = { nom: null, prenom: null, ddn: null, pseudo: null, email: null, mdp: null};
   msgErrPseudo: any;
   msgErrEmail: any;
   msgErrMdp: any;
   verifyExist: any;
 
+  membreForm: any;
+
   ngOnInit(): void {
-    
+    this.membreForm = new FormGroup({
+      nom: new FormControl(this.membre.nom),
+      prenom: new FormControl(this.membre.prenom),
+      ddn: new FormControl(this.membre.ddn),
+      pseudo: new FormControl(this.membre.pseudo, [Validators.required]),
+      email: new FormControl(this.membre.email, [Validators.required]),
+      sameEmail: new FormControl(),
+      mdp: new FormControl(this.membre.mdp, [Validators.required, Validators.minLength(3)]),
+      sameMdp: new FormControl()
+    }, { validators: [verifySameEmail, verifySameMdp] });;
+
+
   }
+
+  get nom() { return this.membreForm.get('nom'); }
+  get prenom() { return this.membreForm.get('prenom'); }
+  get ddn() { return this.membreForm.get('ddn'); }
+  get pseudo() { return this.membreForm.get('pseudo'); }
+  get email() { return this.membreForm.get('email'); }
+  get sameEmail() { return this.membreForm.get('sameEmail'); }
+  get mdp() { return this.membreForm.get('mdp'); }
+  get sameMdp() { return this.membreForm.get('sameMdp'); }
 
   signup(membre: any): void {
     this.http.post(this.otherService.lienBack + 'creation', membre).subscribe({
-      next: (data) => { 
+      next: (data) => {
         this.verifyExist = data;
-        if (this.verifyExist == 1){
+        if (this.verifyExist == 1) {
           this.msgErrPseudo = "Le pseudo existe déjà";
         }
-        else if (this.verifyExist == 2){
+        else if (this.verifyExist == 2) {
           this.msgErrEmail = "L'email existe déjà";
         }
-        else if (this.verifyExist == 0){
+        else if (this.verifyExist == 0) {
           this.messageService.sendMessage("Enregistrement réussi! Vous pouvez vous connecter")
           this.route.navigateByUrl("connexion")
         }
-       },
+      },
       error: (err) => { console.log(err) }
     })
   }
