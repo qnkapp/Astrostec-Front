@@ -1,8 +1,4 @@
-<div class="container">
-    <div class="col-sm-6" *ngFor='let s of satellites'>
-        <h1> {{ s.name }} </h1>
-    </div>
-</div>
+
 
 <!-- <p>satellites works!</p> -->
 <div class="fond">
@@ -22,6 +18,10 @@
     <div class="soustitre container text-center mb-4">
         Tout savoir sur les satellites de notre système solaire
     </div>
-
+    <div class="container">
+        <div class="col-sm-6" *ngFor='let s of satellites'>
+            <h1> {{ s.name }} </h1>
+        </div>
+    </div>
 
 </div>
