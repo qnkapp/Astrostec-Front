@@ -10,6 +10,12 @@
                 appVerifySameMdp>
                 <p class="h4 text-center py-4">S'enregistrer</p>
 
+                <!-- Envoie un message d'erreur si l'email est déjà dans la BDD -->
+                <div *ngIf="verifyExist == 1 || verifyExist == 3" class="text-danger">
+                    Ce pseudo est déjà utilisé
+                </div>
+
+                <!-- Vérifie qu'un pseudo est bien entré -->
                 <div *ngIf="pseudo.invalid && (pseudo.dirty || pseudo.touched) && pseudo.errors?.required"
                     class="text-danger">
                     Un pseudo est requis
@@ -22,9 +28,15 @@
                     <label for="pseudo" class="font-weight-light pl-3">Votre pseudo*</label>
                 </div>
 
+                <!-- Vérifie qu'un email est bien entré -->
                 <div *ngIf="email.invalid && (email.dirty || email.touched) && (email.errors?.required || email.errors?.email)"
                     class="text-danger">
                     Veuillez entrer un email
+                </div>
+
+                <!-- Envoie un message d'erreur si l'email est déjà dans la BDD -->
+                <div *ngIf="verifyExist == 2 || verifyExist == 3" class="text-danger">
+                    Cet email est déjà utilisé
                 </div>
 
                 <!-- Material input email -->
@@ -35,6 +47,7 @@
                     <label for="email" class="font-weight-light pl-3">Votre email*</label>
                 </div>
 
+                <!-- Vérifie que les champs email et confirmer Email sont les mêmes -->
                 <div *ngIf="membreForm.errors?.isNotSameEmail && sameEmail.dirty" class="text-danger">
                     L'email est différent
                 </div>
@@ -54,6 +67,8 @@
                         Votre mot de passe doit faire plus de 3 caractères
                     </div>
                 </div>
+
+
 
                 <!-- Material input password -->
                 <div class="md-form">
@@ -102,7 +117,7 @@
                 <!-- Material input date -->
                 <div class="md-form">
                     <i class="fa fa-calendar prefix grey-text"></i>
-                    <input type="date" id="ddn" class="form-control" formControlName="ddn">
+                    <input type="date" id="ddn" class="form-control" formControlName="ddn" min="1900-01-01" max="{{todaysdate|date:'yyyy-MM-dd'}}">
                     <label for="pseudo" class="font-weight-light pl-3">Votre date de naissance</label>
                 </div>
 

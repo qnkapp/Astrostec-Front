@@ -4,8 +4,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MessageService } from '../services/message.service';
 import { OtherService } from '../services/other.service';
-import { verifySameEmail } from './verifySameEmail.directive';
-import { verifySameMdp } from './verifySameMdp.directive';
+import { verifySameEmail } from './sign-up-directives/verifySameEmail.directive';
+import { verifySameMdp } from './sign-up-directives/verifySameMdp.directive';
 
 @Component({
   selector: 'app-sign-up',
@@ -18,15 +18,15 @@ export class SignUpComponent implements OnInit {
     private http: HttpClient,
     private otherService: OtherService,
     private route: Router,
-    private messageService: MessageService) { }
+    private messageService: MessageService,
+    ) { }
 
   membre = { nom: null, prenom: null, ddn: null, pseudo: null, email: null, mdp: null};
-  msgErrPseudo: any;
-  msgErrEmail: any;
-  msgErrMdp: any;
-  verifyExist: any;
-
+  newMembre: any;
   membreForm: any;
+  todaysdate = new Date();
+  verifyExist: any;
+  
 
   ngOnInit(): void {
     this.membreForm = new FormGroup({
@@ -56,19 +56,14 @@ export class SignUpComponent implements OnInit {
     this.http.post(this.otherService.lienBack + 'creation', membre).subscribe({
       next: (data) => {
         this.verifyExist = data;
-        if (this.verifyExist == 1) {
-          this.msgErrPseudo = "Le pseudo existe déjà";
-        }
-        else if (this.verifyExist == 2) {
-          this.msgErrEmail = "L'email existe déjà";
-        }
-        else if (this.verifyExist == 0) {
-          this.messageService.sendMessage("Enregistrement réussi! Vous pouvez vous connecter")
-          this.route.navigateByUrl("connexion")
+        if (this.verifyExist == 0) {
+          this.messageService.sendMessage("Enregistrement réussi! Vous pouvez vous connecter");
+          this.route.navigateByUrl("connexion");
         }
       },
       error: (err) => { console.log(err) }
     })
   }
+
 
 }
