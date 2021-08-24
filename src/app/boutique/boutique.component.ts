@@ -19,8 +19,12 @@ export class BoutiqueComponent implements OnInit {
     this.getProducts();
   }
 
-  goToDetail():void{
-    const mydial = this.dialog.open(DetailProduitBoutiqueComponent);
+  goToDetail(p:any):void{
+    const mydial = this.dialog.open(DetailProduitBoutiqueComponent,{
+      height:'450px',
+      width:'70%',
+      data:p,
+    });
   }
 
   goToCart():void{
@@ -34,4 +38,7 @@ export class BoutiqueComponent implements OnInit {
     });
   }
 
+  parseFloat(prix:any):number{
+    return prix.toFixed(2);
+  }
 }

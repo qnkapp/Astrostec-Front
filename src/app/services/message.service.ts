@@ -7,12 +7,12 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class MessageService {
 
-  private messageSource = new BehaviorSubject<String>("test");
-  currentMessage = this.messageSource.asObservable();
+  private message = new BehaviorSubject<String>('');
+  sharedMessage = this.message.asObservable();
 
   constructor() { }
 
   sendMessage(message: String) {
-    this.messageSource.next(message);
+    this.message.next(message);
   }
 }

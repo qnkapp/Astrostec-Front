@@ -1,10 +1,10 @@
-<div class="fond">
+<body class="fond">
 
     <br>
     <br>
 
     <div class="title text-center" style="width: 100%;">
-        Les planètes
+        Les planètes du système solaire
     </div>
 
     <br>
@@ -12,39 +12,44 @@
     <br>
     <br>
 
-    <div class="soustitre container text-center mb-4">
+    <div class="soustitre container text-center">
         Tout savoir sur les planètes de notre système solaire
     </div>
 
     <br>
     <br>
+    <br>
+    <br>
 
-    <div class="descriptif container text-align mt-4 pl-auto ml-4">
-        Le système solaire est le système planétaire du Soleil, auquel appartient la Terre. 
-        Il est composé de cette étoile et des objets célestes gravitant autour d'elle : 
-        les huit planètes confirmées et leurs satellites naturels connus.
-
+    <div class="descriptif container text-center">
+        Le Système solaire est le nom donné à notre système planétaire, composé du Soleil et de l'ensemble des objets célestes qui l'accompagnent et tournent autour de lui.
+        
     </div>
 
     <br>
     <br>
+    <br>
+    <br>
 
-    <div class="descriptif container text-align mt-4 pl-auto ml-4">
+    <div class="descriptif container-fluid">
         <div class="row">
             <div class="col-sm-6" *ngFor='let p of planetes'>
-                <div class="card mb-3" style="max-width: 540px;" >
-                    <div class="row g-0">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0 text-center">
                         <div class="col-md-4">
-                            <img src='/assets/Img/planets/Mercure.png' alt="..."
-                                class="img-fluid" />
+                            <div
+                                style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: black;">
+                                <img width="95%"  src="/assets/Img/planets_black/{{p.name}}.jpg" alt="..." />
+                            </div>
+
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <p class="card-text">
-                                    Cliquez ici pour en apprendre plus sur {{ p.name }}
+                                    Pour en apprendre plus sur {{ p.name }}, cliquez ici :
                                 </p>
                                 <p class="card-text">
-                                    <button (click)="goToDetail()" class="btn btn-grey">{{ p.name }}</button>
+                                    <button (click)="goToDetail(p)" class="btn btn-grey">{{ p.name }}</button>
                                 </p>
                             </div>
                         </div>
@@ -53,6 +58,6 @@
             </div>
         </div>
     </div>
-
-</div>
+ 
+</body>
 

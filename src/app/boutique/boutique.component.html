@@ -10,12 +10,12 @@
             <div class="col-md-4" *ngFor='let p of produits'>
                 <div class="product-wrapper mb-30 text-center">
                     <div class="product-img">
-                        <a (click)="goToDetail()" data-abc="true"> <img src="https://i.imgur.com/tL7ZE46.jpg" alt="">
+                        <a (click)="goToDetail(p)" data-abc="true"> <img src={{p.image}} width="227">
                         </a>
-                        <span class="text-center"><i class="fa fa-rupee"></i>{{p.prix}}€</span>
+                        <span style="top: 0.1em;background-color: rgba(0, 0, 0, 0.5); color: white;"><i class="fa fa-rupee"></i>{{parseFloat(p.prix)}}€</span>
                         <div class="product-action">
-                            <div class="product-action-style">
-                                <a (click)="goToDetail()"> <i class="fa fa-plus"></i></a>
+                            <div class="product-action-style" style="border: 1px solid black;">
+                                <a (click)="goToDetail(p)"> <i class="fa fa-plus"></i></a>
                                 <a href="#"> <i class="fa fa-shopping-cart"></i> </a>
                             </div>
                         </div>

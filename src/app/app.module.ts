@@ -16,8 +16,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { PlanetesComponent } from './planetes/planetes.component';
 import { SatellitesComponent } from './satellites/satellites.component';
 import { ChatComponent } from './chat/chat.component';
-import { VerifySameEmailDirective } from './sign-up/verifySameEmail.directive';
-import { VerifySameMdpDirective } from './sign-up/verifySameMdp.directive';
+import { VerifySameEmailDirective } from './sign-up/sign-up-directives/verifySameEmail.directive';
+import { VerifySameMdpDirective } from './sign-up/sign-up-directives/verifySameMdp.directive';
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
 
 @NgModule({
