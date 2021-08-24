@@ -21,13 +21,8 @@ import { VerifySameMdpDirective } from './sign-up/sign-up-directives/verifySameM
 
 import { DetailSatellitesComponent } from './detail-satellites/detail-satellites.component';
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
-import { DiscussionsComponent } from './discussions/discussions.component';
-import { SolaireComponent } from './solaire/solaire.component';
-import { SourceComponent } from './source/source.component';
-import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
+import { PanierComponent } from './panier/panier.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
-
-
 
 @NgModule({
   declarations: [
@@ -44,11 +39,7 @@ import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
     VerifySameEmailDirective,
     VerifySameMdpDirective,
     DetailPlanetesComponent,
-    DiscussionsComponent,
-    DetailSatellitesComponent,
-    SolaireComponent,
-    SourceComponent,
-    GestionMembreComponent,
+    PanierComponent,
     PiedDePageComponent
   ],
   imports: [
@@ -64,4 +55,6 @@ import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+ }
