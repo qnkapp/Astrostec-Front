@@ -1,56 +1,55 @@
 <body class="fond">
+    <div class="container">
 
-    <br>
-    <br>
+        <br>
+        <br>
 
-    <div class="title text-center" style="width: 100%;">
-        Les planètes du système solaire
-    </div>
+        <div class="title text-center" style="width: 100%;">
+            Les planètes du système solaire
+        </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
+        <br>
+        <br>
 
-    <div class="soustitre container text-center">
-        Tout savoir sur les planètes de notre système solaire
-    </div>
+        <div class="soustitre container text-center">
+            Tout savoir sur les planètes de notre système solaire
+        </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
+        <br>
+        <br>
 
-    <div class="descriptif container text-center">
-        Le Système solaire est le nom donné à notre système planétaire, composé du Soleil et de l'ensemble des objets célestes qui l'accompagnent et tournent autour de lui.
-        
-    </div>
+        <div class="descriptif container text-center">
+            Le Système solaire est le nom donné à notre système planétaire, composé du Soleil et de l'ensemble des
+            objets célestes qui l'accompagnent et gravitent autour de lui. 
+            <br>
+            On compte parmi ses corps huit planètes, leurs satellites naturels, des planètes naines et des milliards de petits corps (astéroïdes, comètes, poussières etc.) Les planètes telluriques, à surface solide, proches du Soleil sont, par ordre de distance à notre étoile, Mercure, Vénus, la Terre et Mars. Les planètes géantes et gazeuses, plus éloignées, sont Jupiter, Saturne, Uranus et Neptune.
 
-    <br>
-    <br>
-    <br>
-    <br>
+        </div>
 
-    <div class="descriptif container-fluid">
-        <div class="row">
-            <div class="col-sm-6" *ngFor='let p of planetes'>
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0 text-center">
-                        <div class="col-md-4">
-                            <div
-                                style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: black;">
-                                <img width="95%"  src="/assets/Img/planets_black/{{p.name}}.jpg" alt="..." />
+        <br>
+        <br>
+
+        <div>
+            <div class="row">
+                <div class="col-sm-6" *ngFor='let p of planetes'>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0 text-center">
+                            <div class="col-md-4">
+                                <div
+                                    style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: black;">
+                                    <img width="95%" src="/assets/Img/planets_black/{{p.name}}.jpg" alt="..." />
+                                </div>
+
                             </div>
-
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Pour en apprendre plus sur {{ p.name }}, cliquez ici :
-                                </p>
-                                <p class="card-text">
-                                    <button (click)="goToDetail(p)" class="btn btn-grey">{{ p.name }}</button>
-                                </p>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Pour en apprendre plus sur {{ p.name }}, cliquez ici :
+                                    </p>
+                                    <p class="card-text">
+                                        <button (click)="goToDetail(p)" class="btn btn-grey">{{ p.name }}</button>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -58,6 +57,4 @@
             </div>
         </div>
     </div>
- 
 </body>
-
