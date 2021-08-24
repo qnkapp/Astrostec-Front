@@ -14,11 +14,8 @@ import { DiscussionsComponent } from './discussions/discussions.component';
 import { SolaireComponent } from './solaire/solaire.component';
 import { SourceComponent } from './source/source.component';
 import { AuthGuard } from './_helpers/auth.guard';
-<<<<<<< HEAD
 import { SujetsComponent } from './sujets/sujets.component';
-=======
 import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
->>>>>>> 957104681d0be5295ed834d2b4cdfdb2c6d93852
 
 const routes: Routes = [
   { component: BoutiqueComponent, path: 'boutique' },

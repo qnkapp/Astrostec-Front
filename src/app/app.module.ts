@@ -24,11 +24,8 @@ import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.compo
 import { DiscussionsComponent } from './discussions/discussions.component';
 import { SolaireComponent } from './solaire/solaire.component';
 import { SourceComponent } from './source/source.component';
-<<<<<<< HEAD
 import { SujetsComponent } from './sujets/sujets.component';
-=======
 import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
->>>>>>> 957104681d0be5295ed834d2b4cdfdb2c6d93852
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
 
 
@@ -52,11 +49,8 @@ import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
     DetailSatellitesComponent,
     SolaireComponent,
     SourceComponent,
-<<<<<<< HEAD
     SujetsComponent,
-=======
     GestionMembreComponent,
->>>>>>> 957104681d0be5295ed834d2b4cdfdb2c6d93852
     PiedDePageComponent
   ],
   imports: [
