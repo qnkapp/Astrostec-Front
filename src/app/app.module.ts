@@ -41,12 +41,8 @@ import { SujetsComponent } from './sujets/sujets.component';
     VerifySameMdpDirective,
     DetailPlanetesComponent,
     PanierComponent,
-<<<<<<< HEAD
     PiedDePageComponent,
     SujetsComponent
-=======
-    PiedDePageComponent
->>>>>>> 943a645a475e05e479d87e9e7b248cd0d84c5da0
   ],
   imports: [
     BrowserModule,
