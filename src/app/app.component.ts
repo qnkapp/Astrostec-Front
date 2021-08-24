@@ -14,5 +14,9 @@ export class AppComponent {
 
 currentUser = this.authService.currentUserValue;
 
+logout() : void {
+  this.authService.logout();
+}
+
 }
 
