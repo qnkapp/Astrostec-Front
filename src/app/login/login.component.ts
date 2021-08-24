@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { OtherService } from '../services/other.service';
 import { HttpClient } from '@angular/common/http';
 import { MessageService } from '../services/message.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { MessageService } from '../services/message.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http: HttpClient, private otherService: OtherService, private messageService: MessageService) { }
+  constructor(private http: HttpClient, private otherService: OtherService, private messageService: MessageService, private authService: AuthService) { }
 
   message: any;
   membre: any;
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   connexion(membre: any): void {
-    this.http.post(this.otherService.lienBack + 'login', membre).subscribe({
+    this.authService.login(membre).subscribe({
       next: (data) => { 
         this.membre = data;
         if (this.membre != null){
