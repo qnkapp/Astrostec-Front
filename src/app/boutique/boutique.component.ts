@@ -4,6 +4,7 @@ import { DetailProduitBoutiqueComponent } from '../detail-produit-boutique/detai
 import { PanierComponent } from '../panier/panier.component';
 import { HttpClient } from '@angular/common/http';
 import { OtherService } from '../services/other.service';
+import { CartService } from '../services/cart.service';
  
 @Component({
   selector: 'app-boutique',
@@ -13,11 +14,13 @@ import { OtherService } from '../services/other.service';
 export class BoutiqueComponent implements OnInit {
 
   produits:any;
-  constructor(private dialog:MatDialog, private http:HttpClient,private otherService:OtherService) { }
+
+  constructor(private dialog:MatDialog, private http:HttpClient,private otherService:OtherService,private cartService:CartService) { }
 
   ngOnInit(): void {
     this.getProducts();
   }
+// push
 
   goToDetail(p:any):void{
     const mydial = this.dialog.open(DetailProduitBoutiqueComponent,{
@@ -37,8 +40,14 @@ export class BoutiqueComponent implements OnInit {
       error: (err) => { console.log(err)}
     });
   }
-
   parseFloat(prix:any):number{
     return prix.toFixed(2);
   }
+
+  addToCart(product: any,qty:number) {
+    this.cartService.addToCart(product,qty);
+    window.alert('Le produit a bien été ajouté au panier !');
+    console.log(this.cartService.getItems());
+  }
+
 }

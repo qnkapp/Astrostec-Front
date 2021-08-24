@@ -16,7 +16,7 @@
                         <div class="product-action">
                             <div class="product-action-style" style="border: 1px solid black;">
                                 <a (click)="goToDetail(p)"> <i class="fa fa-plus"></i></a>
-                                <a href="#"> <i class="fa fa-shopping-cart"></i> </a>
+                                <a (click)="addToCart(p,1)"> <i class="fa fa-shopping-cart"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -29,6 +29,7 @@
         </div>
 
     </div>
+    
     <div id="icon-cart" style="width: 5%; height: 8%;"><a (click)="goToCart()" id="cart-bottom" style="height: 6%;"> <i class="fa fa-shopping-cart" style="color: white; font-size: 1.7em;"></i></a></div>
 
 </div>
