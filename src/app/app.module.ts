@@ -23,6 +23,7 @@ import { DetailSatellitesComponent } from './detail-satellites/detail-satellites
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
 import { PanierComponent } from './panier/panier.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
+import { SujetsComponent } from './sujets/sujets.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
     DetailPlanetesComponent,
     PanierComponent,
     PiedDePageComponent,
+    SujetsComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,7 @@ import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
     MatDialogModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
