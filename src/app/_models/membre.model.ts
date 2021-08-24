@@ -7,5 +7,5 @@ export class Membre {
     prenom!: String;
     ddn!: Date;
     admin!: boolean;
-    token!: string;
+    //token!: string;
 }
