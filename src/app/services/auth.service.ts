@@ -42,4 +42,10 @@ export class AuthService {
       return true;
     } else return false;
   }
+
+  public isAdmin(): boolean {
+    if (this.currentUserValue?.admin){
+      return true;
+    } else return false;
+  }
 }

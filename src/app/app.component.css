@@ -1,18 +1,15 @@
 .navbar-nav .nav-item .nav-link {
     color: white;
 }
-
+.navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
-    color: rgb(255, 208, 155);
-}
-
-.navbar-nav .dropdown-menu:hover .dropdown-item {
     color: rgb(255, 208, 155);
 }
 
 .navbar-inner {
     background:transparent;
 }
+
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
     background-color:rgb(156, 150, 150);

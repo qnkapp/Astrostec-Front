@@ -43,12 +43,29 @@
                     <a class="nav-link" routerLink='connexion'>Connexion</a>
                 </li>
 
-                <li class="nav-item" routerLinkActive='active' *ngIf="authService.isConnected()">
-                    <a class="nav-link" routerLink='Accueil' (click)="authService.logout()">Déconnexion</a>
+                <li class="nav-item" routerLinkActive='active' *ngIf="authService.isConnected() && !authService.isAdmin()">
+                    <a class="nav-link" routerLink='connexion' (click)="authService.logout()">Déconnexion</a>
                 </li>
+
+                <li class="nav-item dropdown" *ngIf="authService.isAdmin()">
+                    <a class="nav-link dropdown-toggle" routerLinkActive='active' id="navbardrop" data-toggle="dropdown">
+        Administration
+      </a>
+                    <div class="dropdown-menu black" role="menu">
+                        <li><a class="dropdown-item text-white" routerLink='gestion-membre'>Gestion Membre</a></li>
+                        <li><a class="dropdown-item text-white" routerLink='connexion' (click)="authService.logout()">Deconnexion</a></li>
+                    </div>
+                </li>
+
             </ul>
         </div>
     </nav>
 
 </div>
+
+<br>
+<br>
+<br>
+<br>
+
 <router-outlet></router-outlet>

@@ -43,6 +43,7 @@ body {
     position:relative;
     padding-bottom: auto;   /* Hauteur du pied de page */
  }
+ 
  footer {
     position:absolute;
     bottom:0;  /* on le colle en bas */
