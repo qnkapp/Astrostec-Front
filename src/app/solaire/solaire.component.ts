@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { OtherService } from '../services/other.service';
 
 @Component({
   selector: 'app-solaire',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SolaireComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient, private otherService: OtherService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
