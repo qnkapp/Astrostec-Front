@@ -15,7 +15,7 @@ import { PlaneteService } from '../services/planete.service';
 export class DetailPlanetesComponent implements OnInit {
   satellites: any;
   planete: any;
-
+  taille:any;
   constructor(private http: HttpClient, private otherService: OtherService) { }
 
   ngOnInit(): void {
@@ -34,7 +34,7 @@ export class DetailPlanetesComponent implements OnInit {
       next: (data) => { this.planete = data },
       error: (err) => { console.log(err) }
     });
+    this.taille=this.planete.diamater/12753;
   }
-
-
+  
 }
