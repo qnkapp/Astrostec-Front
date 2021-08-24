@@ -20,7 +20,7 @@ export class BoutiqueComponent implements OnInit {
   ngOnInit(): void {
     this.getProducts();
   }
-
+// push
 
   goToDetail(p:any):void{
     const mydial = this.dialog.open(DetailProduitBoutiqueComponent,{
