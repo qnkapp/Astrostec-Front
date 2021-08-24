@@ -1,6 +1,6 @@
 <body class="container-fluid fond">
 
-  <div class="main"> <!--!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+  <div class="main"> <!--!!!!!!!!!!!!!!!!!!!!!!!!!! Nécessaire pour le footer : voir en bas-->
 
     <!--Section: Titre-->
     <section class="title text-center pt-5">
@@ -20,7 +20,7 @@
     <br>
     <br>
 
-    <div class="row">
+    <div class="row mb-4"> <!--row descriptif + carousel-->
 
       <!--Section: Descriptif-->
       <section class="col-sm-6 mt-auto pt-auto">
@@ -124,8 +124,7 @@
               </div>
             </div>
 
-          </div>
-          <!--carousel-inner-->
+          </div> <!--carousel-inner-->
 
           <a class="carousel-control-prev" href="#carouselPlanetes" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -136,8 +135,7 @@
             <span class="sr-only">Next</span>
           </a>
 
-        </div>
-        <!--carouselPlanetes-->
+        </div> <!--carouselPlanetes-->
 
       </section>
       <!--Section: Carousel-->
@@ -147,18 +145,24 @@
       <br>
       <br>
 
+    </div> <!--row descriptif + carousel-->
 
-      <!--Section: Contact us-->
-      <section class="text-center mt-4 mb-auto ml-auto mr-auto">
+    <div class="row"> <!--row Contact us-->
+    
+    <!--Section: Contact us-->
 
-        <div class="descriptif text-center my-4">Contact</div>
+    <section class="card p-3 ml-auto mr-auto mt-4 mb-4" style="background-color: rgb(180, 107, 23);">
+
+      <div class="text-center mt-auto mb-auto ml-auto mr-auto">
+
+        <div class="descriptif text-center my-2">Contact</div>
 
         <div class="text text-center mx-auto mb-5">Des questions ou des remarques ? N'hésitez pas à nous contacter.
           Notre
           équipe reviendra vers vous dans quelques heures pour vous aider.
         </div>
 
-        <div class="row">
+        <div class="row"> <!--row2-->
 
           <div class="col-md-9 mb-md-0 mb-5">
             <form id="contact-form" name="contact-form" action="mail.php" method="POST">
@@ -168,14 +172,22 @@
                 <div class="col-md-6">
                   <div class="md-form mb-0">
                     <input type="text" id="name" name="name" class="form-control">
-                    <label for="name" class="">Nom</label>
+                    <label for="name">
+                      <span class="text">
+                        Nom
+                      </span>
+                    </label>
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="md-form mb-0">
                     <input type="text" id="email" name="email" class="form-control">
-                    <label for="email" class="">Email</label>
+                    <label for="email">
+                      <span class="text">
+                        Email
+                      </span>
+                    </label>
                   </div>
                 </div>
 
@@ -185,19 +197,24 @@
                 <div class="col-md-12">
                   <div class="md-form mb-0">
                     <input type="text" id="subject" name="subject" class="form-control">
-                    <label for="subject" class="">Objet</label>
+                    <label for="subject">
+                      <span class="text">
+                        Objet
+                      </span>
+                    </label>
                   </div>
                 </div>
               </div>
 
               <div class="row">
-
                 <div class="col-md-12">
-
                   <div class="md-form">
-                    <textarea type="text" id="message" name="message" rows="2"
-                      class="form-control md-textarea"></textarea>
-                    <label for="message">Votre message</label>
+                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                    <label for="message">
+                      <span class="text">
+                        Votre message
+                      </span>
+                    </label>
                   </div>
 
                 </div>
@@ -205,7 +222,7 @@
 
             </form>
 
-            <div class="text-center text-md-left">
+            <div class="text-center text-md-right">
               <a class="btn btn-light" onclick="document.getElementById('contact-form').submit();">
                 <span class="envoyer">Envoyer</span>
               </a>
@@ -229,19 +246,23 @@
             </ul>
           </div>
 
-        </div>
-        <!--row 2-->
+        </div><!--row 2-->
 
-      </section>
-      <!--Section: Contact us-->
+      </div> 
 
-    </div>
-    <!--row 1-->
+    </section> <!--Card-->
+    <!--Section: Contact us-->
 
-  </div> <!--!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    </div> <!--row Contact us-->
+
+    
+
+
+  </div>
+  <!--!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! A FAIRE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-    <!-- Le footer a besoin d'un référent pour se placer en fin de page (ex: "page-contenu")
+  <!-- Le footer a besoin d'un référent pour se placer en fin de page (ex: "page-contenu")
         On aura body = page-contenu + footer
         En théorie ça serait possible de la mettre directement dans app.component.html
         Mais j'y arrive pas (LAETITIA) : du coup il faut :
@@ -249,13 +270,13 @@
         2/ Rajouter ce code pour le footer juste après la fermeture de la balise div de "main"
       -->
 
-    <!-- Footer : Copyright -->
-    <div id="footer bg-light text-center pt-auto">
-      <div class="text-center p-3" style="background-color : grey;">
-        © 2021 Copyright: DEV-04-2021
-      </div>
+  <!-- Footer : Copyright -->
+  <div id="footer bg-light text-center pt-auto">
+    <div class="text-center p-3" style="background-color : grey;">
+      © 2021 Copyright: DEV-04-2021
     </div>
-    <!-- Copyright -->
+  </div>
+  <!-- Copyright -->
 
 </body>
 <!--fond-->
