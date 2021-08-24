@@ -1,1 +1,32 @@
-<p>gestion-membre works!</p>
+<div class="container">
+    <table class="table w-auto">
+        <thead class="black white-text">
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Pseudo</th>
+                <th scope="col" class="text-center">Email</th>
+                <th scope="col">date de naissance</th>
+                <th scope="col">admin</th>
+                <th scope="col">date de création</th>
+                <th scope="col">Supprimer</th>
+            </tr>
+        </thead>
+        <tbody class="white-text">
+            <tr *ngFor='let m of listMembre'>
+                <th scope="row">{{m.id}}</th>
+                <td>{{m.nom}}</td>
+                <td>{{m.prenom}}</td>
+                <td>{{m.pseudo}}</td>
+                <td>{{m.email}}</td>
+                <td>{{m.ddn | date: 'dd/MM/yyyy'}}</td>
+                <td>{{m.admin}}</td>
+                <td>{{m.dateCreation | date: 'dd/MM/yyyy'}}</td>
+                <td class="flex-center">
+                    <mat-icon aria-hidden="false" aria-label="Remove icon">person_remove</mat-icon>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
