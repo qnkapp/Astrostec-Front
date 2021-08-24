@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { CartService } from '../services/cart.service';
 import { OtherService } from '../services/other.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { OtherService } from '../services/other.service';
 export class DetailProduitBoutiqueComponent implements OnInit {
 
   produit:any;
-  constructor(@Inject(MAT_DIALOG_DATA) public data:any, private http:HttpClient,private otherService:OtherService) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data:any, private http:HttpClient,private otherService:OtherService,private cartService:CartService) { }
 
   ngOnInit(): void {
     this.getProduit();
@@ -26,6 +27,12 @@ export class DetailProduitBoutiqueComponent implements OnInit {
 
   parseFloat(prix:any):number{
     return prix.toFixed(2);
+  }
+
+  addToCart(product: any,qty:number) {
+    this.cartService.addToCart(product,qty);
+    window.alert('Le produit a bien été ajouté au panier !');
+    console.log(this.cartService.getItems());
   }
 
 }

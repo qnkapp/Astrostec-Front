@@ -19,6 +19,7 @@ import { ChatComponent } from './chat/chat.component';
 import { VerifySameEmailDirective } from './sign-up/sign-up-directives/verifySameEmail.directive';
 import { VerifySameMdpDirective } from './sign-up/sign-up-directives/verifySameMdp.directive';
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
+import { PanierComponent } from './panier/panier.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.compo
     ChatComponent,
     VerifySameEmailDirective,
     VerifySameMdpDirective,
-    DetailPlanetesComponent
+    DetailPlanetesComponent,
+    PanierComponent
   ],
   imports: [
     BrowserModule,
@@ -48,4 +50,6 @@ import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.compo
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+ }
