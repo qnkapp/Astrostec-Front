@@ -12,6 +12,7 @@ import { OtherService } from '../services/other.service';
 export class DetailProduitBoutiqueComponent implements OnInit {
 
   produit:any;
+  myQty:any;
   constructor(@Inject(MAT_DIALOG_DATA) public data:any, private http:HttpClient,private otherService:OtherService,private cartService:CartService) { }
 
   ngOnInit(): void {
@@ -29,8 +30,9 @@ export class DetailProduitBoutiqueComponent implements OnInit {
     return prix.toFixed(2);
   }
 
-  addToCart(product: any,qty:number) {
-    this.cartService.addToCart(product,qty);
+  addToCart(product: any) {
+    this.myQty = (<HTMLInputElement>document.getElementById("qty")).valueAsNumber;
+    this.cartService.addToCart(product,this.myQty);
     window.alert('Le produit a bien été ajouté au panier !');
     console.log(this.cartService.getItems());
   }
