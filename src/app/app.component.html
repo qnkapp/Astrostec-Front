@@ -39,14 +39,13 @@
                     <a class="nav-link" routerLink='boutique'>Boutique</a>
                 </li>
 
-                <li class="nav-item" routerLinkActive='active'>
+                <li class="nav-item" routerLinkActive='active' *ngIf="!authService.isConnected()">
                     <a class="nav-link" routerLink='connexion'>Connexion</a>
+                </li>
 
-
-                    <li class="nav-item" routerLinkActive='active'>
-                        <a class="nav-link" *ngIf="currentUser != null" (click)="logout()">Déconnexion</a>
-
-                    </li>
+                <li class="nav-item" routerLinkActive='active' *ngIf="authService.isConnected()">
+                    <a class="nav-link" routerLink='connexion' (click)="authService.logout()">Déconnexion</a>
+                </li>
             </ul>
         </div>
     </nav>

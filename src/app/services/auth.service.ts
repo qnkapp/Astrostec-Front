@@ -36,4 +36,10 @@ export class AuthService {
     localStorage.removeItem('currentUser');
     this.currentUserSubject.next(null);
   }
+
+  public isConnected(): boolean {
+    if (this.currentUserValue!=null){
+      return true;
+    } else return false;
+  }
 }
