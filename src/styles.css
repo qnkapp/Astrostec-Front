@@ -7,23 +7,23 @@
 
 
 .title{
-    
+
     font-size: 60px;
     color: rgb(180, 107, 23);
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Squada One', "Arial Black", Arial, Verdana, sans-serif;
 }
 
 
 .soustitre{
     font-size: 30px;
     color: gray;
-    font-family: 'Palatino', sans-serif;
+    font-family: Impact, "Arial Black", Arial, Verdana, sans-serif;
 }
 
 .text{
     font-size: 17px;
     color: white;
-    font-family: 'Palatino', sans-serif;
+    font-family: Arial, Verdana, sans-serif;
     text-align: justify;
 }
 
@@ -50,4 +50,3 @@ body {
     width:100%;
     height:auto;   /* Hauteur du pied de page */
  }
-

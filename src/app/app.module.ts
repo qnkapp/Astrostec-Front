@@ -23,6 +23,8 @@ import { DetailSatellitesComponent } from './detail-satellites/detail-satellites
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
 import { PanierComponent } from './panier/panier.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
+import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
     VerifySameMdpDirective,
     DetailPlanetesComponent,
     PanierComponent,
-    PiedDePageComponent
+    PiedDePageComponent,
+    GestionMembreComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,7 @@ import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
