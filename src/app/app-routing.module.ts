@@ -10,6 +10,10 @@ import { LoginComponent } from './login/login.component';
 import { PlanetesComponent } from './planetes/planetes.component';
 import { SatellitesComponent } from './satellites/satellites.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { DiscussionsComponent } from './discussions/discussions.component';
+import { SolaireComponent } from './solaire/solaire.component';
+import { SourceComponent } from './source/source.component';
+import { AuthGuard } from './_helpers/auth.guard';
 
 const routes: Routes = [
   { component: BoutiqueComponent, path: 'boutique' },
@@ -18,14 +22,17 @@ const routes: Routes = [
   { component: LoginComponent, path: 'connexion' },
   {
     component: ForumComponent, path: 'forum', children: [
-    { component: ChatComponent, path: 'chat' },
-    ]
+    { component: ChatComponent, path: 'chat' }, { component: DiscussionsComponent, path: 'discussions' },
+    ],
+    canActivate: [AuthGuard]
   },
   { component: SignUpComponent, path: 'sign-up' },
   { component: PlanetesComponent, path: 'planetes' },
   { component: SatellitesComponent, path: 'satellites' },
   { component: DetailPlanetesComponent, path: 'detail-planetes' },
-  { component: DetailSatellitesComponent, path: 'detail-satellites' }
+  { component: DetailSatellitesComponent, path: 'detail-satellites' },
+  { component: SolaireComponent, path: 'solaire'},
+  { component: SourceComponent, path: 'source'}
 ];
 
 @NgModule({
