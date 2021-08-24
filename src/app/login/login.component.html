@@ -5,6 +5,8 @@
         <!-- Card body -->
         <div class="card-body">
 
+            <div *ngIf="message!=''" class="text-success text-center">{{message}}</div>
+
             <!-- Material form register -->
             <form #connect="ngForm" (ngSubmit)="connexion(connect.value)">
                 <p class="h4 text-center py-4">Connexion</p>
