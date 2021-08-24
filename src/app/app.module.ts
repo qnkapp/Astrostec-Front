@@ -25,6 +25,7 @@ import { DiscussionsComponent } from './discussions/discussions.component';
 import { SolaireComponent } from './solaire/solaire.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
