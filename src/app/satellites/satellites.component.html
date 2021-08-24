@@ -1,56 +1,64 @@
 <body class="fond">
+    <div class="container">
 
-    <br>
-    <br>
+        <br>
+        <br>
 
-    <div class="title text-center" style="width: 100%;">
-        Les satellites naturels des planètes du système solaire
-    </div>
+        <div class="title text-center" style="width: 100%;">
+            Les satellites naturels des planètes du système solaire
+        </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
+        <br>
+        <br>
 
-    <div class="soustitre container-fluid text-center">
-        Tout savoir sur les satellites naturels de nos planètes du système solaire
-    </div>
+        <div class="soustitre container-fluid text-center">
+            Tout savoir sur les satellites naturels de nos planètes du système solaire
+        </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
+        <br>
+        <br>
 
-    <div class="descriptif container text-center">
-        Dans le Système solaire, 184 satellites naturels ont été mis en évidence comme orbitant autour d'une planète ou
-        d'une planète naine.
-    </div>
+        <div class="text container text-center">
+            Un satellite est un astre en orbite autour d'un astre autre qu'une étoile. 
+            <br>
+            <br>
+            De tels objets sont également appelés lunes, par analogie avec la Lune, le satellite naturel de la Terre. 
+            <br>
+            <br>
+            Aujourd’hui, on connaît près de 600 satellites naturels dans le Système solaire, dont près de 200 confirmés autour des planètes du Système solaire. 
+            <br>
+            <br>
+            Cliquez sur le satellite naturel de votre choix pour en apprendre plus sur celui-ci :
+            <br>
+            <br>
+        </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
+        <br>
+        <br>
 
-    <div class="descriptif container-fluid">
-        <div class="row">
-            <div class="col-sm-6" *ngFor='let s of satellites'>
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0 text-center">
-                        <div class="col-md-4">
-                            <div
-                                style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: black;">
-                                <img width="95%"  src="/assets/Img/satellites/{{s.name}}.jpg" alt="..." />
+        <div>
+            <div class="row">
+                <div class="col-sm-6" *ngFor='let s of satellites'>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0 text-center">
+                            <div class="col-md-4">
+                                <div
+                                    style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: black;">
+                                    <img width="95%" src="/assets/Img/satellites/{{s.name}}.jpg" alt="..."
+                                        class="img-fluid" />
+                                </div>
+
                             </div>
-
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Pour en apprendre plus sur {{ s.name }}, cliquez ici :
-                                </p>
-                                <p class="card-text">
-                                    <button onclick="goToDetail(s)" class="btn btn-grey">{{ s.name }}</button>
-                                </p>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Pour en apprendre plus sur {{ s.name }}, cliquez ici :
+                                    </p>
+                                    <p class="card-text">
+                                        <button (click)="goToDetailSatellite(s)" class="btn btn-grey">{{ s.name
+                                            }}</button>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -58,5 +66,4 @@
             </div>
         </div>
     </div>
-
 </body>

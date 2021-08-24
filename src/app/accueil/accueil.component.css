@@ -1,3 +1,11 @@
+.title{
+    font-size: 100px;
+}
+
+.soustitre{
+    font-size: 50px;
+}
+
 .descriptif{
     font-size: 20px;
     color: white;
@@ -7,7 +15,7 @@
 
 .envoyer{
     font-size: 20px;
-    color: gray;
+    color: rgb(180, 107, 23);
     font-family: Impact, "Arial Black", Arial, Verdana, sans-serif;
 }
 

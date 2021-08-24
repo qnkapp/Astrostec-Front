@@ -18,8 +18,15 @@ import { SatellitesComponent } from './satellites/satellites.component';
 import { ChatComponent } from './chat/chat.component';
 import { VerifySameEmailDirective } from './sign-up/sign-up-directives/verifySameEmail.directive';
 import { VerifySameMdpDirective } from './sign-up/sign-up-directives/verifySameMdp.directive';
+
+import { DetailSatellitesComponent } from './detail-satellites/detail-satellites.component';
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
+<<<<<<< HEAD
 import { DiscussionsComponent } from './discussions/discussions.component';
+=======
+import { SolaireComponent } from './solaire/solaire.component';
+
+>>>>>>> c17c8ab5a9bd5ec1e86735903263e73ed11c86ea
 
 @NgModule({
   declarations: [
@@ -36,7 +43,12 @@ import { DiscussionsComponent } from './discussions/discussions.component';
     VerifySameEmailDirective,
     VerifySameMdpDirective,
     DetailPlanetesComponent,
+<<<<<<< HEAD
     DiscussionsComponent
+=======
+    DetailSatellitesComponent,
+    SolaireComponent
+>>>>>>> c17c8ab5a9bd5ec1e86735903263e73ed11c86ea
   ],
   imports: [
     BrowserModule,
