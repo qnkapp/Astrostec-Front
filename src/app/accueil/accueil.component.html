@@ -1,7 +1,5 @@
 <div class="container-fluid fond">
 
-  <div class="main"> <!--!!!!!!!!!!!!!!!!!!!!!!!!!! Nécessaire pour le footer : voir en bas-->
-
     <!--Section: Titre-->
     <section class="title text-center pt-5">
       Bienvenue sur Astrotec
@@ -152,7 +150,7 @@
           Dans tout le contenu du site, vous trouverez différentes informations et images concernant les astres 
           décrits. 
           <br>Pour plus d'informations sur les sources utilisées, cliquez 
-          <span  (click)="goToSource()">ici</span>.
+          <span (click)="goToSource()" style="color: blue;">ici</span>.
       </section>
     </div> <!--row lien source-->
 
@@ -267,20 +265,7 @@
     
 
 
-  </div>
-  <!--!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-
-  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! A FAIRE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-  <!-- Le footer a besoin d'un référent pour se placer en fin de page (ex: "main")
-        On aura body = main + footer
-        En théorie ça serait possible de la mettre directement dans app.component.html
-        Mais j'y arrive pas (LAETITIA) : du coup il faut :
-        1/ Englober le contenu de chaque page dans une <div class="main"> Mettre le contenu de la page </div>
-        2/ Rajouter ce code pour le footer juste après la fermeture de la balise div de "main"
-      -->
-
-  
-
+    
 </div>
 
 <app-pied-de-page></app-pied-de-page>
