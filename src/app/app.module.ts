@@ -21,12 +21,9 @@ import { VerifySameMdpDirective } from './sign-up/sign-up-directives/verifySameM
 
 import { DetailSatellitesComponent } from './detail-satellites/detail-satellites.component';
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
-<<<<<<< HEAD
 import { DiscussionsComponent } from './discussions/discussions.component';
-=======
 import { SolaireComponent } from './solaire/solaire.component';
 
->>>>>>> c17c8ab5a9bd5ec1e86735903263e73ed11c86ea
 
 @NgModule({
   declarations: [
@@ -43,12 +40,9 @@ import { SolaireComponent } from './solaire/solaire.component';
     VerifySameEmailDirective,
     VerifySameMdpDirective,
     DetailPlanetesComponent,
-<<<<<<< HEAD
-    DiscussionsComponent
-=======
+    DiscussionsComponent,
     DetailSatellitesComponent,
     SolaireComponent
->>>>>>> c17c8ab5a9bd5ec1e86735903263e73ed11c86ea
   ],
   imports: [
     BrowserModule,

@@ -10,11 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { PlanetesComponent } from './planetes/planetes.component';
 import { SatellitesComponent } from './satellites/satellites.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-<<<<<<< HEAD
 import { DiscussionsComponent } from './discussions/discussions.component';
-=======
 import { SolaireComponent } from './solaire/solaire.component';
->>>>>>> c17c8ab5a9bd5ec1e86735903263e73ed11c86ea
 
 const routes: Routes = [
   { component: BoutiqueComponent, path: 'boutique' },
