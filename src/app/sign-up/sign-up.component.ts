@@ -18,15 +18,16 @@ export class SignUpComponent implements OnInit {
     private http: HttpClient,
     private otherService: OtherService,
     private route: Router,
-    private messageService: MessageService,
-    ) { }
+    private messageService: MessageService
+  ) { }
 
-  membre = { nom: null, prenom: null, ddn: null, pseudo: null, email: null, mdp: null};
+  message: any;
+  membre = { nom: null, prenom: null, ddn: null, pseudo: null, email: null, mdp: null };
   newMembre: any;
   membreForm: any;
   todaysdate = new Date();
   verifyExist: any;
-  
+
 
   ngOnInit(): void {
     this.membreForm = new FormGroup({
@@ -38,10 +39,10 @@ export class SignUpComponent implements OnInit {
       sameEmail: new FormControl(),
       mdp: new FormControl(this.membre.mdp, [Validators.required, Validators.minLength(3)]),
       sameMdp: new FormControl()
-    }, { validators: [verifySameEmail, verifySameMdp] });;
-
-
+    }, { validators: [verifySameEmail, verifySameMdp] });
+    this.messageService.sharedMessage.subscribe(message => this.message = message)
   }
+
 
   get nom() { return this.membreForm.get('nom'); }
   get prenom() { return this.membreForm.get('prenom'); }
@@ -57,7 +58,7 @@ export class SignUpComponent implements OnInit {
       next: (data) => {
         this.verifyExist = data;
         if (this.verifyExist == 0) {
-          this.messageService.sendMessage("Enregistrement réussi! Vous pouvez vous connecter");
+          this.messageService.sendMessage("Enregistrement réussi! Vous pouvez vous connecter")
           this.route.navigateByUrl("connexion");
         }
       },

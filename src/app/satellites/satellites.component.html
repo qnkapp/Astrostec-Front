@@ -1,4 +1,4 @@
-<div class="fond">
+<body class="fond">
 
     <br>
     <br>
@@ -21,14 +21,9 @@
     <br>
     <br>
 
-    <div class="descriptif container-fluid text-center">
-        Le Système solaire renferme des astres divers, planètes, satellites, astéroïdes, comètes, météorites … 
-        <br>
-        Parmi ceux-ci, les satellites des planètes présentent des variétés étonnantes où l’on trouve des volcans actifs, des océans, ou bien même des geysers. 
-        <br>
-        L’observation de ces corps nous renseigne sur les planètes elles-mêmes et sur l’histoire du Système solaire. 
-        <br>
-        Astrotec vous propose de découvrir ici un peu plus en profondeur les mystères de ces corps astronomiques.
+    <div class="descriptif container text-center">
+        Dans le Système solaire, 184 satellites naturels ont été mis en évidence comme orbitant autour d'une planète ou
+        d'une planète naine.
     </div>
 
     <br>
@@ -39,13 +34,16 @@
     <div class="descriptif container-fluid">
         <div class="row">
             <div class="col-sm-6" *ngFor='let s of satellites'>
-                <div class="card mb-3">
-                    <div class="row g-0">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0 text-center">
                         <div class="col-md-4">
-                            <img src="/assets/Img/satellites/{{s.name}}.jpg" alt="..."
-                                class="img-fluid" />
+                            <div
+                                style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: black;">
+                                <img width="95%"  src="/assets/Img/satellites/{{s.name}}.jpg" alt="..." />
+                            </div>
+
                         </div>
-                        <div class="col-md-8">  
+                        <div class="col-md-8">
                             <div class="card-body">
                                 <p class="card-text">
                                     Pour en apprendre plus sur {{ s.name }}, cliquez ici :
@@ -58,7 +56,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
 
-</div>
+</body>
