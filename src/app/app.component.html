@@ -44,7 +44,7 @@
                 </li>
 
                 <li class="nav-item" routerLinkActive='active' *ngIf="authService.isConnected()">
-                    <a class="nav-link" routerLink='Accueil' (click)="authService.logout()">Déconnexion</a>
+                    <a class="nav-link" (click)="authService.logout()">Déconnexion</a>
                 </li>
             </ul>
         </div>
