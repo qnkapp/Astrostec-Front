@@ -40,7 +40,7 @@ import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
     VerifySameMdpDirective,
     DetailPlanetesComponent,
     PanierComponent,
-    PiedDePageComponent,
+    PiedDePageComponent
   ],
   imports: [
     BrowserModule,

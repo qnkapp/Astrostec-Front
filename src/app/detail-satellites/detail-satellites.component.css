@@ -1,6 +1,6 @@
 .Jumbotron  {
-    background-image: url('/assets/Img/satellites/Lune.jpg');
-    color: rgba(44, 218, 21, 0.801); 
+    /* background-image: url('/assets/Img/satellites/Lune.jpg'); */
+    color: white; 
     height: auto; 
     
 }
