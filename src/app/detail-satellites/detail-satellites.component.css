@@ -1,8 +1,6 @@
-.jumbotron {
-    position: relative;
-    background: #fff url("/assets/Img/satellites/{{satellites.name}}.jpg") center center;/*slide.jpg =>you image*/   
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    overflow: hidden;
+.Jumbotron  {
+    background-image: url('/assets/Img/satellites/Lune.jpg');
+    color: rgba(44, 218, 21, 0.801); 
+    height: auto; 
+    
 }
