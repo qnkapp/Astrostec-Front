@@ -11,6 +11,7 @@ import { PlanetesComponent } from './planetes/planetes.component';
 import { SatellitesComponent } from './satellites/satellites.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SolaireComponent } from './solaire/solaire.component';
+import { SourceComponent } from './source/source.component';
 
 const routes: Routes = [
   { component: BoutiqueComponent, path: 'boutique' },
@@ -27,7 +28,8 @@ const routes: Routes = [
   { component: SatellitesComponent, path: 'satellites' },
   { component: DetailPlanetesComponent, path: 'detail-planetes' },
   { component: DetailSatellitesComponent, path: 'detail-satellites' },
-  { component: SolaireComponent, path: 'solaire'}
+  { component: SolaireComponent, path: 'solaire'},
+  { component: SourceComponent, path: 'source'}
 ];
 
 @NgModule({

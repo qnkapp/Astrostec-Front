@@ -22,6 +22,7 @@ import { VerifySameMdpDirective } from './sign-up/sign-up-directives/verifySameM
 import { DetailSatellitesComponent } from './detail-satellites/detail-satellites.component';
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
 import { SolaireComponent } from './solaire/solaire.component';
+import { SourceComponent } from './source/source.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { SolaireComponent } from './solaire/solaire.component';
     VerifySameMdpDirective,
     DetailPlanetesComponent,
     DetailSatellitesComponent,
-    SolaireComponent
+    SolaireComponent,
+    SourceComponent
   ],
   imports: [
     BrowserModule,
