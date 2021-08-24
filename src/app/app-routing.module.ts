@@ -12,6 +12,7 @@ import { SatellitesComponent } from './satellites/satellites.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { DiscussionsComponent } from './discussions/discussions.component';
 import { SolaireComponent } from './solaire/solaire.component';
+import { SourceComponent } from './source/source.component';
 import { AuthGuard } from './_helpers/auth.guard';
 
 const routes: Routes = [
@@ -30,7 +31,8 @@ const routes: Routes = [
   { component: SatellitesComponent, path: 'satellites' },
   { component: DetailPlanetesComponent, path: 'detail-planetes' },
   { component: DetailSatellitesComponent, path: 'detail-satellites' },
-  { component: SolaireComponent, path: 'solaire'}
+  { component: SolaireComponent, path: 'solaire'},
+  { component: SourceComponent, path: 'source'}
 ];
 
 @NgModule({

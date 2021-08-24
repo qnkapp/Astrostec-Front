@@ -23,6 +23,7 @@ import { DetailSatellitesComponent } from './detail-satellites/detail-satellites
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
 import { DiscussionsComponent } from './discussions/discussions.component';
 import { SolaireComponent } from './solaire/solaire.component';
+import { SourceComponent } from './source/source.component';
 
 
 
@@ -43,7 +44,8 @@ import { SolaireComponent } from './solaire/solaire.component';
     DetailPlanetesComponent,
     DiscussionsComponent,
     DetailSatellitesComponent,
-    SolaireComponent
+    SolaireComponent,
+    SourceComponent
   ],
   imports: [
     BrowserModule,
