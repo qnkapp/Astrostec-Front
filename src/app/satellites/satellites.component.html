@@ -1,4 +1,4 @@
-<div class="fond">
+<body class="fond">
 
     <br>
     <br>
@@ -12,7 +12,7 @@
     <br>
     <br>
 
-    <div class="soustitre container text-center">
+    <div class="soustitre container-fluid text-center">
         Tout savoir sur les satellites naturels de nos planètes du système solaire
     </div>
 
@@ -22,7 +22,8 @@
     <br>
 
     <div class="descriptif container text-center">
-        Dans le Système solaire, 184 satellites naturels ont été mis en évidence comme orbitant autour d'une planète ou d'une planète naine.
+        Dans le Système solaire, 184 satellites naturels ont été mis en évidence comme orbitant autour d'une planète ou
+        d'une planète naine.
     </div>
 
     <br>
@@ -30,16 +31,19 @@
     <br>
     <br>
 
-    <div class="descriptif container text-center">
+    <div class="descriptif container-fluid">
         <div class="row">
             <div class="col-sm-6" *ngFor='let s of satellites'>
-                <div class="card mb-3">
-                    <div class="row g-0">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0 text-center">
                         <div class="col-md-4">
-                            <img src="/assets/Img/satellites/{{s.name}}.jpg" alt="..."
-                                class="img-fluid" />
+                            <div
+                                style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: black;">
+                                <img width="95%"  src="/assets/Img/satellites/{{s.name}}.jpg" alt="..." />
+                            </div>
+
                         </div>
-                        <div class="col-md-8">  
+                        <div class="col-md-8">
                             <div class="card-body">
                                 <p class="card-text">
                                     Pour en apprendre plus sur {{ s.name }}, cliquez ici :
@@ -52,7 +56,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
 
-</div>
+</body>
