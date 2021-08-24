@@ -22,7 +22,7 @@ img {
     justify-content: flex-end;
     flex-direction: column;
     position: relative;
-    top: 2px;
+    top: 1px;
     
 
 }
@@ -34,7 +34,7 @@ img {
     height: 60px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    background-color: rgb(127, 143, 216);
+    background-color: rgb(95, 98, 107);
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgb(3, 0, 0);
@@ -223,5 +223,5 @@ img {
 }
 
 i{
-    width: 30px;
+    width: 42px;
 }

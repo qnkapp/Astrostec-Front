@@ -1,7 +1,7 @@
 <body class="fond">
     
     <div class="title text-center pt-5">
-        Espace Membre : Acceuil Forum
+        Espace Membre : Accueil Forum
     </div>
     <br>
     <br>
@@ -15,13 +15,15 @@
          <!-- Links -->
          <ul class="navbar-nav mr-auto nav-fill w-100">
             <li class="nav-item" routerLinkActive='active'>
-              <a class="nav-link" routerLink='forum'> Thèmes Forum 
-                <span class="sr-only">(current)</span>
+              <a class="nav-link" routerLink='sujets'> Thèmes Forum 
+      
               </a>
             </li>
              <!-- Dropdown -->
             <li class="nav-item" routerLinkActive='active'>
-              <a class="nav-link" routerLink='chat'>Discussions</a>
+              <a class="nav-link" routerLink='discussions'>Discussions</a>
+                <i class="fas fa-bell fa-lg"></i>
+
             </li>
         </ul>
     </nav>
@@ -29,7 +31,7 @@
 </body>
 
 
-
+<app-pied-de-page></app-pied-de-page>
 <router-outlet></router-outlet>
 
 

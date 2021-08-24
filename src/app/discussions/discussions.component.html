@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussions</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-3">
+          <!-- Tab navs -->
+          <div
+            class="nav flex-column nav-tabs text-center"
+            id="v-tabs-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <a
+              class="nav-link active"
+              id="chat-global"
+              data-mdb-toggle="tab"
+              href="chat-global"
+              role="tab"
+              aria-controls="chat-global"
+              aria-selected="true"
+              >Sacha</a
+            >
+          </div>
+          <!-- Tab navs -->
+        </div>
+      
+        <div class="col-9">
+          <!-- Tab content -->
+          <div class="tab-content" id="v-tabs-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="chat-global"
+              role="tabpanel"
+              aria-labelledby="chat-global"
+            >
+            <app-chat></app-chat>
+            
+            </div>
+          </div>
+          <!-- Tab content -->
+        </div>
+      </div>
+</body>
+</html>
+
+<app-pied-de-page></app-pied-de-page>

@@ -6,18 +6,16 @@
         <div class="card-body">
 
             <!-- Material form register -->
-            <form #connect="ngForm" (ngSubmit)="signup(connect.value)" [formGroup]="membreForm" appVerifySameEmail
-                appVerifySameMdp>
+            <form #connect="ngForm" (ngSubmit)="signup(connect.value)" [formGroup]="membreForm" appVerifySameEmail appVerifySameMdp>
                 <p class="h4 text-center py-4">S'enregistrer</p>
 
                 <!-- Envoie un message d'erreur si l'email est déjà dans la BDD -->
-                <div *ngIf="verifyExist == 1 || verifyExist == 3" class="text-danger">
+                <div *ngIf="verifyExist == 2 || verifyExist == 3" class="text-danger">
                     Ce pseudo est déjà utilisé
                 </div>
 
                 <!-- Vérifie qu'un pseudo est bien entré -->
-                <div *ngIf="pseudo.invalid && (pseudo.dirty || pseudo.touched) && pseudo.errors?.required"
-                    class="text-danger">
+                <div *ngIf="pseudo.invalid && (pseudo.dirty || pseudo.touched) && pseudo.errors?.required" class="text-danger">
                     Un pseudo est requis
                 </div>
 
@@ -29,21 +27,19 @@
                 </div>
 
                 <!-- Vérifie qu'un email est bien entré -->
-                <div *ngIf="email.invalid && (email.dirty || email.touched) && (email.errors?.required || email.errors?.email)"
-                    class="text-danger">
+                <div *ngIf="email.invalid && (email.dirty || email.touched) && (email.errors?.required || email.errors?.email)" class="text-danger">
                     Veuillez entrer un email
                 </div>
 
                 <!-- Envoie un message d'erreur si l'email est déjà dans la BDD -->
-                <div *ngIf="verifyExist == 2 || verifyExist == 3" class="text-danger">
+                <div *ngIf="verifyExist == 1 || verifyExist == 3" class="text-danger">
                     Cet email est déjà utilisé
                 </div>
 
                 <!-- Material input email -->
                 <div class="md-form">
                     <i class="fa fa-envelope prefix grey-text"></i>
-                    <input type="email" id="email" name="email" class="form-control" formControlName="email" required
-                        email>
+                    <input type="email" id="email" name="email" class="form-control" formControlName="email" required email>
                     <label for="email" class="font-weight-light pl-3">Votre email*</label>
                 </div>
 
