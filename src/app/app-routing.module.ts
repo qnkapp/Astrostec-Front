@@ -28,7 +28,7 @@ const routes: Routes = [
     { component: ChatComponent, path: 'chat' }, { component: DiscussionsComponent, path: 'discussions' },
     { component: SujetsComponent, path: 'sujets' }
     ],
-    canActivate: [AuthGuard]
+    // canActivate: [AuthGuard]
   },
   { component: SignUpComponent, path: 'sign-up' },
   { component: PlanetesComponent, path: 'planetes' },
