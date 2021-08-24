@@ -16,6 +16,7 @@ import { SourceComponent } from './source/source.component';
 import { AuthGuard } from './_helpers/auth.guard';
 import { SujetsComponent } from './sujets/sujets.component';
 import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
+import { AdminGuard } from './_helpers/admin.guard';
 
 const routes: Routes = [
   { component: BoutiqueComponent, path: 'boutique' },
@@ -36,7 +37,7 @@ const routes: Routes = [
   { component: DetailSatellitesComponent, path: 'detail-satellites' },
   { component: SolaireComponent, path: 'solaire'},
   { component: SourceComponent, path: 'source'},
-  { component: GestionMembreComponent, path: 'gestion-membre', canActivate: [AuthGuard]}
+  { component: GestionMembreComponent, path: 'gestion-membre', canActivate: [AdminGuard]}
 ];
 
 @NgModule({
