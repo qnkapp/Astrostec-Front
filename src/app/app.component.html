@@ -42,9 +42,11 @@
   
           <li class="nav-item" routerLinkActive='active'>
             <a class="nav-link" routerLink='connexion'>Connexion</a>
-           <!-- <a class="nav-link"> <span style="vertical-align: middle;" class="material-icons">
-                logout
-              </span></a>-->
+
+
+            <li class="nav-item" routerLinkActive='active'>
+              <a class="nav-link" routerLink='deconnexion' *ngIf = "currentUser != null">Déconnexion</a>
+
           </li> 
         </ul>
       </div>

@@ -26,6 +26,7 @@ import { SolaireComponent } from './solaire/solaire.component';
 import { SourceComponent } from './source/source.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
