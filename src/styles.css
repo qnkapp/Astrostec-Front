@@ -28,13 +28,26 @@
     text-align: justify;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+ }
 
-
-.descriptif{
-    font-size: 20px;
-    color: white;
-    font-family: Arial Black, Arial, Verdana, sans-serif;
-    text-align: justify;
+body { 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
+
+
+ .main {
+    min-height:100%;
+    position:relative;
+    padding-bottom: auto;   /* Hauteur du pied de page */
+ }
+ footer {
+    position:absolute;
+    bottom:0;  /* on le colle en bas */
+    width:100%;
+    height:auto;   /* Hauteur du pied de page */
+ }
+
