@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { OtherService } from '../services/other.service';
+import { PlaneteService } from '../services/planete.service';
 
 @Component({
   selector: 'app-satellites',
@@ -10,7 +12,12 @@ import { OtherService } from '../services/other.service';
 })
 export class SatellitesComponent implements OnInit {
   satellites: any;
-  constructor(private http: HttpClient, private otherService: OtherService, private dialog: MatDialog) { }
+  constructor(
+    private http: HttpClient, 
+    private otherService: OtherService, 
+    private dialog: MatDialog,
+    private route: Router,
+    ) { }
 
   ngOnInit(): void {
     this.getSatellite();
@@ -20,6 +27,12 @@ export class SatellitesComponent implements OnInit {
       next: (data) => { this.satellites = data },
       error: (err) => { console.log(err) }
     })
+  }
+  goToDetailSatellite(s: any):void{
+    
+    PlaneteService.saveSatellite(s.id);
+    this.route.navigateByUrl("detail-satellites")
+    
   }
 
 }

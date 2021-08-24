@@ -4,6 +4,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
 import { ChatComponent } from './chat/chat.component';
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
+import { DetailSatellitesComponent } from './detail-satellites/detail-satellites.component';
 import { ForumComponent } from './forum/forum.component';
 import { LoginComponent } from './login/login.component';
 import { PlanetesComponent } from './planetes/planetes.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   { component: PlanetesComponent, path: 'planetes' },
   { component: SatellitesComponent, path: 'satellites' },
   { component: DetailPlanetesComponent, path: 'detail-planetes' },
+  { component: DetailSatellitesComponent, path: 'detail-satellites' }
 ];
 
 @NgModule({
