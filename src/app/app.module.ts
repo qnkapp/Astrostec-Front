@@ -21,6 +21,7 @@ import { VerifySameMdpDirective } from './sign-up/sign-up-directives/verifySameM
 
 import { DetailSatellitesComponent } from './detail-satellites/detail-satellites.component';
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
+import { DiscussionsComponent } from './discussions/discussions.component';
 import { SolaireComponent } from './solaire/solaire.component';
 
 
@@ -39,6 +40,7 @@ import { SolaireComponent } from './solaire/solaire.component';
     VerifySameEmailDirective,
     VerifySameMdpDirective,
     DetailPlanetesComponent,
+    DiscussionsComponent,
     DetailSatellitesComponent,
     SolaireComponent
   ],
@@ -50,6 +52,7 @@ import { SolaireComponent } from './solaire/solaire.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
