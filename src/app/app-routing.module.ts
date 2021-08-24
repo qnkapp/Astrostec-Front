@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { PlanetesComponent } from './planetes/planetes.component';
 import { SatellitesComponent } from './satellites/satellites.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { DiscussionsComponent } from './discussions/discussions.component';
 import { SolaireComponent } from './solaire/solaire.component';
 
 const routes: Routes = [
@@ -19,7 +20,7 @@ const routes: Routes = [
   { component: LoginComponent, path: 'connexion' },
   {
     component: ForumComponent, path: 'forum', children: [
-    { component: ChatComponent, path: 'chat' },
+    { component: DiscussionsComponent, path: 'discussions' },
     ]
   },
   { component: SignUpComponent, path: 'sign-up' },
