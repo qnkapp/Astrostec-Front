@@ -43,7 +43,7 @@ import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.compo
     MatDialogModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
