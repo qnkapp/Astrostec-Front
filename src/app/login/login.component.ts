@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OtherService } from '../services/other.service';
 import { HttpClient } from '@angular/common/http';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-login',
@@ -9,13 +10,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http: HttpClient, private otherService: OtherService) { }
+  constructor(private http: HttpClient, private otherService: OtherService, private messageService: MessageService) { }
 
+  message: any;
   membre: any;
   msgErr: any;
 
   ngOnInit(): void {
-    
+    this.messageService.sharedMessage.subscribe((message:String) => this.message = message)
   }
 
   connexion(membre: any): void {
