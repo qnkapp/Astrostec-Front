@@ -25,6 +25,7 @@ import { DiscussionsComponent } from './discussions/discussions.component';
 import { SolaireComponent } from './solaire/solaire.component';
 import { SourceComponent } from './source/source.component';
 import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
+import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
 
 
 
@@ -47,7 +48,8 @@ import { GestionMembreComponent } from './gestion-membre/gestion-membre.componen
     DetailSatellitesComponent,
     SolaireComponent,
     SourceComponent,
-    GestionMembreComponent
+    GestionMembreComponent,
+    PiedDePageComponent
   ],
   imports: [
     BrowserModule,
