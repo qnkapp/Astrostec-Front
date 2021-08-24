@@ -14,6 +14,7 @@ import { DiscussionsComponent } from './discussions/discussions.component';
 import { SolaireComponent } from './solaire/solaire.component';
 import { SourceComponent } from './source/source.component';
 import { AuthGuard } from './_helpers/auth.guard';
+import { SujetsComponent } from './sujets/sujets.component';
 
 const routes: Routes = [
   { component: BoutiqueComponent, path: 'boutique' },
@@ -23,6 +24,7 @@ const routes: Routes = [
   {
     component: ForumComponent, path: 'forum', children: [
     { component: ChatComponent, path: 'chat' }, { component: DiscussionsComponent, path: 'discussions' },
+    { component: SujetsComponent, path: 'sujets' }
     ],
     canActivate: [AuthGuard]
   },
