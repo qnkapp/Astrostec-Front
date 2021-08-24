@@ -1,29 +1,26 @@
 .fond{
-
     background-image : url("/assets/Img/fond_etoiles.jpg");
     color: white; 
     height: auto; 
 }
 
 
-.title{
-    
+.title{ 
     font-size: 60px;
     color: rgb(180, 107, 23);
     font-family: 'Orbitron', sans-serif;
 }
 
-
 .soustitre{
-    font-size: 30px;
+    font-size: 40px;
     color: gray;
-    font-family: 'Palatino', sans-serif;
+    font-family: Impact, 'Arial Black', sans-serif;
 }
 
 .text{
-    font-size: 17px;
+    font-size: 25px;
     color: white;
-    font-family: 'Palatino', sans-serif;
+    font-family: Arial, 'Abhaya Libre', sans-serif;
     text-align: justify;
 }
 
@@ -34,7 +31,7 @@ html, body {
  }
 
 body { 
-    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    font-family: 'Abhaya Libre', serif;
 }
 
 
