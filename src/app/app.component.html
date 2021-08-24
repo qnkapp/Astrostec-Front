@@ -1,56 +1,54 @@
-<div class="fond" > 
+<div class="fond">
 
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg black fixed-top">
 
-      <!-- Navbar brand -->
-      <a class="navbar-brand" href="Astrotec/Accueil"><img src="/assets/Img/logo_A.png" alt="logo" width="40" height="40"/></a>
-  
-      <!-- Collapse button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="basicExampleNav">
-  
-        <!-- Links -->
-        <ul class="navbar-nav mr-auto nav-fill w-100">
-          <li class="nav-item" routerLinkActive='active'>
-            <a class="nav-link" routerLink='Accueil'> Accueil
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-           <!-- Dropdown -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle"  routerLinkActive='active' id="navbardrop" data-toggle="dropdown">
-        Catalogue
-      </a>
-      <div class="dropdown-menu black" role="menu">
-        <li><a class="dropdown-item text-white" routerLink='solaire'>Système Solaire</a></li>
-        <li><a class="dropdown-item text-white" routerLink='planetes'>Planètes</a></li>
-        <li><a class="dropdown-item text-white" routerLink='satellites'>Satellites</a></li>
-      </div>
-    </li>
-          <li class="nav-item" routerLinkActive='active'>
-            <a class="nav-link" routerLink='forum' >Forum</a>
-          </li>
-          <li class="nav-item" routerLinkActive='active'>
-            <a class="nav-link" routerLink='boutique'>Boutique</a>
-          </li>
-  
-          <li class="nav-item" routerLinkActive='active'>
-            <a class="nav-link" routerLink='connexion'>Connexion</a>
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="Astrotec/Accueil"><img src="/assets/Img/logo_A.png" alt="logo" width="40" height="40" /></a>
 
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-            <li class="nav-item" routerLinkActive='active' *ngIf = "currentUser != null">
-              <a class="nav-link" routerLink='deconnexion' >Déconnexion</a>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
 
-          </li> 
-        </ul>
-      </div>
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto nav-fill w-100">
+                <li class="nav-item" routerLinkActive='active'>
+                    <a class="nav-link" routerLink='Accueil'> Accueil
+            <span class="sr-only">(current)</span>
+          </a>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLinkActive='active' id="navbardrop" data-toggle="dropdown">
+            Catalogue
+          </a>
+                    <div class="dropdown-menu black" role="menu">
+                        <li><a class="dropdown-item text-white" routerLink='solaire'>Système Solaire</a></li>
+                        <li><a class="dropdown-item text-white" routerLink='planetes'>Planètes</a></li>
+                        <li><a class="dropdown-item text-white" routerLink='satellites'>Satellites</a></li>
+                    </div>
+                </li>
+                <li class="nav-item" routerLinkActive='active'>
+                    <a class="nav-link" routerLink='forum'>Forum</a>
+                </li>
+                <li class="nav-item" routerLinkActive='active'>
+                    <a class="nav-link" routerLink='boutique'>Boutique</a>
+                </li>
+
+                <li class="nav-item" routerLinkActive='active' *ngIf="!authService.isConnected()">
+                    <a class="nav-link" routerLink='connexion'>Connexion</a>
+                </li>
+
+                <li class="nav-item" routerLinkActive='active' *ngIf="authService.isConnected()">
+                    <a class="nav-link" routerLink='Accueil' (click)="authService.logout()">Déconnexion</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    
+
 </div>
 <router-outlet></router-outlet>

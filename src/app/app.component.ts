@@ -8,11 +8,10 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'Astrotec-Front';
-  constructor(
-    private authService: AuthService,
-) {}
 
-currentUser = this.authService.currentUserValue;
+  constructor(
+    public authService: AuthService,
+  ) { }
 
 }
 
