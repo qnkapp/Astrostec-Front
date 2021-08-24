@@ -18,8 +18,13 @@ import { SatellitesComponent } from './satellites/satellites.component';
 import { ChatComponent } from './chat/chat.component';
 import { VerifySameEmailDirective } from './sign-up/sign-up-directives/verifySameEmail.directive';
 import { VerifySameMdpDirective } from './sign-up/sign-up-directives/verifySameMdp.directive';
+<<<<<<< HEAD
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
 import { SolaireComponent } from './solaire/solaire.component';
+=======
+import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component'
+
+>>>>>>> 8edc827be9605f791df1964a4f83096e629a2030
 
 @NgModule({
   declarations: [
