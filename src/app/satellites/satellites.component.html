@@ -36,30 +36,20 @@
         <br>
         <br>
 
-        <div>
-            <div class="row">
-                <div class="col-sm-6" *ngFor='let s of satellites'> 
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0 text-center">
-                            <div class="col-md-4">
-                                
-                                <div  
-                                    style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: black;">
-                                    <img width="95%" src="/assets/Img/satellites/{{s.name}}.jpg" alt=""
-                                        class="img-fluid" />
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <p class="card-text">
-                                        Pour en apprendre plus sur {{ s.name }}, cliquez ici :
-                                    </p>
-                                    <p class="card-text">
-                                        <button (click)="goToDetailSatellite(s)" class="btn btn-grey">{{ s.name}}</button>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+        <div class="row">
+            <div class="col-sm-6" *ngFor='let s of satellites'>
+                <div class="card bg-dark text-white">
+                    <div
+                        style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: black;">
+                        <img width="50%" src="/assets/Img/satellites/{{s.name}}.jpg" alt="..." />
+                    </div>
+                    <div class="card-img-overlay">
+                        <p class="card-text">
+                            Pour en apprendre plus sur {{ s.name }}, cliquez ici :
+                        </p>
+                        <p class="card-text">
+                            <button (click)="goToDetailSatellite(s)" class="btn btn-grey">{{ s.name }}</button>
+                        </p>
                     </div>
                 </div>
             </div>
