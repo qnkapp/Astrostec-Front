@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { empty, Observable, SchedulerLike } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,14 @@ export class CartService {
   clearCart() {
     this.items = [];
     return this.items;
+  }
+
+  deleteItem(product:any){
+    this.items.forEach((e: any,index:number) => {
+      if (e.id == product.id) {
+        this.items.splice(index,1);
+      }
+    });
   }
 
 

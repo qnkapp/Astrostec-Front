@@ -17,7 +17,7 @@
     font-size: clamp(10px, 5vw, 30px);
     line-height: 1;
     color: gray;
-    font-family: Impact, sans-serif;
+    font-family: Impact, sans-serif; 
 }
 
 .text{
