@@ -9,21 +9,21 @@
 .descriptif{
     font-size: 20px;
     color: white;
-    font-family: Arial Black, Arial, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     text-align: justify;
 }
 
 .textform{
     font-size: 15px;
     color: white;
-    font-family: Arial, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     text-align: justify;
 }
 
 .envoyer{
     font-size: 20px;
     color: rgb(180, 107, 23);
-    font-family: Impact, "Arial Black", Arial, Verdana, sans-serif;
+    font-family: Impact, sans-serif;
 }
 
 .carousel-caption{

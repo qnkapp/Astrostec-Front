@@ -10,13 +10,22 @@ export class CartService {
   constructor() { }
 
   addToCart(product: any, qty: number) {
+    var found = false;
 
-    if (!this.items.some((item: any) => item.id == product.id)) {
+
+    this.items.forEach((e: any) => {
+      if (e.id == product.id) {
+        product.quantite = e.quantite;
+        product.quantite += qty;
+        e.quantite = product.quantite;
+        found=true;
+      }
+    });
+
+    if(!found){
+      console.log("new product");
       product.quantite = qty;
       this.items.push(product);
-    }
-    else {
-      product.quantite += qty;
     }
   }
 
