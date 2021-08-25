@@ -1,0 +1,35 @@
+.mat-column-id {
+    width: 50px;
+    border-right: solid;
+    text-align: left;
+}
+
+.mat-column-pseudo,
+.mat-column-nom,
+.mat-column-prenom {
+    width: 100px;
+    padding-left: 10px;
+}
+
+.mat-column-email {
+    width: 300px;
+}
+
+.mat-column-ddn,
+.mat-column-dateCreation {
+    width: 90px;
+}
+
+.mat-column-admin,
+.mat-column-supprimer {
+    width: 90px;
+    text-align: center;
+}
+
+.material-icons.color_red {
+    color: red;
+}
+
+.material-icons.color_green {
+    color: green;
+}
