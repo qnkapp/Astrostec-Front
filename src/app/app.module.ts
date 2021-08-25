@@ -23,6 +23,7 @@ import { VerifySameMdpDirective } from './sign-up/sign-up-directives/verifySameM
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
 import { PanierComponent } from './panier/panier.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
+import { SujetsComponent } from './sujets/sujets.component';
 import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
 import { MatIconModule } from '@angular/material/icon';
 import { PaymentCardComponent } from './payment-card/payment-card.component';
@@ -49,6 +50,7 @@ import { ValidationAdminComponent } from './gestion-membre/validation-admin/vali
     DetailPlanetesComponent,
     PanierComponent,
     PiedDePageComponent,
+    SujetsComponent,
     GestionMembreComponent,
     PaymentCardComponent,
     DialogueComponent,
@@ -60,7 +62,7 @@ import { ValidationAdminComponent } from './gestion-membre/validation-admin/vali
     BrowserAnimationsModule,
     MatDialogModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule,    
     ReactiveFormsModule,
     MatIconModule,
     MatTableModule,
