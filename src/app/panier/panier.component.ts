@@ -16,6 +16,7 @@ export class PanierComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.items=this.cartService.getItems();
     console.log(this.items);
     this.getPrix();
   }
@@ -26,6 +27,12 @@ export class PanierComponent implements OnInit {
       prix+=element.prix*element.quantite;
     });
     return prix;
+  }
+
+  deleteItem(product:any):void{
+    this.cartService.deleteItem(product);
+    window.alert('Le produit a été supprimé du panier !');
+    console.log(this.cartService.getItems());
   }
 
 

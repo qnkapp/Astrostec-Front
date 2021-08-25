@@ -24,6 +24,8 @@ import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.compo
 import { PanierComponent } from './panier/panier.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
 import { SujetsComponent } from './sujets/sujets.component';
+import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { SujetsComponent } from './sujets/sujets.component';
     DetailPlanetesComponent,
     PanierComponent,
     PiedDePageComponent,
-    SujetsComponent
+    SujetsComponent,
+    GestionMembreComponent
   ],
   imports: [
     BrowserModule,
@@ -50,9 +53,9 @@ import { SujetsComponent } from './sujets/sujets.component';
     BrowserAnimationsModule,
     MatDialogModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
-    
+    FormsModule,    
+    ReactiveFormsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

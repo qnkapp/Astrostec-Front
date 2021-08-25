@@ -1,10 +1,10 @@
-<div>
+<div *ngIf="produit">
   <div class="row">
     <div class="col-sm-4" style=" display: flex;">
       <img src={{produit.image}} width="100%" style="margin: auto;">
     </div>
     <div class="col-sm-8">
-      <h1>{{produit.nom}}</h1>
+      <h1>{{produit?.nom}}</h1>
       <p><span class="mr-1"><strong style="font-size: 16px;">{{parseFloat(produit.prix)}}€</strong></span></p>
       <p class="pt-1">{{produit.description}}</p>
       
@@ -23,14 +23,12 @@
         <p>Quantité : </p>
         <div class="def-number-input number-input safari_only">
           <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-          <input class="quantity" min="1" max={{produit.stock}} name="quantity" value="1" type="number" #quantite>
+          <input class="quantity" min="1" max={{produit.stock}} name="quantity" value="1" type="number" id="qty">
           <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
         </div>
       </div>
       <button mat-dialog-close type="button" class="btn btn-light btn-md mr-1 mb-2">Fermer</button>
-      <button (click)='addToCart(produit,quantite.valueAsNumber)' type="button" class="btn btn-primary btn-md mr-1 mb-2"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
+      <button (click)='addToCart(produit)' type="button" class="btn btn-primary btn-md mr-1 mb-2"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
     </div>
   </div>
 </div>
-
-<app-pied-de-page></app-pied-de-page>
