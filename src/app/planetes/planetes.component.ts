@@ -26,7 +26,7 @@ export class PlanetesComponent implements OnInit {
   getPlanete(): void {
     this.http.get(this.otherService.lienBack + 'planet').subscribe({
       next: (data) => { this.planetes = data },
-      error: (err) => { console.log(err) }
+      error: (err) => { console.log(err) } 
     })
   }
 
