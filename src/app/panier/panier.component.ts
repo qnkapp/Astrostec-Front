@@ -35,6 +35,9 @@ export class PanierComponent implements OnInit {
     console.log(this.cartService.getItems());
   }
 
-
+  modifyQtyProduct(evt:Event, p:any):void{
+    var n = (evt.target as HTMLInputElement).valueAsNumber;
+    this.cartService.modifyQtyItem(p,n);
+  }
 
 }
