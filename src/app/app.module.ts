@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AccueilComponent } from './accueil/accueil.component';
 
+import { MatTableModule} from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
@@ -19,13 +22,13 @@ import { ChatComponent } from './chat/chat.component';
 import { VerifySameEmailDirective } from './sign-up/sign-up-directives/verifySameEmail.directive';
 import { VerifySameMdpDirective } from './sign-up/sign-up-directives/verifySameMdp.directive';
 
-import { DetailSatellitesComponent } from './detail-satellites/detail-satellites.component';
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
 import { PanierComponent } from './panier/panier.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
 import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
 import { MatIconModule } from '@angular/material/icon';
 import { PaymentCardComponent } from './payment-card/payment-card.component';
+import { NgChatModule } from 'ng-chat';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,10 @@ import { PaymentCardComponent } from './payment-card/payment-card.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatButtonModule,
+    NgChatModule
   ],
   providers: [],
   bootstrap: [AppComponent]

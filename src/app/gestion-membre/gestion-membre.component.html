@@ -1,33 +1,80 @@
 <div class="container">
-    <table class="table w-auto">
-        <thead class="black white-text">
-            <tr>
-                <th scope="col">id</th>
-                <th scope="col">Nom</th>
-                <th scope="col">Prenom</th>
-                <th scope="col">Pseudo</th>
-                <th scope="col" class="text-center">Email</th>
-                <th scope="col">date de naissance</th>
-                <th scope="col">admin</th>
-                <th scope="col">date de création</th>
-                <th scope="col">Supprimer</th>
-            </tr>
-        </thead>
-        <tbody class="white-text">
-            <tr *ngFor='let m of listMembre'>
-                <th scope="row">{{m.id}}</th>
-                <td>{{m.nom}}</td>
-                <td>{{m.prenom}}</td>
-                <td>{{m.pseudo}}</td>
-                <td>{{m.email}}</td>
-                <td>{{m.ddn | date: 'dd/MM/yyyy'}}</td>
-                <td>{{m.admin}}</td>
-                <td>{{m.dateCreation | date: 'dd/MM/yyyy'}}</td>
-                <td class="flex-center">
-                    <mat-icon aria-hidden="false" aria-label="Remove icon">person_remove</mat-icon>
-                </td>
-            </tr>
-        </tbody>
+    <table mat-table [dataSource]="listMembre" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Id Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let membre"> {{membre.id}} </td>
+        </ng-container>
+
+        <!-- Pseudo Column -->
+        <ng-container matColumnDef="pseudo">
+            <th mat-header-cell *matHeaderCellDef> Pseudo </th>
+            <td mat-cell *matCellDef="let membre"> {{membre.pseudo}} </td>
+        </ng-container>
+
+        <!-- Nom Column -->
+        <ng-container matColumnDef="nom">
+            <th mat-header-cell *matHeaderCellDef> Nom </th>
+            <td mat-cell *matCellDef="let membre"> {{membre.nom}} </td>
+        </ng-container>
+
+        <!-- Prenom Column -->
+        <ng-container matColumnDef="prenom">
+            <th mat-header-cell *matHeaderCellDef> Prénom </th>
+            <td mat-cell *matCellDef="let membre"> {{membre.prenom}} </td>
+        </ng-container>
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let membre"> {{membre.email}} </td>
+        </ng-container>
+
+        <!-- Date de Naissance Column -->
+        <ng-container matColumnDef="ddn">
+            <th mat-header-cell *matHeaderCellDef> Date de naissance </th>
+            <td mat-cell *matCellDef="let membre"> {{membre.ddn | date: 'dd/MM/YYYY'}} </td>
+        </ng-container>
+
+        <!-- Date de création Column -->
+        <ng-container matColumnDef="dateCreation">
+            <th mat-header-cell *matHeaderCellDef> Date de création </th>
+            <td mat-cell *matCellDef="let membre"> {{membre.dateCreation | date : 'dd/MM/YYYY'}} </td>
+        </ng-container>
+
+        <!-- Admin Column -->
+        <ng-container matColumnDef="admin">
+            <th mat-header-cell *matHeaderCellDef> Administrateur </th>
+            <td mat-cell *matCellDef="let membre">
+                <button mat-icon-button *ngIf="membre.admin" (click)="openValidation(membre.pseudo, membre.id, 'Voulez-vous vraiment retirer les droits administrateur à')">
+                    <mat-icon aria-hidden="false" aria-label="admin" class="material-icons color_green">
+                        verified_user</mat-icon>
+                </button>
+                <button mat-icon-button *ngIf="!membre.admin" (click)="openValidation(membre.pseudo, membre.id, 'Voulez-vous vraiment donner les droits administrateur à')">
+                    <mat-icon aria-hidden="false" aria-label="admin">
+                        person_add</mat-icon>
+                </button>
+            </td>
+
+        </ng-container>
+
+        <!-- Supprimer Column -->
+        <ng-container matColumnDef="supprimer">
+            <th mat-header-cell *matHeaderCellDef> Supprimer </th>
+            <td mat-cell *matCellDef="let membre">
+                <button mat-icon-button (click)="supprimerMembre(membre.id)">
+                    <mat-icon aria-hidden="false" aria-label="Person_remove" class="material-icons color_red">
+                        person_remove</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 </div>
 
