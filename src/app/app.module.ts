@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AccueilComponent } from './accueil/accueil.component';
 
-import { MatTableModule} from '@angular/material/table';
-import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +26,8 @@ import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
 import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
 import { MatIconModule } from '@angular/material/icon';
 import { PaymentCardComponent } from './payment-card/payment-card.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
 import { NgChatModule } from 'ng-chat';
 
 @NgModule({

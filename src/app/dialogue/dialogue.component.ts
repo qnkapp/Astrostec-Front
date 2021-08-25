@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ChatAdapter } from 'ng-chat';
-import { MyAdapter } from '../my-adapter';
+import { MyAdapter } from './Adapter/my-adapter';
 import { AuthService } from '../services/auth.service';
 import { OtherService } from '../services/other.service';
 
