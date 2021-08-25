@@ -28,6 +28,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { ValidationAdminComponent } from './gestion-membre/validation-admin/validation-admin.component';
+import { NgChatModule } from 'ng-chat';
+import { DialogueComponent } from './dialogue/dialogue.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { ValidationAdminComponent } from './gestion-membre/validation-admin/vali
     PiedDePageComponent,
     SujetsComponent,
     GestionMembreComponent,
-    ValidationAdminComponent
+    ValidationAdminComponent,
+    DialogueComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,8 @@ import { ValidationAdminComponent } from './gestion-membre/validation-admin/vali
     ReactiveFormsModule,
     MatIconModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    NgChatModule
   ],
   providers: [],
   bootstrap: [AppComponent]
