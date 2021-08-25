@@ -1,19 +1,68 @@
-/* object {
-    position: relative;
-    float: left;
-    display: block;
-    width: 200px;
-    height: 200px;
-    margin-right: 20px;
-    border: 1px solid black;
+.zoom {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   }
-  object::after {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.zoom img {
+  width: 55%;
+  transition: 1s all ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+  }
+
+.zoom:hover img {
+  transform: scale(1.2);
+  } 
+
+.zoomsat {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  }
+
+.zoomsat img {
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+  }
+
+.zoomsat:hover img {
+  transform: scale(2.0);
+  } 
+
+  .zoomsatellite {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    }
+  
+  .zoomsatellite img {
+    width: 55%;
+    transition: 1s all ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     display: block;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background: red url("http://placehold.it/200x200");
-  } */
+    }
+  
+  .zoomsatellite:hover img {
+    transform: scale(1.2);
+    } 
