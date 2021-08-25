@@ -2,18 +2,22 @@ import { HttpClient } from '@angular/common/http';
 import { ChatAdapter, IChatGroupAdapter, Group, Message, ChatParticipantStatus, ParticipantResponse, ChatParticipantType, IChatParticipant, MessageType } from 'ng-chat';
 import { Observable, of } from 'rxjs';
 import { delay } from "rxjs/operators";
-import { OtherService } from './services/other.service';
+import { OtherService } from 'src/app/services/other.service';
+import { Membre } from 'src/app/_models/membre.model';
 
 
 export class MyAdapter extends ChatAdapter implements IChatGroupAdapter {
 
-    constructor(private http: HttpClient, private otherService: OtherService){
+    constructor(private http: HttpClient, private otherService: OtherService) {
         super();
     }
 
+    listMembre !: Membre[];
+    participants !: IChatParticipant[]
+
     public static mockedParticipants: IChatParticipant[] =[
 
-        
+
     {
         participantType: ChatParticipantType.User,
         id: 1,
@@ -85,9 +89,25 @@ export class MyAdapter extends ChatAdapter implements IChatGroupAdapter {
         status: ChatParticipantStatus.Away
     }];
 
-    // getMembre(): IChatParticipant[] {
-    //     return this.http.get(this.otherService.lienBack + 'liste_membre')
-    // }
+    getMembre(): IChatParticipant[] {
+        
+        this.http.get(this.otherService.lienBack + 'liste_membre').subscribe({
+            next: (data) => { this.listMembre = data as Membre[] },
+            error: (err) => { console.log(err) }
+        })
+        
+        let i = 0;
+        this.listMembre.forEach(membre => {
+            this.participants[i] = {
+                participantType: ChatParticipantType.User,
+                id: membre.id,
+                displayName: membre.pseudo as string,
+                avatar: "https://thumbnail.myheritageimages.com/502/323/78502323/000/000114_884889c3n33qfe004v5024_C_64x64C.jpg",
+                status: ChatParticipantStatus.Away
+            }
+        })
+        return this.participants
+    }
 
 
 
