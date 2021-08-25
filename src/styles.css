@@ -7,37 +7,22 @@
 
 
 .title{
-<<<<<<< HEAD
-
-    font-size: 60px;
-    color: rgb(180, 107, 23);
-    font-family: 'Squada One', "Arial Black", Arial, Verdana, sans-serif;
-=======
     font-size: 60px;
     color: rgb(180, 107, 23);
     font-family: 'Squada One', sans-serif;
->>>>>>> 0171ebaa4f11e84abf9983ce03740edf27f53bab
 }
 
 
 .soustitre{
     font-size: 30px;
     color: gray;
-<<<<<<< HEAD
-    font-family: Impact, "Arial Black", Arial, Verdana, sans-serif;
-=======
     font-family: Impact, sans-serif;
->>>>>>> 0171ebaa4f11e84abf9983ce03740edf27f53bab
 }
 
 .text{
     font-size: 17px;
     color: white;
-<<<<<<< HEAD
-    font-family: Arial, Verdana, sans-serif;
-=======
     font-family: Arial, sans-serif;
->>>>>>> 0171ebaa4f11e84abf9983ce03740edf27f53bab
     text-align: justify;
 }
 
@@ -49,22 +34,4 @@ html, body {
 
 body { 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
-<<<<<<< HEAD
 }
-
-
- .main {
-    min-height:100%;
-    position:relative;
-    padding-bottom: auto;   /* Hauteur du pied de page /
- }
- 
- footer {
-    position:absolute;
-    bottom:0;  / on le colle en bas /
-    width:100%;
-    height:auto;   / Hauteur du pied de page */
- }
-=======
-}
->>>>>>> 0171ebaa4f11e84abf9983ce03740edf27f53bab
