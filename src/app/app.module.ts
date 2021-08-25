@@ -25,6 +25,7 @@ import { PanierComponent } from './panier/panier.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
 import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
 import { MatIconModule } from '@angular/material/icon';
+import { PaymentCardComponent } from './payment-card/payment-card.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MatIconModule } from '@angular/material/icon';
     DetailPlanetesComponent,
     PanierComponent,
     PiedDePageComponent,
-    GestionMembreComponent
+    GestionMembreComponent,
+    PaymentCardComponent
   ],
   imports: [
     BrowserModule,
