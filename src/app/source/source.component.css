@@ -1,0 +1,23 @@
+#sources {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #sources td, #sources th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  
+  
+  #sources tr:hover {background-color: grey;}
+  
+  #sources th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    font-weight: bold;
+    background-color: rgb(180, 107, 23);
+    color: white;
+  }
