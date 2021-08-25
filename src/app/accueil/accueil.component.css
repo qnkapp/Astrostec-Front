@@ -4,7 +4,6 @@
 
 .soustitre{
     font-size: clamp(25px, 5vw, 40px);
-    line-height: 1;
 }
 
 .descriptif{

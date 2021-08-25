@@ -1,5 +1,4 @@
 .fond{
-
     background-image : url("/assets/Img/fond_etoiles.jpg");
     color: white; 
     height: auto; 
@@ -7,14 +6,16 @@
 
 
 .title{
-    font-size: clamp(33px, 5vw, 60px);
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: 1;
     color: rgb(180, 107, 23);
     font-family: 'Squada One', sans-serif;
 }
 
 
 .soustitre{
-    font-size: clamp(15px, 5vw, 30px);
+    font-size: clamp(10px, 5vw, 30px);
+    line-height: 1;
     color: gray;
     font-family: Impact, sans-serif;
 }
