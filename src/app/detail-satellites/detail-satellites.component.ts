@@ -11,8 +11,9 @@ import { PlaneteService } from '../services/planete.service';
 export class DetailSatellitesComponent implements OnInit {
   satellites: any;
   planete: any;
+ 
   constructor(private http: HttpClient, private otherService: OtherService) { }
-
+  
   ngOnInit(): void {
     this.getSatellite();
     this.getPlanet();
@@ -22,9 +23,10 @@ export class DetailSatellitesComponent implements OnInit {
       next: (data) => { this.satellites = data },
       error: (err) => { console.log(err) }
     });
+    
   }
   getPlanet(): void {
-    this.http.get(this.otherService.lienBack + 'planet/' + PlaneteService.getPlanetes()).subscribe({
+    this.http.get(this.otherService.lienBack + 'planet/' + this.satellites.planetid).subscribe({
       next: (data) => { this.planete = data },
       error: (err) => { console.log(err) }
     });
