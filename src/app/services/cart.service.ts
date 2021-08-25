@@ -47,5 +47,13 @@ export class CartService {
     });
   }
 
+  modifyQtyItem(product:any,qty:number){
+    this.items.forEach((e: any) => {
+      if (e.id == product.id) {
+        product.quantite = qty;
+      }
+    });
+  }
+
 
 }
