@@ -16,7 +16,8 @@
         <br>
 
         <div class="text container">
-            Un satellite est un astre en orbite autour d'un astre autre qu'une étoile. De tels objets sont également appelés lunes, par analogie avec la Lune, le satellite naturel de la Terre.
+            Un satellite est un astre en orbite autour d'un astre autre qu'une étoile. De tels objets sont également
+            appelés lunes, par analogie avec la Lune, le satellite naturel de la Terre.
 
             <br>
             <br>
@@ -35,24 +36,19 @@
         <br>
 
         <div class="row">
-            <div class="col-sm-6" *ngFor='let s of satellites'>
-                <div class="card bg-dark text-white">
-                    <div
-                        style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: black;">
-                        <img width="50%" src="/assets/Img/satellites/{{s.name}}.jpg" alt="..." />
-                    </div>
-                    <div class="card-img-overlay">
-                        <p class="card-text">
-                            Pour en apprendre plus sur {{ s.name }}, cliquez ici :
-                        </p>
-                        <p class="card-text">
-                            <button (click)="goToDetailSatellite(s)" class="btn btn-white">{{ s.name }}</button>
-                        </p>
+            <div class="col-sm-4" *ngFor='let s of satellites'>
+                <div
+                    style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: transparent;">
+
+                    <button class="btn btn-white" (click)="goToDetailSatellite(s)">{{ s.name }}</button>
+                    <div class="zoomsatellite">
+                        <img src="/assets/Img/satellites/{{s.name}}.jpg" alt="..." />
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <app-pied-de-page></app-pied-de-page>
