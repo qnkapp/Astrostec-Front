@@ -19,12 +19,14 @@ import { ChatComponent } from './chat/chat.component';
 import { VerifySameEmailDirective } from './sign-up/sign-up-directives/verifySameEmail.directive';
 import { VerifySameMdpDirective } from './sign-up/sign-up-directives/verifySameMdp.directive';
 
-import { DetailSatellitesComponent } from './detail-satellites/detail-satellites.component';
 import { DetailPlanetesComponent } from './detail-planetes/detail-planetes.component';
 import { PanierComponent } from './panier/panier.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
 import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { ValidationAdminComponent } from './gestion-membre/validation-admin/validation-admin.component';
 import { NgChatModule } from 'ng-chat';
 import { DialogueComponent } from './dialogue/dialogue.component';
 
@@ -46,6 +48,7 @@ import { DialogueComponent } from './dialogue/dialogue.component';
     PanierComponent,
     PiedDePageComponent,
     GestionMembreComponent,
+    ValidationAdminComponent,
     DialogueComponent
   ],
   imports: [
@@ -57,6 +60,8 @@ import { DialogueComponent } from './dialogue/dialogue.component';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
+    MatTableModule,
+    MatButtonModule,
     NgChatModule
   ],
   providers: [],

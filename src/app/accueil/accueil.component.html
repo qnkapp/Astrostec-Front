@@ -1,18 +1,17 @@
 <div class="container-fluid fond">
 
     <!--Section: Titre-->
-    <section class="title text-center pt-5">
+    <section class="title text-center pt-4 mb-4">
       Bienvenue sur Astrotec
     </section>
     <!--Section: Titre-->
 
     <br>
-    <br>
 
     <!--Section: Sous-titre-->
-    <section class="soustitre text-center mb-4">
-      Le meilleur site d'exploration des astres environnants
-    </section>
+    <section class="soustitre text-center mt-4 mb-4">
+      Le meilleur site d'exploration spatiale
+    </section> 
     <!--Section: Sous-titre-->
 
     <br>
@@ -23,7 +22,7 @@
       <!--Section: Descriptif-->
       <section class="col-sm-6 mt-auto mb-auto pt-auto">
 
-        <div class="descriptif mt-auto mb-auto pl-auto ml-4">
+        <div class="descriptif mt-auto mb-auto pl-auto ml-4 pr-auto mr-4">
           Visitez notre site pour en apprendre plus sur les planètes, satellites ou encore exoplanètes qui nous
           entourent.
           <br>Cliquez sur la catégorie d'astres qui vous intéresse dans le menu déroulant du catalogue et vous 
@@ -138,19 +137,44 @@
       </section>
       <!--Section: Carousel-->
 
-
+      <br>
       <br>
       <br>
       <br>
 
     </div> <!--row descriptif + carousel-->
 
+    <div class="row"> <!--row video-->
+
+      <!--Section: Texte video-->
+      <section class="col-sm-12 mt-4">
+
+        <div class="descriptif text-center mt-auto mb-auto pl-auto ml-4 pr-auto mr-4">
+          Pour commencer, nous vous proposons de vous mettre en jambe avec un classique incontournable sur le système solaire :
+
+          <br>
+          <br>
+
+        </div>
+      </section>
+      <!--Section: Texte video-->
+
+      <!--Section: Video-->
+      <section class="container col-sm-7">
+        <div class="videocontainer">
+          <iframe src="https://www.youtube.com/embed/I7cajVnzm8k"  width="560" height="315" allowfullscreen></iframe>
+        </div>
+    </section>
+      <!--Section: Video-->
+
+    </div> <!--row video-->
+
     <div class="row"> <!--row lien source-->
       <section class="descriptif text-center ml-auto mr-auto mt-4 mb-4">
-          Dans tout le contenu du site, vous trouverez différentes informations et images concernant les astres 
+          Dans tout le contenu du site, vous trouverez différentes informations, images vidéos concernant les astres 
           décrits. 
           <br>Pour plus d'informations sur les sources utilisées, cliquez 
-          <span (click)="goToSource()" style="color: blue;">ici</span>.
+          <span (click)="goToSource()" style="color: blue; cursor:pointer;">ici</span>.
       </section>
     </div> <!--row lien source-->
 
