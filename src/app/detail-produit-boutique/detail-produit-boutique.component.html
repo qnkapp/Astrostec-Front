@@ -1,10 +1,10 @@
-<div>
+<div *ngIf="produit">
   <div class="row">
     <div class="col-sm-4" style=" display: flex;">
       <img src={{produit.image}} width="100%" style="margin: auto;">
     </div>
     <div class="col-sm-8">
-      <h1>{{produit.nom}}</h1>
+      <h1>{{produit?.nom}}</h1>
       <p><span class="mr-1"><strong style="font-size: 16px;">{{parseFloat(produit.prix)}}€</strong></span></p>
       <p class="pt-1">{{produit.description}}</p>
       

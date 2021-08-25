@@ -29,6 +29,15 @@ export class PanierComponent implements OnInit {
     return prix;
   }
 
+  deleteItem(product:any):void{
+    this.cartService.deleteItem(product);
+    window.alert('Le produit a été supprimé du panier !');
+    console.log(this.cartService.getItems());
+  }
 
+  modifyQtyProduct(evt:Event, p:any):void{
+    var n = (evt.target as HTMLInputElement).valueAsNumber;
+    this.cartService.modifyQtyItem(p,n);
+  }
 
 }

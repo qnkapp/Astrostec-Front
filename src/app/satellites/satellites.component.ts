@@ -12,6 +12,7 @@ import { PlaneteService } from '../services/planete.service';
 })
 export class SatellitesComponent implements OnInit {
   satellites: any;
+  cheminImage: any;
   constructor(
     private http: HttpClient, 
     private otherService: OtherService, 
@@ -21,6 +22,7 @@ export class SatellitesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSatellite();
+    
   }
   getSatellite(): void {
     this.http.get(this.otherService.lienBack + 'satellite').subscribe({
@@ -34,5 +36,7 @@ export class SatellitesComponent implements OnInit {
     this.route.navigateByUrl("detail-satellites")
     
   }
-
+  // Imagepath(s: any):void{
+  //  this.cheminImage = "/assets/Img/satellites/" + s.name + ".jpg";
+  // }
 }
