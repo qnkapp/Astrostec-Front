@@ -1,14 +1,15 @@
 <!-- <p>detail-satellites works!</p> -->
 <div class="Jumbotron">
-    <div style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: black;">
-        <img width="30%" src="/assets/Img/satellites/{{satellites.name}}.jpg" alt="..." />
-        <p>{{satellites.name}} à pour rayon moyen {{satellites.radius}} km et pour paramètre gravitationnel standard {{satellites.gm}}</p>
+    <div
+        style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: black;">
+        <img width='40%' src="/assets/Img/satellites/{{satellites.name}}.jpg" alt=''>
+        <!-- <object data="/assets/Img/satellites/akkzvnjezv.jpg" type="image/jpg"></object> -->
+        
 
-
-
+        <p>{{satellites.name}} à pour rayon moyen {{satellites.radius}} km et pour paramètre gravitationnel standard
+            {{satellites.gm}}</p>
 
         <p>{{satellites.name}} est le satellite de {{planete.name}}</p>
     </div>
+    <div> {{satellites.name}}</div>
 </div>
-
-
