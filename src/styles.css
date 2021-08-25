@@ -1,26 +1,29 @@
 .fond{
+
     background-image : url("/assets/Img/fond_etoiles.jpg");
     color: white; 
     height: auto; 
 }
 
 
-.title{ 
+.title{
+
     font-size: 60px;
     color: rgb(180, 107, 23);
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Squada One', "Arial Black", Arial, Verdana, sans-serif;
 }
 
+
 .soustitre{
-    font-size: 40px;
+    font-size: 30px;
     color: gray;
-    font-family: Impact, 'Arial Black', sans-serif;
+    font-family: Impact, "Arial Black", Arial, Verdana, sans-serif;
 }
 
 .text{
-    font-size: 25px;
+    font-size: 17px;
     color: white;
-    font-family: Arial, 'Abhaya Libre', sans-serif;
+    font-family: Arial, Verdana, sans-serif;
     text-align: justify;
 }
 
@@ -31,20 +34,19 @@ html, body {
  }
 
 body { 
-    font-family: 'Abhaya Libre', serif;
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
 
 
  .main {
     min-height:100%;
     position:relative;
-    padding-bottom: auto;   /* Hauteur du pied de page */
+    padding-bottom: auto;   /* Hauteur du pied de page /
  }
  
  footer {
     position:absolute;
-    bottom:0;  /* on le colle en bas */
+    bottom:0;  / on le colle en bas /
     width:100%;
-    height:auto;   /* Hauteur du pied de page */
+    height:auto;   / Hauteur du pied de page */
  }
-
