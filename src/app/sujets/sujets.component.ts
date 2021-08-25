@@ -9,6 +9,13 @@ export class SujetsComponent implements OnInit {
 
   constructor() { }
 
+  message: any;
+  sujet = {text: null, pseudo: null, date: null};
+  newSujet: any;
+  todaysdate = new Date();
+  
+
+
   ngOnInit(): void {
   }
 
