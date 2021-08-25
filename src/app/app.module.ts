@@ -29,6 +29,8 @@ import { PaymentCardComponent } from './payment-card/payment-card.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { NgChatModule } from 'ng-chat';
+import { DialogueComponent } from './dialogue/dialogue.component';
+import { ValidationAdminComponent } from './gestion-membre/validation-admin/validation-admin.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { NgChatModule } from 'ng-chat';
     PanierComponent,
     PiedDePageComponent,
     GestionMembreComponent,
-    PaymentCardComponent
+    PaymentCardComponent,
+    DialogueComponent,
+    ValidationAdminComponent
   ],
   imports: [
     BrowserModule,
