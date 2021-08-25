@@ -37,14 +37,8 @@
                                         </div>
                                         <div>
                                             <div class="def-number-input number-input safari_only mb-0 w-100">
-                                                <button
-                                                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                                                    class="minus decrease"></button>
-                                                <input class="quantity" min="1" name="quantity" value={{item.quantite}}
-                                                    type="number">
-                                                <button
-                                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                                                    class="plus increase"></button>
+                                                <input value={{item.quantite}} class="quantity" min="1" name="quantity" 
+                                                    type="number" (change)='modifyQtyProduct($event,item)'>
                                             </div>
                                         </div>
                                     </div>
