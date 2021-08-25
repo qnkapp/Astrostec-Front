@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ForumService } from '../services/forum.service';
 
 @Component({
   selector: 'app-chat',
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
-  constructor() { }
+  constructor(public nav: ForumService) { }
 
   ngOnInit(): void {
       console.log('dans chat');
+      this.nav.hide();
   }
 
 }

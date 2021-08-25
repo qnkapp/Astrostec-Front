@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { empty, Observable, SchedulerLike } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +11,22 @@ export class CartService {
   constructor() { }
 
   addToCart(product: any, qty: number) {
+    var found = false;
 
-    if (!this.items.some((item: any) => item.id == product.id)) {
+
+    this.items.forEach((e: any) => {
+      if (e.id == product.id) {
+        product.quantite = e.quantite;
+        product.quantite += qty;
+        e.quantite = product.quantite;
+        found=true;
+      }
+    });
+
+    if(!found){
+      console.log("new product");
       product.quantite = qty;
       this.items.push(product);
-    }
-    else {
-      product.quantite += qty;
     }
   }
 
@@ -27,6 +37,14 @@ export class CartService {
   clearCart() {
     this.items = [];
     return this.items;
+  }
+
+  deleteItem(product:any){
+    this.items.forEach((e: any,index:number) => {
+      if (e.id == product.id) {
+        this.items.splice(index,1);
+      }
+    });
   }
 
 
