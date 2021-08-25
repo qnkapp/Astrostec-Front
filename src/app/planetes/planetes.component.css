@@ -1,13 +1,13 @@
 img {
     float: left;
-    width: 600px;
-    height: 600 px;
+    width: 350px;
+    height: 350 px;
     object-fit: cover;
 }
 
 .imgsat {
     float: left;
-    width: 1500px;
-    height: 15000 px;
+    width: 700px;
+    height: 700 px;
     object-fit: cover;
 }
