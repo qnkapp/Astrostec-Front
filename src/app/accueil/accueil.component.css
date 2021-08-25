@@ -3,7 +3,7 @@
 }
 
 .soustitre{
-    font-size: clamp(20px, 5vw, 30px);
+    font-size: clamp(25px, 5vw, 40px);
     line-height: 1;
 }
 
