@@ -17,6 +17,8 @@ export class SujetsComponent implements OnInit {
 
 
   ngOnInit(): void {
+
+    console.log('dans sujet');
   }
 
 }
