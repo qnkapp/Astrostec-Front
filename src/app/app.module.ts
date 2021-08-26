@@ -39,6 +39,9 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ExplorationComponent } from './exploration/exploration.component';
 import { CosmologieComponent } from './cosmologie/cosmologie.component';
 import { SoleilComponent } from './soleil/soleil.component';
+import { CommonModule } from '@angular/common';
+import { DetailSatellitesComponent } from './detail-satellites/detail-satellites.component';
+import { ModifProductComponent } from './modif-product/modif-product.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +58,7 @@ import { SoleilComponent } from './soleil/soleil.component';
     VerifySameEmailDirective,
     VerifySameMdpDirective,
     DetailPlanetesComponent,
+    DetailSatellitesComponent,
     PanierComponent,
     PiedDePageComponent,
     SujetsComponent,
@@ -69,9 +73,11 @@ import { SoleilComponent } from './soleil/soleil.component';
     AddProductComponent,
     ExplorationComponent,
     CosmologieComponent,
-    SoleilComponent
+    SoleilComponent,
+    ModifProductComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

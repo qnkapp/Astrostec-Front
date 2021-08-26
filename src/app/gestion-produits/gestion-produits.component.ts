@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddProductComponent } from '../add-product/add-product.component';
+import { ModifProductComponent } from '../modif-product/modif-product.component';
 import { OtherService } from '../services/other.service';
 
 @Component({
@@ -34,7 +35,15 @@ export class GestionProduitsComponent implements OnInit {
     var dialog = this.matDialog.open(AddProductComponent, {
       height: '600px',
       width: '500px',
-    }).afterClosed().subscribe(() => { this.getProducts();console.log(this.produits) });;
+    }).afterClosed().subscribe(() => { this.getProducts();});;
+  }
+
+  goToModif(p:any):void{
+    const mydial = this.matDialog.open(ModifProductComponent,{
+      height:'600px',
+      width:'70%',
+      data:p,
+    }).afterClosed().subscribe(()=> {this.getProducts();});
   }
 
 }
