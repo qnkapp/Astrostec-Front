@@ -16,7 +16,10 @@
                         <div class="product-action">
                             <div class="product-action-style" style="border: 1px solid black;">
                                 <a (click)="goToDetail(p)"> <i class="fa fa-plus"></i></a>
-                                <a (click)="addToCart(p,1)"> <i class="fa fa-shopping-cart"></i> </a>
+                                <a *ngIf="isConnected(); else enabled" (click)="addToCart(p,1)" disabled><i class="fa fa-shopping-cart"></i> </a>
+                                  <ng-template #enabled>
+                                    <a routerLink="/connexion" routerLinkActive="active"><i class="fa fa-shopping-cart"></i></a>
+                                  </ng-template>
                             </div>
                         </div>
                     </div>
@@ -35,3 +38,4 @@
 </div>
 
 <app-pied-de-page></app-pied-de-page>
+<router-outlet></router-outlet>
