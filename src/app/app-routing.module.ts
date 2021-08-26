@@ -18,6 +18,8 @@ import { SujetsComponent } from './sujets/sujets.component';
 import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
 import { AdminGuard } from './_helpers/admin.guard';
 import { RemerciementFormContactComponent } from './remerciement-form-contact/remerciement-form-contact.component';
+import { QuizzComponent } from './quizz/quizz.component';
+import { SoleilComponent } from './soleil/soleil.component';
 
 const routes: Routes = [
   { component: BoutiqueComponent, path: 'boutique' },
@@ -27,7 +29,7 @@ const routes: Routes = [
   {
     component: ForumComponent, path: 'forum', children: [
     { component: ChatComponent, path: 'chat' }, { component: DiscussionsComponent, path: 'discussions' },
-    { component: SujetsComponent, path: 'sujets' }
+    { component: SujetsComponent, path: 'sujets' }, { component: SoleilComponent, path: 'soleil' }
     ],
     // canActivate: [AuthGuard]
   },
@@ -39,7 +41,8 @@ const routes: Routes = [
   { component: SolaireComponent, path: 'solaire' },
   { component: SourceComponent, path: 'source' },
   { component: GestionMembreComponent, path: 'gestion-membre', canActivate: [AdminGuard]},
-  { component: RemerciementFormContactComponent, path: 'remerciement-form-contact' }
+  { component: RemerciementFormContactComponent, path: 'remerciement-form-contact' },
+  { component: QuizzComponent, path:'quizz' }
 ];
 
 @NgModule({
