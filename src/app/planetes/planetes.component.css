@@ -1,45 +1,183 @@
-.zoom {
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    }
+.zoom1 {
+width: 150px;
+height: 150px;
+overflow: hidden;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+}
 
-.zoom img {
-    width: 55%;
-    transition: 1s all ease-in-out;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    display: block;
-    }
+.zoom1 img {
+width: 28%;
+transition: 1s all ease-in-out;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+display: block;
+}
 
-.zoom:hover img {
-    transform: scale(1.2);
-    } 
+.zoom1:hover img {
+transform: scale(7);
+} 
 
-.zoomsat {
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    }
+.zoom2 {
+width: 150px;
+height: 150px;
+overflow: hidden;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+}
 
-.zoomsat img {
-    width: 100%;
-    transition: 0.5s all ease-in-out;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    display: block;
-    }
+.zoom2 img {
+width: 50%;
+transition: 1s all ease-in-out;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+display: block;
+}
 
-.zoomsat:hover img {
-    transform: scale(2.0);
-    } 
+.zoom2:hover img {
+transform: scale(3.5);
+} 
+
+.zoom3 {
+width: 150px;
+height: 150px;
+overflow: hidden;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+}
+
+.zoom3 img {
+width: 63%;
+transition: 1s all ease-in-out;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+display: block;
+}
+
+.zoom3:hover img {
+transform: scale(3.1);
+} 
+
+.zoom4 {
+width: 150px;
+height: 150px;
+overflow: hidden;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+}
+
+.zoom4 img {
+width: 30%;
+transition: 1s all ease-in-out;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+display: block;
+}
+
+.zoom4:hover img {
+transform: scale(5);
+} 
+
+.zoom5 {
+width: 460px;
+height: 460px;
+overflow: hidden;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+}
+
+.zoom5 img {
+width: 95%;
+transition: 1s all ease-in-out;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+display: block;
+}
+
+.zoom5:hover img {
+transform: scale(1.15);
+} 
+
+.zoom6 {
+width: 950px;
+height: 950px;
+overflow: hidden;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+}
+
+.zoom6 img {
+width: 90%;
+transition: 1s all ease-in-out;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+display: block;
+}
+
+.zoom6:hover img {
+transform: scale(1.2);
+} 
+
+.zoom7 {
+width: 250px;
+height: 250px;
+overflow: hidden;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+}
+
+.zoom7 img {
+width: 80%;
+transition: 1s all ease-in-out;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+display: block;
+}
+
+.zoom7:hover img {
+transform: scale(1.5);
+} 
+
+.zoom8 {
+width: 250px;
+height: 250px;
+overflow: hidden;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+}
+
+.zoom8 img {
+width: 75%;
+transition: 1s all ease-in-out;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+display: block;
+}
+
+.zoom8:hover img {
+transform: scale(1.5);
+} 

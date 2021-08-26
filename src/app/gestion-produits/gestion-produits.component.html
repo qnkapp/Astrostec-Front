@@ -10,16 +10,12 @@
             <div class="col-md-4" *ngFor='let p of produits'>
                 <div class="product-wrapper mb-30 text-center">
                     <div class="product-img">
-                        <a (click)="goToDetail(p)" data-abc="true"> <img src={{p.image}} width="227">
+                        <a  data-abc="true"> <img src={{p.image}} width="227">
                         </a>
                         <span style="top: 0.1em;background-color: rgba(0, 0, 0, 0.5); color: white;"><i class="fa fa-rupee"></i>{{parseFloat(p.prix)}}€</span>
                         <div class="product-action">
                             <div class="product-action-style" style="border: 1px solid black;">
-                                <a (click)="goToDetail(p)"> <i class="fa fa-plus"></i></a>
-                                <a *ngIf="isConnected(); else enabled" (click)="addToCart(p,1)" disabled><i class="fa fa-shopping-cart"></i> </a>
-                                  <ng-template #enabled>
-                                    <a routerLink="/connexion" routerLinkActive="active"><i class="fa fa-shopping-cart"></i></a>
-                                  </ng-template>
+                                <a> <i class="fa fa-edit"></i></a>
                             </div>
                         </div>
                     </div>
@@ -32,8 +28,7 @@
         </div>
 
     </div>
-    
-    <div id="icon-cart" style="width: 5%; height: 8%;"><a (click)="goToCart()" id="cart-bottom" style="height: 6%;"> <i class="fa fa-shopping-cart" style="color: white; font-size: 1.7em;"></i></a></div>
+    <div id="icon-cart" style="width: 8%; height: 8%;"><a (click)='goToAdd()' id="cart-bottom"> <i class="fa fa-plus" style="color: white; font-size: 3em;"></i></a></div>
 
 </div>
 

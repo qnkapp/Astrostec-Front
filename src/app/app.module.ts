@@ -34,6 +34,12 @@ import { DialogueComponent } from './dialogue/dialogue.component';
 import { ValidationAdminComponent } from './gestion-membre/validation-admin/validation-admin.component';
 import { RemerciementFormContactComponent } from './remerciement-form-contact/remerciement-form-contact.component';
 import { QuizzComponent } from './quizz/quizz.component';
+import { GestionProduitsComponent } from './gestion-produits/gestion-produits.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { QuestionComponent } from './question/question.component';
+import { ExplorationComponent } from './exploration/exploration.component';
+import { CosmologieComponent } from './cosmologie/cosmologie.component';
+import { SoleilComponent } from './soleil/soleil.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +64,14 @@ import { QuizzComponent } from './quizz/quizz.component';
     DialogueComponent,
     ValidationAdminComponent,
     RemerciementFormContactComponent,
-    QuizzComponent
+    QuizzComponent,
+    GestionProduitsComponent,
+    GestionProduitsComponent,
+    AddProductComponent,
+    QuestionComponent,
+    ExplorationComponent,
+    CosmologieComponent,
+    SoleilComponent
   ],
   imports: [
     BrowserModule,
