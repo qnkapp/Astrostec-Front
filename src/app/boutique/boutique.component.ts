@@ -5,7 +5,8 @@ import { PanierComponent } from '../panier/panier.component';
 import { HttpClient } from '@angular/common/http';
 import { OtherService } from '../services/other.service';
 import { CartService } from '../services/cart.service';
- 
+import { AuthService } from '../services/auth.service';
+
 @Component({
   selector: 'app-boutique',
   templateUrl: './boutique.component.html',
@@ -15,7 +16,7 @@ export class BoutiqueComponent implements OnInit {
 
   produits:any;
 
-  constructor(private dialog:MatDialog, private http:HttpClient,private otherService:OtherService,private cartService:CartService) { }
+  constructor(private dialog:MatDialog, private http:HttpClient,private otherService:OtherService,private cartService:CartService,private authService:AuthService) { }
 
   ngOnInit(): void {
     this.getProducts();
@@ -48,6 +49,10 @@ export class BoutiqueComponent implements OnInit {
     this.cartService.addToCart(product,qty);
     window.alert('Le produit a bien été ajouté au panier !');
     console.log(this.cartService.getItems());
+  }
+
+  isConnected():boolean{
+    return this.authService.isConnected();
   }
 
 }
