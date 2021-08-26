@@ -5,13 +5,14 @@ import { map } from 'rxjs/operators';
 
 import { OtherService } from './other.service';
 import { Membre } from '../_models/membre.model';
+import { CartService } from './cart.service';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private currentUserSubject: BehaviorSubject<Membre | null>;
   public currentUser: Observable<Membre | null>;
 
-  constructor(private http: HttpClient, private otherService: OtherService) {
+  constructor(private http: HttpClient, private otherService: OtherService,private cartService :CartService) {
     let curUser = localStorage.getItem('currentUser') as string;
     this.currentUserSubject = new BehaviorSubject<Membre | null>(JSON.parse(curUser));
     this.currentUser = this.currentUserSubject.asObservable();
@@ -35,6 +36,7 @@ export class AuthService {
     // remove user from local storage and set current user to null
     localStorage.removeItem('currentUser');
     this.currentUserSubject.next(null);
+    this.cartService.clearCart();
   }
 
   public isConnected(): boolean {

@@ -39,12 +39,11 @@
             <div class="col-sm-4" *ngFor='let s of satellites'>
                 <div
                     style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: transparent;">
-
-                    <button class="btn btn-white" (click)="goToDetailSatellite(s)">{{ s.name }}</button>
                     <div class="zoomsatellite">
-                        <img src="/assets/Img/satellites/{{s.name}}.jpg" alt="..." />
+                        <button class="btn btn" (click)="goToDetailSatellite(s)">{{ s.name }}<img
+                                src="/assets/Img/satellites/{{s.name}}.jpg" alt="..." /></button>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
     </div>
