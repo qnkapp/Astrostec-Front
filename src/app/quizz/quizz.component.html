@@ -1,8 +1,25 @@
 <div class="container-fluid fond">
+   <div class="row">
 
-   coucou
+
+      <div *ngFor="let q of questions" class="col-sm-4">
+         <div class="card p-4" style="background-color: darkorange;">
+            <div class="row">
+               <div class="col-sm 4">{{q.id}}</div>
+               <div class="col-sm-8">
+                  {{q.enonce}}
+                  <div *ngFor="let r of reponses">
+                     <div *ngIf="q.id == r.question.id">
+                        <span>{{r.answer}}</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
 
+   </div>
 </div>
 
 <app-pied-de-page></app-pied-de-page>

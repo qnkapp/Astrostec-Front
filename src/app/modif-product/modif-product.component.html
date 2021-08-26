@@ -20,5 +20,5 @@
         <label for="inputStock">Stock</label>
         <input type="text" class="form-control" id="inputStock" placeholder="Stock" [(ngModel)]="stockName" name="stock">
     </div>
-    <button mat-dialog-close (click)='addProduct()' type="submit" class="btn btn-primary">Ajouter</button>
+    <button (click)='modifProduct()' mat-dialog-close type="submit" class="btn btn-primary">Modifier</button>
 </form>
