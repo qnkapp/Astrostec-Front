@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PaymentCardComponent } from '../payment-card/payment-card.component';
 import { CartService } from '../services/cart.service';
 
 
@@ -10,7 +12,7 @@ import { CartService } from '../services/cart.service';
 export class PanierComponent implements OnInit {
 
   
-  constructor(private cartService:CartService) { }
+  constructor(private cartService:CartService,private dialog:MatDialog) { }
 
   items=this.cartService.getItems();
 
@@ -21,12 +23,12 @@ export class PanierComponent implements OnInit {
     this.getPrix();
   }
 
-  getPrix(): number{
+  getPrix(): string{
     var prix = 0;
     this.items.forEach((element: any) => {
       prix+=element.prix*element.quantite;
     });
-    return prix;
+    return prix.toFixed(2);
   }
 
   deleteItem(product:any):void{
@@ -38,6 +40,16 @@ export class PanierComponent implements OnInit {
   modifyQtyProduct(evt:Event, p:any):void{
     var n = (evt.target as HTMLInputElement).valueAsNumber;
     this.cartService.modifyQtyItem(p,n);
+  }
+
+  goToCardPayment(){
+    const mydial = this.dialog.open(PaymentCardComponent,{
+      panelClass: 'custom-dialog'
+    });
+  }
+
+  parseFloat(prix:any):string{
+    return prix.toFixed(2);
   }
 
 }

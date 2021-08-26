@@ -1,4 +1,141 @@
-hello world
+
+<div class="row">
+        <div class="col-3">
+          <!-- Tab navs -->
+          <div
+            class="nav flex-column nav-tabs text-center"
+            id="v-tabs-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <a
+              class="nav-link active"
+              id="v-tabs-home-tab"
+              data-mdb-toggle="tab"
+              href="home_forum"
+              role="tab"
+              aria-controls="v-tabs-home"
+              aria-selected="true"
+              >Accueil Forum</a
+            >
+            <a
+              class="nav-link"
+              id="v-tabs-profile-tab"
+              data-mdb-toggle="tab"
+              href="sujet1"
+              role="tab"
+              aria-controls="v-tabs-profile"
+              aria-selected="true"
+              >Sujet 1</a
+            >
+            <a
+              class="nav-link"
+              id="v-tabs-messages-tab"
+              data-mdb-toggle="tab"
+              href="sujet2"
+              role="tab"
+              aria-controls="v-tabs-messages"
+              aria-selected="true"
+              >Sujet 2</a
+            >
+            <a
+            class="nav-link"
+            id="v-tabs-messages-tab"
+            data-mdb-toggle="tab"
+            href="sujet3"
+            role="tab"
+            aria-controls="v-tabs-messages"
+            aria-selected="true"
+            >Sujet 3</a
+          >
+          </div>
+          <!-- Tab navs -->
+        </div>
+      
+        <div class="col-9">
+          <!-- Tab content -->
+          <div class="tab-content" id="v-tabs-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="v-tabs-home"
+              role="tabpanel"
+              aria-labelledby="v-tabs-home-tab"
+            >
+            <div class="text ml-4 mt-4 mb-4" >
+              Bienvenue dans votre espace d'échanges et de discussions autour des Astres et de l'Espace 
+                  <br>Nous rappelons qu'il s'agit d'un espace communautaire, alors veillez à ce que la courtoisie et la bienveillance soient d'usage, échangez dans la convivialité ! 
+                  <br><br> Embarquez dans le vaisseau de la curiosité et gardez des étoiles pleins les yeux, Salutation!
+                  <br>
+                  <i class="far fa-hand-point-left fa-2x"></i> Ces liens vous amenerons vers les questionnements et débats populaires.
+          </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="sujet1"
+              role="tabpanel"
+              aria-labelledby="affichage-conversation"
+            >
+             <div class="affichage-conversation">
+               <div class="talk">
+                  <form action="" method="post">
+                    <input type="text" name="pseudo" time="date">
+                    <br>
+                    <textarea name="commentaire-forum" placeholder="Commantaires..." cols="70" rows="4"></textarea>
+                    <input type="submit" name="envoyer">
+                  </form>
+                  <section id="message"></section>
+
+               </div>
+              
+             </div>  
+
+
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-tabs-messages"
+              role="tabpanel"
+              aria-labelledby="v-tabs-messages-tab"
+            >
+            Sujet 2 content<div class="affichage-conversation2">
+              <div class="talk2">
+                 <form action="" method="post">
+                   <input type="text" name="pseudo" time="date">
+                   <br>
+                   <textarea name="commentaire-forum" placeholder="Commantaires..." cols="70" rows="4"></textarea>
+                   <input type="submit" name="envoyer">
+                 </form>
+                 <section id="message"></section>
+
+              </div>
+             
+            </div> 
+            </div>
+            <div
+            class="tab-pane fade"
+            id="v-tabs-messages"
+            role="tabpanel"
+            aria-labelledby="v-tabs-messages-tab"
+          >
+            Sujet 3 content <div class="affichage-conversation3">
+              <div class="talk3">
+                 <form action="" method="post">
+                   <input type="text" name="pseudo" time="date">
+                   <br>
+                   <textarea name="commentaire-forum" placeholder="Commantaires..." cols="70" rows="4"></textarea>
+                   <input type="submit" name="envoyer">
+                 </form>
+                 <section id="message"></section>
+
+              </div>
+             
+            </div> 
+          </div>
+          </div>
+          <!-- Tab content--> 
+        </div>
+      </div> 
+
 
 <!--!!!!!!!!!!!!!!!!!!!!!!!! A RESOUDRE !!!!!!!!!!!!!!!!!!!!!!!!!!-->
 <!-- <app-pied-de-page></app-pied-de-page> -->
