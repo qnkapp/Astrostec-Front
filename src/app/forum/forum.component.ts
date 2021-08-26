@@ -14,4 +14,6 @@ export class ForumComponent implements OnInit {
     this.nav.show();
   }
 
+  
+
 }

@@ -1,40 +1,33 @@
-<div class="fond">
-    
-    <div class="title text-center">
-        Espace Membre : Accueil Forum
-    </div>
-    <br>
-    <br>
 
-    
-   
-    <!-- <div class="text ml-4 mt-4 mb-4" *ngIf="nav.visible">
-        Bienvenue dans votre espace d'échanges et de discussions autour des Astres et de l'Espace 
-            <br>Nous rappelons qu'il s'agit d'un espace communautaire, alors veillez à ce que la courtoisie et la bienveillance soient d'usage, échangez dans la convivialité ! 
-            <br><br> Embarquez dans le vaisseau de la curiosité et gardez des étoiles pleins les yeux, Salutation!
-            <br>
-            <br>
-    </div> -->
-   <!-- <nav class="navbar navbar-expand-lg navbar-dark grey" *ngIf="nav.visible">
-       
-         <ul class="navbar-nav mr-auto nav-fill w-100">
-            <li class="nav-item" routerLinkActive='active'>
-              <a class="nav-link text text-center" routerLink='sujets'> Thèmes Forum 
-      
-              </a>
-            </li>
-        
-            <li class="nav-item" routerLinkActive='active'>
-              <a class="nav-link text text-center" routerLink='discussions'> <i class="fas fa-bell fa-lg "></i>Discussions</a>
-                
-
-            </li>
-        </ul>
-    </nav> -->
-
+  <div class="title text-center">
+    Espace Membre : Accueil Forum
   </div>
+  <br>
+  <br>
+
+      <!-- Tab navs -->
+      <nav class="navbar navbar-expand-lg ">
+        <ul class="navbar-nav mr-auto nav-fill w-100">
+        <li class="nav-item" routerLinkActive='active'>
+          <a class="nav-link" routerLink='sujets'><h2>Accueil Forum</h2>
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <br>
+        <li class="nav-item" routerLinkActive='active'>
+          <a class="nav-link" routerLink='soleil'><h2>Savons-nous tout de notre Etoile : Le Soleil ?</h2></a>
+        </li>
+        <br>
+        <li class="nav-item" routerLinkActive='active'>
+          <a class="nav-link" routerLink='exploration'><h2>L'exploration spatiale</h2></a>
+        </li>
+        <br>
+        <li class="nav-item" routerLinkActive='active'>
+          <a class="nav-link" routerLink='cosmologie'><h2>Cosmologie</h2></a>
+        </li>
+        <br>
+        </ul>
+      </nav>
 
 
 <router-outlet></router-outlet>
-
-
