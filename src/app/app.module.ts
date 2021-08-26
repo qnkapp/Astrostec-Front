@@ -34,6 +34,7 @@ import { DialogueComponent } from './dialogue/dialogue.component';
 import { ValidationAdminComponent } from './gestion-membre/validation-admin/validation-admin.component';
 import { RemerciementFormContactComponent } from './remerciement-form-contact/remerciement-form-contact.component';
 import { QuizzComponent } from './quizz/quizz.component';
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { QuizzComponent } from './quizz/quizz.component';
     DialogueComponent,
     ValidationAdminComponent,
     RemerciementFormContactComponent,
-    QuizzComponent
+    QuizzComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
