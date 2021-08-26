@@ -63,13 +63,10 @@ import { SoleilComponent } from './soleil/soleil.component';
     ValidationAdminComponent,
     RemerciementFormContactComponent,
     QuizzComponent,
-<<<<<<< HEAD
-    QuestionComponent
-=======
+    QuestionComponent,
     ExplorationComponent,
     CosmologieComponent,
     SoleilComponent
->>>>>>> a19cdbae31fe60b36c944da032932eb0134f9efd
   ],
   imports: [
     BrowserModule,
