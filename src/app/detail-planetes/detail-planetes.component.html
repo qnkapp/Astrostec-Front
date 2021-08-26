@@ -15,7 +15,33 @@
             </p>
         </div>
     </div>
-     <!-- if satellites null -->
+
+
+
+    <!-- Article -->
+    <div class="fond">
+        <div class="container">
+            <div class="text container">
+                <h2>Article sur {{planete.name}}</h2>
+                <p>{{planete.text}}</p>
+
+                <button class="btn btn-black" ion-button full round (click)="onButtonClick()">Modifier</button>
+                <div *ngIf="buttonClicked && !authService.isConnected()">
+                    Connecter vous pour modifier l'article.
+                </div>
+                <div *ngIf="buttonClicked && authService.isConnected()">
+                    <input type="text" placeholder="Text" #filterName name="filterName" id="text" class="form-text"
+                        formControlText="text">
+                    <button class="btn btn-black" (click)="enregistrer(filterName.value)">Enregistrer</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- if satellites null afficher  planete n'a pas de satellites-->
     <div *ngIf="satellites== '' ">
         <p>{{planete.name}} n'a pas de satellite
         </p>
@@ -23,12 +49,15 @@
     <div>
         <div *ngIf="satellites!=''">
             {{planete.name}} à pour satellites :
-            <div *ngFor='let s of satellites'>
-                {{s.name}}
+            <div class='liens' *ngFor='let s of satellites'>
+                <p (click)="gotosatellite(s)"><u>{{s.name}}</u></p>
             </div>
         </div>
     </div>
 </div>
+
+
+
 
 
 <!-- 
