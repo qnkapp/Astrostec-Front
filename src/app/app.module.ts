@@ -32,6 +32,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgChatModule } from 'ng-chat';
 import { DialogueComponent } from './dialogue/dialogue.component';
 import { ValidationAdminComponent } from './gestion-membre/validation-admin/validation-admin.component';
+import { RemerciementFormContactComponent } from './remerciement-form-contact/remerciement-form-contact.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ValidationAdminComponent } from './gestion-membre/validation-admin/vali
     GestionMembreComponent,
     PaymentCardComponent,
     DialogueComponent,
-    ValidationAdminComponent
+    ValidationAdminComponent,
+    RemerciementFormContactComponent
   ],
   imports: [
     BrowserModule,
