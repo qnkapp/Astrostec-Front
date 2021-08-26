@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { response } from 'express';
+
 
 @Component({
   selector: 'app-accueil',
@@ -24,8 +24,8 @@ export class AccueilComponent implements OnInit {
     if (contactForm.valid) {
       const email = contactForm.value;
       const headers = new HttpHeaders( { 'Content-Type' : 'application/json' } );
-      this.http.post('https://formspree.io/f/xoqypozl',
-      { nom : email.nom, prenom : email.prenom, mail : email.email, objet : email.subject, message : email.message },
+      this.http.post('https://formspree.io/f/xoqypozl', //Utilisation d'un lien fourni par formspree (compte créé pour rediriger les mail vers la boîte mail contact)
+      { Nom : email.nom, Prénom : email.prenom, Email : email.email, Objet : email.subject, Message : email.message },
       { 'headers' : headers }).subscribe(
         response => {
           console.log(response);
