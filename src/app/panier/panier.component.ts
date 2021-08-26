@@ -42,9 +42,9 @@ export class PanierComponent implements OnInit {
     this.cartService.modifyQtyItem(p,n);
   }
 
-  goToCardPayment(){
+  goToCardPayment(p:any){
     const mydial = this.dialog.open(PaymentCardComponent,{
-      panelClass: 'custom-dialog'
+      data:p,
     });
   }
 
