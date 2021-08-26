@@ -24,12 +24,17 @@
             <div class="text container">
                 <h2>Article sur {{planete.name}}</h2>
                 <p>{{planete.text}}</p>
+
                 <button class="btn btn-black" ion-button full round (click)="onButtonClick()">Modifier</button>
-                <div *ngIf="buttonClicked">
+                <div *ngIf="buttonClicked && !authService.isConnected()">
+                    Connecter vous pour modifier l'article.
+                </div>
+                <div *ngIf="buttonClicked && authService.isConnected()">
                     <input type="text" placeholder="Text" #filterName name="filterName" id="text" class="form-text"
                         formControlText="text">
                     <button class="btn btn-black" (click)="enregistrer(filterName.value)">Enregistrer</button>
                 </div>
+
             </div>
         </div>
     </div>
@@ -44,8 +49,8 @@
     <div>
         <div *ngIf="satellites!=''">
             {{planete.name}} à pour satellites :
-            <div class='satellites' *ngFor='let s of satellites'>
-                <p (click)="gotosatellite(s)">{{s.name}}</p>
+            <div class='liens' *ngFor='let s of satellites'>
+                <p (click)="gotosatellite(s)"><u>{{s.name}}</u></p>
             </div>
         </div>
     </div>
