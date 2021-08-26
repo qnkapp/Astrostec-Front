@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Inject, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { OtherService } from '../services/other.service';
 import { PlaneteService } from '../services/planete.service';
@@ -16,9 +17,12 @@ export class DetailPlanetesComponent implements OnInit {
   satellites: any;
   planete: any;
   taille:any;
+  filterName:any;
+  public buttonClicked: boolean = false;
   constructor(private http: HttpClient, private otherService: OtherService) { }
 
   ngOnInit(): void {
+   
     this.satelliteByPlanet();
     this.getPlanet();
   }
@@ -36,5 +40,19 @@ export class DetailPlanetesComponent implements OnInit {
     });
     this.taille=this.planete.diamater/12753;
   }
+
+  enregistrer(value:any): void{
+    this.planete.text=value
+    this.http.put(this.otherService.lienBack+'planet/article/'+PlaneteService.getPlanetes(),this.planete).subscribe({
+      next: (data) => { this.planete = data },
+      error: (err) => { console.log(err) }
+    });
+    this.buttonClicked = !this.buttonClicked;
+  }
+  
+  public onButtonClick() {
+
+    this.buttonClicked = !this.buttonClicked;
+}
   
 }
