@@ -20,6 +20,7 @@ import { AdminGuard } from './_helpers/admin.guard';
 import { RemerciementFormContactComponent } from './remerciement-form-contact/remerciement-form-contact.component';
 import { QuizzComponent } from './quizz/quizz.component';
 import { SoleilComponent } from './soleil/soleil.component';
+import { GestionProduitsComponent } from './gestion-produits/gestion-produits.component';
 import { ExplorationComponent } from './exploration/exploration.component';
 import { CosmologieComponent } from './cosmologie/cosmologie.component';
 import { QuestionComponent } from './question/question.component';
@@ -47,6 +48,7 @@ const routes: Routes = [
   { component: GestionMembreComponent, path: 'gestion-membre', canActivate: [AdminGuard]},
   { component: RemerciementFormContactComponent, path: 'remerciement-form-contact' },
   { component: QuizzComponent, path:'quizz' },
+  { component: GestionProduitsComponent, path: 'gestion-produits'},
   { component: ExplorationComponent, path:'exploration'},
   {component: CosmologieComponent, path:'cosmologie'},
   { component: QuestionComponent, path: 'questions' }
