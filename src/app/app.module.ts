@@ -35,6 +35,7 @@ import { ValidationAdminComponent } from './gestion-membre/validation-admin/vali
 import { RemerciementFormContactComponent } from './remerciement-form-contact/remerciement-form-contact.component';
 import { QuizzComponent } from './quizz/quizz.component';
 import { ExplorationComponent } from './exploration/exploration.component';
+import { CosmologieComponent } from './cosmologie/cosmologie.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { ExplorationComponent } from './exploration/exploration.component';
     ValidationAdminComponent,
     RemerciementFormContactComponent,
     QuizzComponent,
-    ExplorationComponent
+    ExplorationComponent,
+    CosmologieComponent
   ],
   imports: [
     BrowserModule,
