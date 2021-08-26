@@ -23,6 +23,7 @@ import { SoleilComponent } from './soleil/soleil.component';
 import { GestionProduitsComponent } from './gestion-produits/gestion-produits.component';
 import { ExplorationComponent } from './exploration/exploration.component';
 import { CosmologieComponent } from './cosmologie/cosmologie.component';
+import { QuestionComponent } from './question/question.component';
 
 const routes: Routes = [
   { component: BoutiqueComponent, path: 'boutique' },
@@ -49,7 +50,8 @@ const routes: Routes = [
   { component: QuizzComponent, path:'quizz' },
   { component: GestionProduitsComponent, path: 'gestion-produits'},
   { component: ExplorationComponent, path:'exploration'},
-  {component: CosmologieComponent, path:'cosmologie'}
+  {component: CosmologieComponent, path:'cosmologie'},
+  { component: QuestionComponent, path: 'questions' }
 ];
 
 @NgModule({
