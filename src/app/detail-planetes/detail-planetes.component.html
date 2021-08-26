@@ -35,6 +35,7 @@
     </div>
     <br>
     <br>
+
     <!-- if satellites null afficher  planete n'a pas de satellites-->
     <div *ngIf="satellites== '' ">
         <p>{{planete.name}} n'a pas de satellite
@@ -44,7 +45,7 @@
         <div *ngIf="satellites!=''">
             {{planete.name}} à pour satellites :
             <div class='satellites' *ngFor='let s of satellites'>
-                {{s.name}}
+                <p (click)="gotosatellite(s)">{{s.name}}</p>
             </div>
         </div>
     </div>
