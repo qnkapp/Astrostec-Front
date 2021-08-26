@@ -12,9 +12,9 @@ import { OtherService } from '../services/other.service';
 })
 export class DialogueComponent implements OnInit {
   
-  userId = 999;
+  userId = this.authService.currentUserValue?.id;
 
-  public adapter: ChatAdapter = new MyAdapter(this.http, this.otherService);
+  public adapter: ChatAdapter = new MyAdapter(this.http, this.otherService, this.authService);
   //public adapter: ChatAdapter = new MyAdapterPagedHistory();
 
 

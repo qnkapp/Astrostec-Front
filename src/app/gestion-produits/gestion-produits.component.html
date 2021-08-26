@@ -1,0 +1,36 @@
+<div class="fond">
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+
+            <div class="title text-center" style="width: 100%;">
+                Achetez vos produits made in univers !
+            </div>
+
+            <br><br><br><br>
+            <div class="col-md-4" *ngFor='let p of produits'>
+                <div class="product-wrapper mb-30 text-center">
+                    <div class="product-img">
+                        <a  data-abc="true"> <img src={{p.image}} width="227">
+                        </a>
+                        <span style="top: 0.1em;background-color: rgba(0, 0, 0, 0.5); color: white;"><i class="fa fa-rupee"></i>{{parseFloat(p.prix)}}€</span>
+                        <div class="product-action">
+                            <div class="product-action-style" style="border: 1px solid black;">
+                                <a> <i class="fa fa-edit"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-4 mr-4">
+                        <p>{{p.nom}}</p>
+                    </div>
+                </div>
+            </div>
+                  
+        </div>
+
+    </div>
+    <div id="icon-cart" style="width: 8%; height: 8%;"><a (click)='goToAdd()' id="cart-bottom"> <i class="fa fa-plus" style="color: white; font-size: 3em;"></i></a></div>
+
+</div>
+
+<app-pied-de-page></app-pied-de-page>
+<router-outlet></router-outlet>
