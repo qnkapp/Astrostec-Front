@@ -1,30 +1,38 @@
-<body class="fond">
+<div class="fond">
     
-    <div class="title text-center pt-5">
-        Espace Membre : Acceuil Forum
+    <div class="title text-center">
+        Espace Membre : Accueil Forum
     </div>
     <br>
     <br>
    
-    <div>
-        <h5>Bienvenue dans votre espace d'échanges et de discussions autour des Astres et de l'Espace 
+    <!-- <div class="text ml-4 mt-4 mb-4" *ngIf="nav.visible">
+        Bienvenue dans votre espace d'échanges et de discussions autour des Astres et de l'Espace 
             <br>Nous rappelons qu'il s'agit d'un espace communautaire, alors veillez à ce que la courtoisie et la bienveillance soient d'usage, échangez dans la convivialité ! 
-            <br><br> Embarquez dans le vaisseau de la curiosoté et gardez des étoiles pleins les yeux, Salutation!</h5>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark grey">
-         <!-- Links -->
+            <br><br> Embarquez dans le vaisseau de la curiosité et gardez des étoiles pleins les yeux, Salutation!
+            <br>
+            <br>
+    </div> -->
+   <!-- <nav class="navbar navbar-expand-lg navbar-dark grey" *ngIf="nav.visible">
+       
          <ul class="navbar-nav mr-auto nav-fill w-100">
             <li class="nav-item" routerLinkActive='active'>
-              <a class="nav-link" routerLink='forum'> Thèmes Forum 
-                <span class="sr-only">(current)</span>
+              <a class="nav-link text text-center" routerLink='sujets'> Thèmes Forum 
+      
               </a>
             </li>
-             <!-- Dropdown -->
+        
             <li class="nav-item" routerLinkActive='active'>
-              <a class="nav-link" routerLink='chats'>Chat</a>
+              <a class="nav-link text text-center" routerLink='discussions'> <i class="fas fa-bell fa-lg "></i>Discussions</a>
+                
+
             </li>
         </ul>
-    </nav>
-</body>
+    </nav> -->
+
+  </div>
+
+
+<router-outlet></router-outlet>
 
 

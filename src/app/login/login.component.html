@@ -1,9 +1,11 @@
-<div class="container flex-centertop">
+<div class="container flex-centertop text-black-50">
     <!-- Card -->
     <div class="card m-5 w-50 ml-auto mr-auto">
 
         <!-- Card body -->
         <div class="card-body">
+
+            <div *ngIf="message!=''" class="text-success text-center">{{message}}</div>
 
             <!-- Material form register -->
             <form #connect="ngForm" (ngSubmit)="connexion(connect.value)">
@@ -12,23 +14,31 @@
                 <!-- Material input email -->
                 <div class="md-form">
                     <i class="fa fa-envelope prefix grey-text"></i>
-                    <input type="email" name="pseudo" class="form-control" ngModel="">
-                    <label for="materialFormCardEmailEx" class="font-weight-light pl-3">Votre login</label>
+                    <input type="text" id="pseudo" name="pseudo" class="form-control" ngModel="">
+                    <label for="pseudo" class="font-weight-light pl-3">Votre login</label>
                 </div>
 
 
                 <!-- Material input password -->
                 <div class="md-form">
                     <i class="fa fa-lock prefix grey-text"></i>
-                    <input type="password" name="mdp" class="form-control" ngModel="">
-                    <label for="materialFormCardPasswordEx" class="font-weight-light pl-3">Votre mot de passe</label>
+                    <input type="password" id="mdp" name="mdp" class="form-control" ngModel="">
+                    <label for="mdp" class="font-weight-light pl-3">Votre mot de passe</label>
                 </div>
 
                 <div class="text-center py-4 mt-3">
                     <button class="btn btn-cyan" type="submit">Se Connecter</button>
                 </div>
+
+                <!-- Register -->
+                <p class="text-center">Pas de compte?
+                    <a routerLink='../sign-up'>S'enregistrer</a>
+                </p>
+
             </form>
             <!-- Material form register -->
+
+            <!-- Affiche une erreur si le login est incorrect -->
             <p class="text-danger text-center" *ngIf=" msgErr != null "> {{ msgErr }} </p>
         </div>
         <!-- Card body -->
@@ -37,3 +47,5 @@
     <!-- Card -->
 
 </div>
+
+<app-pied-de-page></app-pied-de-page>

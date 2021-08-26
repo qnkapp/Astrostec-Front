@@ -1,0 +1,45 @@
+<div class="container text">
+    <div
+        style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: rgba(0, 0, 0, 0);">
+        <img style="width:40%" src="/assets/Img/planets/{{planete.name}}.png" alt="...">
+
+        <div>
+            <p>
+                {{planete.name}} à pour diametre {{planete.diameter}} km, elle a pour masse {{planete.mass}}
+                *10<sup>24</sup>kg,
+                sa température moyenne à la surface est de {{planete.mean_temperature}}°C, les jours y dure
+                {{planete.length_of_day}} heures,
+                elle met {{planete.orbital_period}} jours pour faire le tour du Soleil
+                et elle se situe à {{planete.distance_from_sun}}*10<sup>6</sup> km du Soleil.
+
+            </p>
+        </div>
+    </div>
+     <!-- if satellites null -->
+    <div *ngIf="satellites== '' ">
+        <p>{{planete.name}} n'a pas de satellite
+        </p>
+    </div>
+    <div>
+        <div *ngIf="satellites!=''">
+            {{planete.name}} à pour satellites :
+            <div *ngFor='let s of satellites'>
+                {{s.name}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 
+<div
+    style=" width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color:
+            #ff681100;">
+            <img style="width:{{(planete.diameter/12756)*100}}" src="/assets/Img/planets_black/{{planete.name}}.jpg"
+                alt="...">
+            <img width="100" src="/assets/Img/planets/Terre.png" alt="...">
+        </div> -->
+
+<app-pied-de-page></app-pied-de-page>
+
+<!-- <p>detail-planetes works</p> -->

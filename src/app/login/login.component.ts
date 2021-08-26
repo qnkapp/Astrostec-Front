@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { OtherService } from '../services/other.service';
 import { HttpClient } from '@angular/common/http';
+import { MessageService } from '../services/message.service';
+import { AuthService } from '../services/auth.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -9,28 +13,39 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http: HttpClient, private otherService: OtherService) { }
+  constructor(
+    private http: HttpClient, 
+    private otherService: OtherService, 
+    private messageService: MessageService, 
+    private authService: AuthService,
+    private router: Router,
+    private route: ActivatedRoute) { }
+  
 
+  message: any;
   membre: any;
   msgErr: any;
+  loading = false;
+  returnUrl!: string;
 
   ngOnInit(): void {
-    
+    this.messageService.sharedMessage.subscribe((message:String) => this.message = message)
   }
 
   connexion(membre: any): void {
-    this.http.post(this.otherService.lienBack + 'login', membre).subscribe({
-      next: (data) => { 
-        this.membre = data;
-        if (this.membre != null){
-          console.log(this.membre)
-          this.msgErr = null;
-        }
-        else{
-          this.msgErr = "Mauvais login ou mot de passe"
-        }
-       },
-      error: (err) => { console.log(err) }
-    })
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'Accueil';
+
+    this.loading = true;
+    this.authService.login(membre)
+    .pipe(first())
+    .subscribe(
+        data => {
+            this.router.navigateByUrl(this.returnUrl);
+        },
+        error => {
+            console.log(error)
+        });
   }
 }
+
+//Bonjour

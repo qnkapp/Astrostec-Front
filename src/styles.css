@@ -1,6 +1,4 @@
-
 .fond{
-
     background-image : url("/assets/Img/fond_etoiles.jpg");
     color: white; 
     height: auto; 
@@ -8,24 +6,39 @@
 
 
 .title{
-    
-    font-size: 60px;
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: 1;
     color: rgb(180, 107, 23);
-    font-family: 'Squada One', "Arial Black", Arial, Verdana, sans-serif;
+    font-family: 'Squada One', sans-serif;
 }
 
 
 .soustitre{
-    font-size: 30px;
+    font-size: clamp(10px, 5vw, 30px);
+    line-height: 1;
     color: gray;
-    font-family: Impact, "Arial Black", Arial, Verdana, sans-serif;
+    font-family: Impact, sans-serif; 
 }
 
 .text{
     font-size: 17px;
     color: white;
-    font-family: Arial, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     text-align: justify;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+ }
+
+body { 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+.listFriends {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: gray;
+}
