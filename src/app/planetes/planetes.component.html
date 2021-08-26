@@ -48,19 +48,23 @@
         <br>
 
         <div align="center">
-            
 
-                <div class="soleil"> Soleil <img width="100%" class="imgsat" src="/assets/Img/DemiSoleilBas.png" alt="..." />
+            <div class="soleil"> Soleil <img width="100%" class="imgsat" src="/assets/Img/DemiSoleilBas.png"
+                    alt="..." />
 
-                    <div class="col-sm-6" *ngFor='let p of planetes'>
-                        <div
-                style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: transparent;">
+                <div style="padding: 85px;"></div>
+
+                <div class="col-sm-6" *ngFor='let p of planetes'>
+
+                    <div
+                        style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: transparent;">
 
                         <div *ngIf='p.name=="Mercure"'>
                             <div class="zoom1">
                                 <button (click)="goToDetail(p)" class="btn btn">{{ p.name }}<img class="imgsat"
                                         src="/assets/Img/planets/{{ p.name }}.png" alt="..." /></button>
                             </div>
+                            <div style="padding: 50px;"></div>
                         </div>
 
                         <div *ngIf='p.name=="Venus"'>
@@ -68,6 +72,7 @@
                                 <button (click)="goToDetail(p)" class="btn btn">{{ p.name }}<img class="imgsat"
                                         src="/assets/Img/planets/{{ p.name }}.png" alt="..." /></button>
                             </div>
+                            <div style="padding: 25px;"></div>
                         </div>
 
                         <div *ngIf='p.name=="Terre"'>
@@ -75,6 +80,7 @@
                                 <button (click)="goToDetail(p)" class="btn btn">{{ p.name }}<img class="imgsat"
                                         src="/assets/Img/planets/{{ p.name }}.png" alt="..." /></button>
                             </div>
+                            <div style="padding: 125px;"></div>
                         </div>
 
                         <div *ngIf='p.name=="Mars"'>
@@ -82,6 +88,7 @@
                                 <button (click)="goToDetail(p)" class="btn btn">{{ p.name }}<img class="imgsat"
                                         src="/assets/Img/planets/{{ p.name }}.png" alt="..." /></button>
                             </div>
+                            <div style="padding: 1280px;"></div>
                         </div>
 
                         <div *ngIf='p.name=="Jupiter"'>
@@ -89,6 +96,7 @@
                                 <button (click)="goToDetail(p)" class="btn btn">{{ p.name }}<img class="imgsat"
                                         src="/assets/Img/planets/{{ p.name }}.png" alt="..." /></button>
                             </div>
+                            <div style="padding: 1180px;"></div>
                         </div>
 
                         <div *ngIf='p.name=="Saturne"'>
@@ -96,6 +104,7 @@
                                 <button (click)="goToDetail(p)" class="btn btn">{{ p.name }}<img class="imgsat"
                                         src="/assets/Img/planets/{{ p.name }}.png" alt="..." /></button>
                             </div>
+                            <div style="padding: 2715px;"></div>
                         </div>
 
                         <div *ngIf='p.name=="Uranus"'>
@@ -103,6 +112,7 @@
                                 <button (click)="goToDetail(p)" class="btn btn">{{ p.name }}<img class="imgsat"
                                         src="/assets/Img/planets/{{ p.name }}.png" alt="..." /></button>
                             </div>
+                            <div style="padding: 2890px;"></div>
                         </div>
 
                         <div *ngIf='p.name=="Neptune"'>
