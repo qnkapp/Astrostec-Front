@@ -32,7 +32,7 @@ justify-content: center;
 
 .zoom2 img {
 width: 58%;
-transition: 0.5s all ease-in-out;
+transition: 1s all ease-in-out;
 margin-left: auto;
 margin-right: auto;
 margin-top: auto;
