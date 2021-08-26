@@ -22,6 +22,7 @@ import { QuizzComponent } from './quizz/quizz.component';
 import { SoleilComponent } from './soleil/soleil.component';
 import { ExplorationComponent } from './exploration/exploration.component';
 import { CosmologieComponent } from './cosmologie/cosmologie.component';
+import { QuestionComponent } from './question/question.component';
 
 const routes: Routes = [
   { component: BoutiqueComponent, path: 'boutique' },
@@ -47,7 +48,8 @@ const routes: Routes = [
   { component: RemerciementFormContactComponent, path: 'remerciement-form-contact' },
   { component: QuizzComponent, path:'quizz' },
   { component: ExplorationComponent, path:'exploration'},
-  {component: CosmologieComponent, path:'cosmologie'}
+  {component: CosmologieComponent, path:'cosmologie'},
+  { component: QuestionComponent, path: 'questions' }
 ];
 
 @NgModule({
