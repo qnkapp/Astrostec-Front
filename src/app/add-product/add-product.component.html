@@ -1,24 +1,24 @@
-<form>
+<form #myForm="ngForm" (ngSubmit)='addProduct()'>
     <div class="form-group">
         <label for="inputNom">Nom du produit</label>
-        <input type="text" class="form-control" id="inputNom" name="nom" placeholder="Nom" [(ngModel)]="productName">
+        <input type="text" class="form-control" id="inputNom" name="nom" placeholder="Nom" [(ngModel)]="productName" required ngModel>
     </div>
     <div class="form-group">
         <label for="inputD">Description</label>
-        <textarea class="form-control" id="inputD" placeholder="Description" [(ngModel)]="descName" name="desc"></textarea>
+        <textarea class="form-control" id="inputD" placeholder="Description" [(ngModel)]="descName" name="desc" required ngModel></textarea>
     </div>
 
     <div class="form-group">
         <label for="inputURL">URL image</label>
-        <input type="text" class="form-control" id="inputURL" placeholder="image url" [(ngModel)]="imgName" name="ìmg">
+        <input type="text" class="form-control" id="inputURL" placeholder="image url" [(ngModel)]="imgName" name="ìmg" required ngModel>
     </div>
     <div class="form-group">
         <label for="inputPrix">Prix</label>
-        <input type="text" class="form-control" id="inputPrix" placeholder="Prix" [(ngModel)]="prixName" name="prix">
+        <input type="text" class="form-control" id="inputPrix" placeholder="Prix" [(ngModel)]="prixName" name="prix" required ngModel>
     </div>
     <div class="form-group">
         <label for="inputStock">Stock</label>
-        <input type="text" class="form-control" id="inputStock" placeholder="Stock" [(ngModel)]="stockName" name="stock">
+        <input type="text" class="form-control" id="inputStock" placeholder="Stock" [(ngModel)]="stockName" name="stock" required ngModel>
     </div>
-    <button mat-dialog-close (click)='addProduct()' type="submit" class="btn btn-primary">Ajouter</button>
+    <button mat-dialog-close type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Ajouter</button>
 </form>
