@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,6 +16,10 @@ export class AccueilComponent implements OnInit {
 
   goToSource() : any{
     this.route.navigateByUrl('source');
+  }
+
+  onSubmit(contactForm : NgForm){
+
   }
 
 }

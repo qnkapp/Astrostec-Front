@@ -196,28 +196,34 @@
         <div class="row"> <!--row2-->
 
           <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+            <!--Utiisation d'une méthode onSubmit codée dans accueil.ts-->
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
               <div class="row">
 
                 <div class="col-md-6">
-                  <div class="md-form mb-0">
-                    <input type="text" id="name" name="name" class="form-control">
-                    <label for="name">
-                      <span class="textform font-weight-lighterr">
-                        Nom
-                      </span>
+                  <div class="md-form">
+                    <input type="text" id="nom" name="nom" class="form-control" ngModel required #nom="ngModel">
+                    <label for="nom" class="textform font-weight-lighter">
+                      Votre nom
                     </label>
                   </div>
                 </div>
 
                 <div class="col-md-6">
-                  <div class="md-form mb-0">
-                    <input type="text" id="email" name="email" class="form-control">
-                    <label for="email">
-                      <span class="textform font-weight-lighter">
-                        Email
-                      </span>
+                  <div class="md-form">
+                    <input type="text" id="prenom" name="prenom" class="form-control" ngModel required #prenom="ngModel">
+                    <label for="nom" class="textform font-weight-lighter">
+                      Votre prénom
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="md-form">
+                    <input type="text" id="email" name=email class="form-control" ngModel required #email="ngModel">
+                    <label for="email" class="textform font-weight-lighter">
+                      Votre email
                     </label>
                   </div>
                 </div>
@@ -226,12 +232,10 @@
 
               <div class="row">
                 <div class="col-md-12">
-                  <div class="md-form mb-0">
-                    <input type="text" id="subject" name="subject" class="form-control">
-                    <label for="subject">
-                      <span class="textform font-weight-lighter">
-                        Objet
-                      </span>
+                  <div class="md-form">
+                    <input type="text" id="subject" name="subject" class="form-control" ngModel required #subject="ngModel">
+                    <label for="subject" class="textform font-weight-lighter">
+                      Objet de votre message
                     </label>
                   </div>
                 </div>
@@ -240,25 +244,21 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="md-form">
-                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                    <label for="message">
-                      <span class="textform font-weight-lighter">
-                        Votre message
-                      </span>
+                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" ngModel required #message="ngModel"></textarea>
+                    <label for="message" class="textform font-weight-lighter">
+                      Votre message
                     </label>
                   </div>
 
                 </div>
               </div>
 
-            </form>
+              <!--Je crois qu'il faut que je mette un div class="row"-->
+              <div class="text-center text-md-right">
+                <button type ="submit" class="btn btn-light envoyer" value="Send">Envoyer</button>
+              </div>
 
-            <div class="text-center text-md-right">
-              <a class="btn btn-light" onclick="document.getElementById('contact-form').submit();">
-                <span class="envoyer">Envoyer</span>
-              </a>
-            </div>
-            <div class="status"></div>
+            </form>
           </div>
 
           <div class="col-md-3 text-center">
