@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 import { OtherService } from '../services/other.service';
 import { PlaneteService } from '../services/planete.service';
 
@@ -13,7 +15,7 @@ export class DetailSatellitesComponent implements OnInit {
   satellites: any;
   planete: any;
   public buttonClicked: boolean = false;
-  constructor(private http: HttpClient, private otherService: OtherService) { }
+  constructor(private http: HttpClient, private otherService: OtherService, private route: Router,public authService: AuthService) { }
   
   ngOnInit(): void {
     this.getSatellite();
@@ -43,5 +45,9 @@ export class DetailSatellitesComponent implements OnInit {
   public onButtonClick() {
 
     this.buttonClicked = !this.buttonClicked;
+  }
+  gotoPlanet(){
+    PlaneteService.savePlanetes(this.planete.id);
+    this.route.navigateByUrl("detail-planetes")
   }
 }

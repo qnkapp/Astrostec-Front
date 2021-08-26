@@ -5,6 +5,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { OtherService } from '../services/other.service';
 import { PlaneteService } from '../services/planete.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-detail-planetes',
@@ -19,7 +20,7 @@ export class DetailPlanetesComponent implements OnInit {
   taille: any;
   filterName: any;
   public buttonClicked: boolean = false;
-  constructor(private http: HttpClient, private otherService: OtherService, private route: Router,) { }
+  constructor(private http: HttpClient, private otherService: OtherService, private route: Router,public authService: AuthService, ) { }
 
   ngOnInit(): void {
 

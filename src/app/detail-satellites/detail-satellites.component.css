@@ -1,8 +1,12 @@
-.Jumbotron  {
-    /* background-image: url('/assets/Img/satellites/Lune.jpg'); */
-    color: white; 
-    height: auto; 
-    
+.Jumbotron {
+  /* background-image: url('/assets/Img/satellites/Lune.jpg'); */
+  color: white;
+  height: auto;
+}
+
+.liens {
+  color: rgb(18, 18, 196);
+  cursor:pointer;
 }
 
 /* object {
