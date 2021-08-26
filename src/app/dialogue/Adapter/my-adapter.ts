@@ -21,10 +21,11 @@ export class MyAdapter extends ChatAdapter {
 
     listMembre: Membre[] = [];
 
-    
+
     public static participants: IChatParticipant[];
 
     getParticipants(): IChatParticipant[] {
+
         this.http.get(this.otherService.lienBack + 'liste_membre').subscribe({
             next: (data) => { this.listMembre = data as Membre[] },
             error: (err) => { console.log(err) }
@@ -37,14 +38,16 @@ export class MyAdapter extends ChatAdapter {
                     participantType: ChatParticipantType.User,
                     id: membre.id,
                     displayName: membre.pseudo as string,
-                    avatar: "../../assets/icons/icons_chat/avatar1.svg",
+                    avatar: null,
                     status: ChatParticipantStatus.Online
-                }
+                };
+                i ++;
             }
-            i += 1;
-        })
+
+        });
         return participants;
     }
+
 
     listFriends(): Observable<ParticipantResponse[]> {
         MyAdapter.participants = this.getParticipants();
