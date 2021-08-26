@@ -36,6 +36,7 @@ import { RemerciementFormContactComponent } from './remerciement-form-contact/re
 import { QuizzComponent } from './quizz/quizz.component';
 import { ExplorationComponent } from './exploration/exploration.component';
 import { CosmologieComponent } from './cosmologie/cosmologie.component';
+import { SoleilComponent } from './soleil/soleil.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { CosmologieComponent } from './cosmologie/cosmologie.component';
     RemerciementFormContactComponent,
     QuizzComponent,
     ExplorationComponent,
-    CosmologieComponent
+    CosmologieComponent,
+    SoleilComponent
   ],
   imports: [
     BrowserModule,
