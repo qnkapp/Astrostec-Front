@@ -20,6 +20,7 @@ import { AdminGuard } from './_helpers/admin.guard';
 import { RemerciementFormContactComponent } from './remerciement-form-contact/remerciement-form-contact.component';
 import { QuizzComponent } from './quizz/quizz.component';
 import { SoleilComponent } from './soleil/soleil.component';
+import { ExplorationComponent } from './exploration/exploration.component';
 
 const routes: Routes = [
   { component: BoutiqueComponent, path: 'boutique' },
@@ -42,7 +43,8 @@ const routes: Routes = [
   { component: SourceComponent, path: 'source' },
   { component: GestionMembreComponent, path: 'gestion-membre', canActivate: [AdminGuard]},
   { component: RemerciementFormContactComponent, path: 'remerciement-form-contact' },
-  { component: QuizzComponent, path:'quizz' }
+  { component: QuizzComponent, path:'quizz' },
+  { component: ExplorationComponent, path:'exploration'}
 ];
 
 @NgModule({
