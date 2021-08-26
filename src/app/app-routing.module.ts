@@ -21,6 +21,8 @@ import { RemerciementFormContactComponent } from './remerciement-form-contact/re
 import { QuizzComponent } from './quizz/quizz.component';
 import { SoleilComponent } from './soleil/soleil.component';
 import { GestionProduitsComponent } from './gestion-produits/gestion-produits.component';
+import { ExplorationComponent } from './exploration/exploration.component';
+import { CosmologieComponent } from './cosmologie/cosmologie.component';
 
 const routes: Routes = [
   { component: BoutiqueComponent, path: 'boutique' },
@@ -30,7 +32,8 @@ const routes: Routes = [
   {
     component: ForumComponent, path: 'forum', children: [
     { component: ChatComponent, path: 'chat' }, { component: DiscussionsComponent, path: 'discussions' },
-    { component: SujetsComponent, path: 'sujets' }, { component: SoleilComponent, path: 'soleil' }
+    { component: SujetsComponent, path: 'sujets' }, { component: SoleilComponent, path: 'soleil' },
+    { component: ExplorationComponent, path: 'exploration'}, { component: CosmologieComponent, path: 'cosmologie'}
     ],
     // canActivate: [AuthGuard]
   },
@@ -44,7 +47,9 @@ const routes: Routes = [
   { component: GestionMembreComponent, path: 'gestion-membre', canActivate: [AdminGuard]},
   { component: RemerciementFormContactComponent, path: 'remerciement-form-contact' },
   { component: QuizzComponent, path:'quizz' },
-  { component: GestionProduitsComponent, path: 'gestion-produits'}
+  { component: GestionProduitsComponent, path: 'gestion-produits'},
+  { component: ExplorationComponent, path:'exploration'},
+  {component: CosmologieComponent, path:'cosmologie'}
 ];
 
 @NgModule({
