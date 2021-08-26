@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-quizz',
@@ -10,6 +11,10 @@ export class QuizzComponent implements OnInit {
 
   reponses : any;
   questions: any;
+  score : any;
+  scoreParQuestion: number[]=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  status: any;
+  message : any;
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -29,6 +34,22 @@ export class QuizzComponent implements OnInit {
       next: (data) => { this.questions = data; },
       error: (err) => { console.log(err) }
     })
+  }
+
+  onSubmit(quizzForm: NgForm){
+
+    this.score=0;
+
+    if (quizzForm.valid) {
+      const answer = quizzForm.value;
+      // console.log(this.scoreParQuestion)
+
+      this.scoreParQuestion.forEach(
+        s => { this.score+=s }
+      )
+
+      this.message = "Votre score est de " + this.score + " points !"
+    }
   }
 
 }

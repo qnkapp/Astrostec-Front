@@ -17,6 +17,7 @@ export class SujetsComponent implements OnInit {
 
 
   ngOnInit(): void {
+    
   }
 
 }
