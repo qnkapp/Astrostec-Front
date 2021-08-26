@@ -10,84 +10,12 @@ export class MyAdapter extends ChatAdapter implements IChatGroupAdapter {
 
     constructor(private http: HttpClient, private otherService: OtherService) {
         super();
+        MyAdapter.participants = this.getParticipants();
     }
 
     listMembre: Membre[] = [];
 
-    public static mockedParticipants: IChatParticipant[] = [
-
-
-        {
-            participantType: ChatParticipantType.User,
-            id: 1,
-            displayName: "t",
-            avatar: "../../assets/icons/icons_chat/avatar2.svg",
-            status: ChatParticipantStatus.Online
-        },
-        {
-            participantType: ChatParticipantType.User,
-            id: 2,
-            displayName: "JB",
-            avatar: null,
-            status: ChatParticipantStatus.Online
-        },
-        {
-            participantType: ChatParticipantType.User,
-            id: 3,
-            displayName: "Daenerys Targaryen",
-            avatar: "https://68.media.tumblr.com/avatar_d28d7149f567_128.png",
-            status: ChatParticipantStatus.Online
-        },
-        {
-            participantType: ChatParticipantType.User,
-            id: 4,
-            displayName: "Eddard Stark",
-            avatar: "https://pbs.twimg.com/profile_images/600707945911844864/MNogF757_400x400.jpg",
-            status: ChatParticipantStatus.Online
-        },
-        {
-            participantType: ChatParticipantType.User,
-            id: 5,
-            displayName: "Hodor",
-            avatar: "https://pbs.twimg.com/profile_images/378800000449071678/27f2e27edd119a7133110f8635f2c130.jpeg",
-            status: ChatParticipantStatus.Offline
-        },
-        {
-            participantType: ChatParticipantType.User,
-            id: 6,
-            displayName: "Jaime Lannister",
-            avatar: "https://pbs.twimg.com/profile_images/378800000243930208/4fa8efadb63777ead29046d822606a57.jpeg",
-            status: ChatParticipantStatus.Busy
-        },
-        {
-            participantType: ChatParticipantType.User,
-            id: 7,
-            displayName: "John Snow",
-            avatar: "https://pbs.twimg.com/profile_images/3456602315/aad436e6fab77ef4098c7a5b86cac8e3.jpeg",
-            status: ChatParticipantStatus.Busy
-        },
-        {
-            participantType: ChatParticipantType.User,
-            id: 8,
-            displayName: "Lorde Petyr 'Littlefinger' Baelish",
-            avatar: "http://68.media.tumblr.com/avatar_ba75cbb26da7_128.png",
-            status: ChatParticipantStatus.Offline
-        },
-        {
-            participantType: ChatParticipantType.User,
-            id: 9,
-            displayName: "Sansa Stark",
-            avatar: "http://pm1.narvii.com/6201/dfe7ad75cd32130a5c844d58315cbca02fe5b804_128.jpg",
-            status: ChatParticipantStatus.Online
-        },
-        {
-            participantType: ChatParticipantType.User,
-            id: 10,
-            displayName: "Theon Greyjoy",
-            avatar: "https://thumbnail.myheritageimages.com/502/323/78502323/000/000114_884889c3n33qfe004v5024_C_64x64C.jpg",
-            status: ChatParticipantStatus.Away
-        }];
-
+    public static participants: IChatParticipant[];
 
     getParticipants(): IChatParticipant[] {
         this.http.get(this.otherService.lienBack + 'liste_membre').subscribe({
@@ -101,7 +29,7 @@ export class MyAdapter extends ChatAdapter implements IChatGroupAdapter {
                 participantType: ChatParticipantType.User,
                 id: membre.id,
                 displayName: membre.pseudo as string,
-                avatar: "https://thumbnail.myheritageimages.com/502/323/78502323/000/000114_884889c3n33qfe004v5024_C_64x64C.jpg",
+                avatar: "../../assets/icons/icons_chat/avatar2.svg",
                 status: ChatParticipantStatus.Away
             }
             i += 1;
@@ -110,7 +38,8 @@ export class MyAdapter extends ChatAdapter implements IChatGroupAdapter {
     }
 
     listFriends(): Observable<ParticipantResponse[]> {
-        return of(this.getParticipants().map(user => {
+        MyAdapter.participants = this.getParticipants();
+        return of(MyAdapter.participants.map(user => {
             let participantResponse = new ParticipantResponse();
 
             participantResponse.participant = user;
@@ -132,13 +61,6 @@ export class MyAdapter extends ChatAdapter implements IChatGroupAdapter {
                 message: "Bonjour !",
                 dateSent: new Date()
             },
-            // {
-            //   fromId: 1,
-            //   toId: 999,
-            //   type: MessageType.Image,
-            //   message: "https://66.media.tumblr.com/avatar_9dd9bb497b75_128.pnj",
-            //   dateSent: new Date()
-            // },
             {
                 fromId: MessageType.Text,
                 toId: 999,
@@ -157,7 +79,7 @@ export class MyAdapter extends ChatAdapter implements IChatGroupAdapter {
             replyMessage.message = message.message;
             replyMessage.dateSent = new Date();
             if (isNaN(message.toId)) {
-                let group = MyAdapter.mockedParticipants.find(x => x.id == message.toId) as Group;
+                let group = MyAdapter.participants.find(x => x.id == message.toId) as Group;
 
                 // Message to a group. Pick up any participant for this
                 let randomParticipantIndex = Math.floor(Math.random() * group.chattingTo.length);
@@ -171,7 +93,7 @@ export class MyAdapter extends ChatAdapter implements IChatGroupAdapter {
                 replyMessage.fromId = message.toId;
                 replyMessage.toId = message.fromId;
 
-                let user = MyAdapter.mockedParticipants.find(x => x.id == replyMessage.fromId)!;
+                let user = MyAdapter.participants.find(x => x.id == replyMessage.fromId)!;
 
                 this.onMessageReceived(user, replyMessage);
             }
@@ -180,9 +102,9 @@ export class MyAdapter extends ChatAdapter implements IChatGroupAdapter {
 
 
     groupCreated(group: Group): void {
-        this.getParticipants().push(group);
+        MyAdapter.participants.push(group);
 
-        MyAdapter.mockedParticipants = this.getParticipants().sort((first, second) =>
+        MyAdapter.participants = MyAdapter.participants.sort((first, second) =>
             second.displayName > first.displayName ? -1 : 1
         );
 
