@@ -40,6 +40,8 @@ import { QuestionComponent } from './question/question.component';
 import { ExplorationComponent } from './exploration/exploration.component';
 import { CosmologieComponent } from './cosmologie/cosmologie.component';
 import { SoleilComponent } from './soleil/soleil.component';
+import { CommonModule } from '@angular/common';
+import { DetailSatellitesComponent } from './detail-satellites/detail-satellites.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,7 @@ import { SoleilComponent } from './soleil/soleil.component';
     VerifySameEmailDirective,
     VerifySameMdpDirective,
     DetailPlanetesComponent,
+    DetailSatellitesComponent,
     PanierComponent,
     PiedDePageComponent,
     SujetsComponent,
@@ -74,6 +77,7 @@ import { SoleilComponent } from './soleil/soleil.component';
     SoleilComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
