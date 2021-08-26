@@ -1,14 +1,7 @@
 
 <div class="boite-chat">
-  <ng-chat [adapter]="adapter" [userId]="userId" [historyEnabled]="true" [historyPageSize]="4" [hideFriendsList]="false" [isViewportOnMobileEnabled]="true" [isCollapsed]="true" [pollFriendsList]="true" *ngIf="authService.isConnected()">
+  <ng-chat [title]="'Utilisateurs Connectés'" [adapter]="adapter" [userId]="userId" [historyEnabled]="true" [historyPageSize]="4" [hideFriendsList]="false" [isViewportOnMobileEnabled]="true" [isCollapsed]="true" [pollFriendsList]="true" *ngIf="authService.isConnected()">
   
   </ng-chat>
 </div>
 
-
-<!-- <div *ngFor='let m of membres'>
-  <br>
-  <br>
-  <h1>{{m.pseudo}}</h1>
-</div>
-<div><h1>{{membres.pseudo}}</h1></div> -->
