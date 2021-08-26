@@ -30,7 +30,8 @@ const routes: Routes = [
   {
     component: ForumComponent, path: 'forum', children: [
     { component: ChatComponent, path: 'chat' }, { component: DiscussionsComponent, path: 'discussions' },
-    { component: SujetsComponent, path: 'sujets' }, { component: SoleilComponent, path: 'soleil' }
+    { component: SujetsComponent, path: 'sujets' }, { component: SoleilComponent, path: 'soleil' },
+    { component: ExplorationComponent, path: 'exploration'}
     ],
     // canActivate: [AuthGuard]
   },
