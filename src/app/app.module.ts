@@ -33,6 +33,7 @@ import { NgChatModule } from 'ng-chat';
 import { DialogueComponent } from './dialogue/dialogue.component';
 import { ValidationAdminComponent } from './gestion-membre/validation-admin/validation-admin.component';
 import { RemerciementFormContactComponent } from './remerciement-form-contact/remerciement-form-contact.component';
+import { QuizzComponent } from './quizz/quizz.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { RemerciementFormContactComponent } from './remerciement-form-contact/re
     PaymentCardComponent,
     DialogueComponent,
     ValidationAdminComponent,
-    RemerciementFormContactComponent
+    RemerciementFormContactComponent,
+    QuizzComponent
   ],
   imports: [
     BrowserModule,
