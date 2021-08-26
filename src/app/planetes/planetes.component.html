@@ -47,22 +47,20 @@
         <br>
         <br>
 
-        <div class="row">
+        <div align="center">
             <div class="col-sm-6" *ngFor='let p of planetes'>
                 <div
                     style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: transparent;">
 
                     <div *ngIf='p.name=="Saturne"'>
-                        <button (click)="goToDetail(p)" class="btn btn-white">{{ p.name }}</button>
                         <div class="zoomsat">
-                            <img class="imgsat" src="/assets/Img/planets/{{ p.name }}.png" alt="..." />
+                            <button (click)="goToDetail(p)" class="btn btn-white">{{ p.name }} <img class="imgsat" src="/assets/Img/planets/{{ p.name }}.png" alt="..." /></button>
                         </div>
                     </div>
 
                     <div *ngIf='p.name!="Saturne"'>
-                        <button class="btn btn-white" (click)="goToDetail(p)">{{ p.name }}</button>
                         <div class="zoom">
-                            <img src="/assets/Img/planets/{{p.name}}.png" alt="..." />
+                            <button (click)="goToDetail(p)" class="btn btn-white">{{ p.name }} <img class="imgsat" src="/assets/Img/planets/{{ p.name }}.png" alt="..." /></button>
                         </div>
                     </div>
                 </div>
