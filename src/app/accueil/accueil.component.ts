@@ -25,12 +25,13 @@ export class AccueilComponent implements OnInit {
       const email = contactForm.value;
       const headers = new HttpHeaders( { 'Content-Type' : 'application/json' } );
       this.http.post('https://formspree.io/f/xoqypozl',
-      { name : email.name, replyto : email.email, message : email.message },
+      { nom : email.nom, prenom : email.prenom, mail : email.email, objet : email.subject, message : email.message },
       { 'headers' : headers }).subscribe(
         response => {
           console.log(response);
         }
       );
+      this.route.navigateByUrl('remerciement-form-contact');
     }
   }
 

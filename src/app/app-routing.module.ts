@@ -17,6 +17,7 @@ import { AuthGuard } from './_helpers/auth.guard';
 import { SujetsComponent } from './sujets/sujets.component';
 import { GestionMembreComponent } from './gestion-membre/gestion-membre.component';
 import { AdminGuard } from './_helpers/admin.guard';
+import { RemerciementFormContactComponent } from './remerciement-form-contact/remerciement-form-contact.component';
 
 const routes: Routes = [
   { component: BoutiqueComponent, path: 'boutique' },
@@ -35,9 +36,10 @@ const routes: Routes = [
   { component: SatellitesComponent, path: 'satellites' },
   { component: DetailPlanetesComponent, path: 'detail-planetes' },
   { component: DetailSatellitesComponent, path: 'detail-satellites' },
-  { component: SolaireComponent, path: 'solaire'},
-  { component: SourceComponent, path: 'source'},
-  { component: GestionMembreComponent, path: 'gestion-membre', canActivate: [AdminGuard]}
+  { component: SolaireComponent, path: 'solaire' },
+  { component: SourceComponent, path: 'source' },
+  { component: GestionMembreComponent, path: 'gestion-membre', canActivate: [AdminGuard]},
+  { component: RemerciementFormContactComponent, path: 'remerciement-form-contact' }
 ];
 
 @NgModule({
