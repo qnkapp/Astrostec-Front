@@ -1,6 +1,6 @@
 .zoom1 {
-width: 200px;
-height: 200px;
+width: 150px;
+height: 150px;
 overflow: hidden;
 margin: 0 auto;
 display: flex;
@@ -8,7 +8,7 @@ justify-content: center;
 }
 
 .zoom1 img {
-width: 25%;
+width: 28%;
 transition: 1s all ease-in-out;
 margin-left: auto;
 margin-right: auto;
@@ -18,12 +18,12 @@ display: block;
 }
 
 .zoom1:hover img {
-transform: scale(6);
+transform: scale(7);
 } 
 
 .zoom2 {
-width: 200px;
-height: 200px;
+width: 150px;
+height: 150px;
 overflow: hidden;
 margin: 0 auto;
 display: flex;
@@ -31,7 +31,7 @@ justify-content: center;
 }
 
 .zoom2 img {
-width: 58%;
+width: 50%;
 transition: 1s all ease-in-out;
 margin-left: auto;
 margin-right: auto;
@@ -41,12 +41,12 @@ display: block;
 }
 
 .zoom2:hover img {
-transform: scale(2.5);
+transform: scale(3.5);
 } 
 
 .zoom3 {
-width: 200px;
-height: 200px;
+width: 150px;
+height: 150px;
 overflow: hidden;
 margin: 0 auto;
 display: flex;
@@ -54,7 +54,7 @@ justify-content: center;
 }
 
 .zoom3 img {
-width: 59%;
+width: 63%;
 transition: 1s all ease-in-out;
 margin-left: auto;
 margin-right: auto;
@@ -64,12 +64,12 @@ display: block;
 }
 
 .zoom3:hover img {
-transform: scale(2.5);
+transform: scale(3.1);
 } 
 
 .zoom4 {
-width: 200px;
-height: 200px;
+width: 150px;
+height: 150px;
 overflow: hidden;
 margin: 0 auto;
 display: flex;
@@ -87,12 +87,12 @@ display: block;
 }
 
 .zoom4:hover img {
-transform: scale(4);
+transform: scale(5);
 } 
 
 .zoom5 {
-width: 900px;
-height: 900px;
+width: 460px;
+height: 460px;
 overflow: hidden;
 margin: 0 auto;
 display: flex;
@@ -100,7 +100,7 @@ justify-content: center;
 }
 
 .zoom5 img {
-width: 91%;
+width: 95%;
 transition: 1s all ease-in-out;
 margin-left: auto;
 margin-right: auto;
@@ -110,12 +110,12 @@ display: block;
 }
 
 .zoom5:hover img {
-transform: scale(1.1);
+transform: scale(1.15);
 } 
 
 .zoom6 {
-width: 1500px;
-height: 1500px;
+width: 950px;
+height: 950px;
 overflow: hidden;
 margin: 0 auto;
 display: flex;
@@ -137,8 +137,8 @@ transform: scale(1.2);
 } 
 
 .zoom7 {
-width: 500px;
-height: 500px;
+width: 250px;
+height: 250px;
 overflow: hidden;
 margin: 0 auto;
 display: flex;
@@ -146,7 +146,7 @@ justify-content: center;
 }
 
 .zoom7 img {
-width: 60%;
+width: 80%;
 transition: 1s all ease-in-out;
 margin-left: auto;
 margin-right: auto;
@@ -156,12 +156,12 @@ display: block;
 }
 
 .zoom7:hover img {
-transform: scale(1.8);
+transform: scale(1.5);
 } 
 
 .zoom8 {
-width: 500px;
-height: 500px;
+width: 250px;
+height: 250px;
 overflow: hidden;
 margin: 0 auto;
 display: flex;
@@ -169,7 +169,7 @@ justify-content: center;
 }
 
 .zoom8 img {
-width: 60%;
+width: 75%;
 transition: 1s all ease-in-out;
 margin-left: auto;
 margin-right: auto;
@@ -179,5 +179,5 @@ display: block;
 }
 
 .zoom8:hover img {
-transform: scale(1.8);
+transform: scale(1.5);
 } 
