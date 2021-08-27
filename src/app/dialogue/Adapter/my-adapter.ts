@@ -67,7 +67,7 @@ export class MyAdapter extends ChatAdapter {
     getMessageHistory(destinaryId: any): Observable<Message[]> {
         let History: Array<Message> = [];
         let messageFromDb: MessageFromDb[] = [];
-        const myCall = this.http.get(this.otherService.lienBack + "message_from/" + destinaryId + '/' + this.authService.currentUserValue?.id).toPromise();
+        const myCall = this.http.get(this.otherService.lienBack + "message_from/" + destinaryId  + '/' +  this.authService.currentUserValue?.id).toPromise();
 
         myCall.then(
             data => {
