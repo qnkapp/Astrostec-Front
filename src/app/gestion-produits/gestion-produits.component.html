@@ -10,7 +10,7 @@
             <div class="col-md-4" *ngFor='let p of produits'>
                 <div class="product-wrapper mb-30 text-center">
                     <div class="product-img">
-                        <a  data-abc="true"> <img src={{p.image}} width="227">
+                        <a (click)='goToModif(p)' data-abc="true"> <img src={{p.image}} width="227">
                         </a>
                         <span style="top: 0.1em;background-color: rgba(0, 0, 0, 0.5); color: white;"><i class="fa fa-rupee"></i>{{parseFloat(p.prix)}}€</span>
                         <div class="product-action">
