@@ -54,6 +54,14 @@ export class ModifProductComponent implements OnInit {
      })
   }
 
+  deleteProduit(){
+    this.http.get(this.otherService.lienBack+"produit/delete/"+this.data.id).subscribe({
+      next:(data)=>{console.log(data)},
+      error:(err)=>{console.log(err)}
+    });
+
+  }
+
 
 
 }
