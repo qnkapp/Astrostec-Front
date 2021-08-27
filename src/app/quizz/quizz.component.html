@@ -1,58 +1,87 @@
-<form (ngSubmit)="onSubmit(quizzForm)" #quizzForm="ngForm">
+<div class="container-fluid fond">
+
+   <!--Section: Titre-->
+   <section class="title text-center pt-4 mb-4">
+      Envie de tester vos connaissances ?
+   </section>
+   <!--Section: Titre-->
+
+   <!--Section: Texte-->
+   <section class="soustitre text-center pt-4 mb-4">
+      Répondez à ces 10 questions en faisant le minimum d'erreur !
+   </section>
+   <!--Section: Titre-->
 
    <div class="row">
 
-      <div *ngFor="let q of questions" class="col-sm-5">
-         <div class="card p-4" style="background-color: darkorange;">
+      <div class="col-md-12 mb-md-0 mb-5 ml-4 mr-auto">
+
+         <!--Création de la fonction onSubmit dans le component.ts pour récupérer les valeurs du form-->
+         <form (ngSubmit)="onSubmit(quizzForm)" #quizzForm="ngForm">
 
 
-            <div class="row">
-               <div>{{q.id}}</div>
-               <div>
-                  {{q.enonce}}
+            <div class="row ml-auto mr-auto">
 
-                  <div *ngFor="let r of reponses; let i = index" class="row">
+               <div *ngFor="let q of questions" class="col-sm-6" style="justify-content: center;">
+                  <div class="card p-5 mt-4 mb-4 ml-4 mr-4" style="background-color: darkorange;">
 
-                     <div *ngIf="q.id == r.question.id">
 
-                        <div class="col-sm-12">
+                     <div class="row mb-2">
+                        <div class="" style="font-size: larger;">{{q.id}}.</div> <!--récupération de l'id de la question-->
+                        <div class="col-sm-11" style="font-size: larger;">{{q.enonce}}</div> <!--récupération de l'énoncé de la question-->
+                     </div>
 
-                           <input type="radio" id={{r.id}} name={{q.id}} value={{r.id}} ngModel required
-                              #{{q.id}}="ngModel" *ngIf="r.status" (click)="scoreParQuestion[q.id-1]=1">
+                     <!--Pour chaque réponse de la question, on vérifie si status=True ou False (réponse vraie ou fausse)-->
+                     <div *ngFor="let r of reponses; let i = index" class="row">
 
-                           <input type="radio" id={{r.id}} name={{q.id}} value={{r.id}} ngModel required
-                              #{{q.id}}="ngModel" *ngIf="!r.status" (click)="scoreParQuestion[q.id-1]=0">
+                        <div *ngIf="q.id == r.question.id">
 
-                           <label for={{r.id}}>{{r.answer}}</label>
-                           
+                           <div class="col-sm-12">
+
+                              <!--Si on clique sur le radio et que status=true on passe le score à 1 pour la question 
+                                 (on ajoute un 1 dans le tableau scoreParQuestion pour la question en cours)-->
+                              <input type="radio" id={{r.id}} name={{q.id}} value={{r.id}} ngModel required
+                                 #{{q.id}}="ngModel" *ngIf="r.status" (click)="scoreParQuestion[q.id-1]=1">
+
+                              <!--Si on clique sur le radio et que status=false on passe le score à 0 pour la question
+                                 (on ajoute un 0 dans le tableau scoreParQuestion pour la question en cours)-->
+                              <input type="radio" id={{r.id}} name={{q.id}} value={{r.id}} ngModel required
+                                 #{{q.id}}="ngModel" *ngIf="!r.status" (click)="scoreParQuestion[q.id-1]=0">
+
+                              <!--On affiche les réponses de la question-->
+                              <label for={{r.id}} class="ml-2">{{r.answer}}</label>
+
+                           </div>
+
                         </div>
+
 
                      </div>
 
 
                   </div>
+
                </div>
 
-
             </div>
-         </div>
 
+
+            <!--Bouton Envoyer (submit)-->
+            <div class="text-center">
+               <button type="submit" class="btn btn-light envoyer" value="Send" style="color: darkorange; font-weight: bolder; font-size: larger;">Envoyer</button>
+            </div>
+
+
+            <!--Message Score qui s'affiche après un submit-->
+            <div class="text-center mt-4 p-4">
+               <div class="title">{{message}}</div>
+            </div>
+
+
+         </form>
       </div>
-   
    </div>
 
-
-
-   <div class="row text-center">
-      <button type="submit" class="btn btn-light envoyer" value="Send">Envoyer</button>
-   </div>
-
-   {{score}}
-   <br>{{message}}
-
-
-</form>
-
-
+</div>
 
 <app-pied-de-page></app-pied-de-page>
