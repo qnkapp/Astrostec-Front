@@ -52,6 +52,8 @@ export class ModifProductComponent implements OnInit {
      this.http.put(this.otherService.lienBack+"produit/"+this.data.id,this.productDetails).subscribe({
        error:(err) =>console.log(err)
      })
+
+     window.alert("Modification effectuée avec succès !");
   }
 
   deleteProduit(){
@@ -59,6 +61,7 @@ export class ModifProductComponent implements OnInit {
       next:(data)=>{console.log(data)},
       error:(err)=>{console.log(err)}
     });
+    window.alert("Supression effectuée avec succès !");
 
   }
 

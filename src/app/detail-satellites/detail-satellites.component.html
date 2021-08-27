@@ -1,13 +1,12 @@
-<!-- <p>detail-satellites works!</p> -->
 <div class="container text">
     <div
         style="width: 100%; justify-content: center; align-items:center; display: flex; height: 100%;background-color: black;">
         <img width='30%' src="/assets/Img/satellites/{{satellites.name}}.jpg" alt='...'>
         <div>
             <p>
-                {{satellites.name}} est le satellite de <u style="color: blue; cursor:pointer;" (click)="gotoPlanet()">{{planete.name}}</u> et a pour rayon moyen {{satellites.radius}} km
+                {{satellites.name}} est le satellite de <u style="color: blue; cursor:pointer;" (click)="gotoPlanet()">{{planete.name}}</u> , a un rayon moyen de {{satellites.radius}} km
                 et
-                pour paramètre gravitationnel standard {{satellites.gm}} m<sup>3</sup>s<sup>-2</sup>
+                pour paramètre gravitationnel standard {{satellites.gm}} m<sup>3</sup>s<sup>-2</sup> 
             </p>
         </div>
     </div>
@@ -31,5 +30,4 @@
     </div>
 </div>
 
-<!--!!!!!!!!!!!!!!!!!!!!!!!! A RESOUDRE !!!!!!!!!!!!!!!!!!!!!!!!!!-->
 <app-pied-de-page></app-pied-de-page>

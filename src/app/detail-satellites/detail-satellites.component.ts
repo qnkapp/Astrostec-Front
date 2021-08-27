@@ -19,6 +19,7 @@ export class DetailSatellitesComponent implements OnInit {
   
   ngOnInit(): void {
     this.getSatellite();
+    console.log(PlaneteService.getPlanetes)
     this.getPlanet();
   }
   getSatellite(): void {
@@ -28,7 +29,7 @@ export class DetailSatellitesComponent implements OnInit {
     });
   }
   getPlanet(): void {
-    this.http.get(this.otherService.lienBack + 'planet/' + 3).subscribe({
+    this.http.get(this.otherService.lienBack + 'planet/' + PlaneteService.getPlanetes()).subscribe({
       next: (data) => { this.planete = data },
       error: (err) => { console.log(err) }
     });

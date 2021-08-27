@@ -36,6 +36,8 @@ export class AddProductComponent implements OnInit {
      this.http.post(this.otherService.lienBack+"produit",this.productDetails).subscribe({
        error:(err) =>console.log(err)
      })
+
+     window.alert("Vous avez ajouté le produit avec succès !");
   }
 
 

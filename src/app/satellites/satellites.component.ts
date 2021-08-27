@@ -33,6 +33,7 @@ export class SatellitesComponent implements OnInit {
   goToDetailSatellite(s: any):void{
     
     PlaneteService.saveSatellite(s.id);
+    PlaneteService.savePlanetes(s.planetid)
     this.route.navigateByUrl("detail-satellites")
     
   }
