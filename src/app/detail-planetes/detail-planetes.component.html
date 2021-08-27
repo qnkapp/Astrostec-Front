@@ -7,7 +7,7 @@
             <p>
                 {{planete.name}} a pour diametre {{planete.diameter}} km, elle a pour masse {{planete.mass}}
                 *10<sup>24</sup>kg,
-                sa température moyenne à la surface est de {{planete.mean_temperature}}°C, les jours y dure
+                sa température moyenne à la surface est de {{planete.mean_temperature}}°C, les jours y durent
                 {{planete.length_of_day}} heures,
                 elle met {{planete.orbital_period}} jours pour faire le tour du Soleil
                 et elle se situe à {{planete.distance_from_sun}}*10<sup>6</sup> km du Soleil.
@@ -43,7 +43,7 @@
 
     <!-- if satellites null afficher  planete n'a pas de satellites-->
     <div *ngIf="satellites== '' ">
-        <p>{{planete.name}} n'a pas de satellite
+        <p>{{planete.name}} n'a pas de satellite.
         </p>
     </div>
     <div>
