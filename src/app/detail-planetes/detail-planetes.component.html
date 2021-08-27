@@ -30,8 +30,8 @@
                     Connecter vous pour modifier l'article.
                 </div>
                 <div *ngIf="buttonClicked && authService.isConnected()">
-                    <input type="text" placeholder="Text" #filterName name="filterName" id="text" class="form-text"
-                        formControlText="text">
+                    <textarea type="text" rows="10" cols="115" placeholder="Text" #filterName name="filterName" id="text" class="form-text"
+                        formControlText="text">{{planete.text}}</textarea>
                     <button class="btn btn-black" (click)="enregistrer(filterName.value)">Enregistrer</button>
                 </div>
 
