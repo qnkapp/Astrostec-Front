@@ -72,6 +72,7 @@ export class MyAdapter extends ChatAdapter {
         myCall.then(
             data => {
                 messageFromDb = data as MessageFromDb[];
+                console.log(messageFromDb);
                 let i = 0;
                 messageFromDb.forEach(m => {
                     History[i] = {
@@ -82,7 +83,8 @@ export class MyAdapter extends ChatAdapter {
                     };
                     i++;
                 });
-                History = History.sort((first, second) => (second.dateSent as Date) > (first.dateSent as Date) ? -1 : 1)
+                History = History.sort((first, second) => (second.dateSent as Date) > (first.dateSent as Date) ? -1 : 1);
+                console.log(History);
             },
             err => { console.log(err) }
         );
