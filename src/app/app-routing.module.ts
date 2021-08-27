@@ -35,7 +35,7 @@ const routes: Routes = [
     { component: SujetsComponent, path: 'sujets' }, { component: SoleilComponent, path: 'soleil' },
     { component: ExplorationComponent, path: 'exploration'}, { component: CosmologieComponent, path: 'cosmologie'}
     ],
-    // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
   { component: SignUpComponent, path: 'sign-up' },
   { component: PlanetesComponent, path: 'planetes' },
