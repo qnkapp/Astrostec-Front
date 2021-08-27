@@ -48,7 +48,7 @@
     </div>
     <div>
         <div *ngIf="satellites!=''">
-            {{planete.name}} à pour satellites :
+            {{planete.name}} a pour satellites :
             <div class='liens' *ngFor='let s of satellites'>
                 <p (click)="gotosatellite(s)"><u>{{s.name}}</u></p>
             </div>
