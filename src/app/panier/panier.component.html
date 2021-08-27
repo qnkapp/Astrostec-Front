@@ -11,7 +11,7 @@
                 <div class="mb-3">
                     <div class="pt-4 wish-list">
 
-                        <h5 class="mb-4">Panier (<span></span> produits)</h5>
+                        <h5 class="mb-4">Panier</h5>
 
                         <div class="row mb-4" *ngFor='let item of items'>
 
@@ -90,7 +90,7 @@
                             </li>
                         </ul>
 
-                        <button (click)='goToCardPayment()' type="button" class="btn btn-primary btn-block">Paiement</button>
+                        <button (click)='goToCardPayment(items)' type="button" class="btn btn-primary btn-block">Paiement</button>
 
                     </div>
                 </div>

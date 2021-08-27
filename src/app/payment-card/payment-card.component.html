@@ -1,32 +1,32 @@
 <div class="container">
     <div class="card">
         <p class="heading">DETAILS PAIEMENT</p>
-        <form>
+        <form #myForm="ngForm" (ngSubmit)='payment()'>
             <div class="form-group">
                 <label class="label" for="num">Numero de carte</label>
-                <input type="text" placeholder="1234 5678 9012 3457" class="form-control" id="num" minlength="19"
-                    maxlength="19" requiredformControlName="num">
+                <input type="text" id="num" placeholder="1234 5678 9012 3457" class="form-control" minlength="19"
+                    maxlength="19" name="num" required ngModel>
             </div>
             <div class="form-group">
                 <label for="nom">Nom du titulaire</label>
-                <input type="text" class="form-control" id="nom" placeholder="Nom" required>
+                <input type="text" class="form-control" id="nom" placeholder="Nom" name="nom" required ngModel>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="expiration">Expiration</label>
                     <input type="text" class="form-control" id="expiration" placeholder="MM/YYYY" minlength="7"
-                        maxlength="7" required>
+                        maxlength="7" name="exp" required ngModel >
                 </div>
                 <div class="col-md-2">
 
                 </div>
                 <div class="form-group col-md-5">
                     <label for="cvv">CVV</label>
-                    <input required type="password" class="form-control" id="cvv" placeholder="&#9679;&#9679;&#9679;"
-                        minlength="3" maxlength="3">
+                    <input name="cvv" type="password" class="form-control" id="cvv" placeholder="&#9679;&#9679;&#9679;"
+                        minlength="3" maxlength="3" name="cvv" required ngModel >
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Payer</button>
+            <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Payer</button>
         </form>
     </div>
 </div>
