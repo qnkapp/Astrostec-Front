@@ -21,4 +21,6 @@
         <input type="text" class="form-control" id="inputStock" placeholder="Stock" [(ngModel)]="stockName" name="stock" required ngModel>
     </div>
     <button mat-dialog-close type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Modifier</button>
+    <button (click)='deleteProduit()' mat-dialog-close type="button" class="btn btn-danger" [disabled]="myForm.invalid">Supprimer</button>
+
 </form>
